@@ -11,9 +11,9 @@ console.log(listUsers[0]); //will log Blark
 
 console.log(typeof listUsers); //will log Object
 
-listUsers.pop();
+listUsers.pop(); //removes last element
 
-console.log(listUsers); //removes last element
+console.log(listUsers);
 
 listUsers.push('NEW'); //appends new element into array (at end of it)
 
