@@ -23,6 +23,19 @@ for (let name of names) {
     console.log(name);
 }
 
+function fruit(name, shape, color){
+    this.name = name;
+    this.shape = shape;
+    this.color = color;
+
+    this.describe = function(){
+        return 'A '+this.name+' is shape of '+this.shape+' and is color '+this.color;
+    }
+
+}
+    let melon = new fruit('melon','round','green');
+    console.log(melon.describe());
+
 // names.forEach(function (name, index){
 //     if(name === 'Tool'){
 //         console.log('breakin');
