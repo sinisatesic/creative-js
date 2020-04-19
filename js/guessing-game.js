@@ -3,9 +3,9 @@
 //guessing-game: so, we have to guess:
 
 //Generate a random number (complete)
-//Give user ability to guess number
-//If they guess wrong, ask again
-//If they guess correctly, provide message stating so
+//Give user ability to guess number (complete)
+//If they guess wrong, ask again (complete)
+//If they guess correctly, provide message stating so (complete)
 
 function guessGame(){
     let randomNumber = Math.floor(Math.random() * 11); //if this was added in loop, it would re-generate a new number on each iteration of loop
@@ -26,3 +26,23 @@ function guessGame(){
 }
 
 guessGame();
+
+
+
+// function guessGame(){
+//     let randomNumber = Math.floor(Math.random() * 11);
+//     let guess;
+//
+//     do {
+//         guess = prompt('Pick num from 1 to 10');
+//         if (guess > randomNumber){
+//             console.log('too high bruv');
+//         } else if (guess < randomNumber){
+//             console.log('too low bruv');
+//         }
+//
+//     } while (guess != randomNumber);
+//     console.log('noice, ya won');
+// }
+//
+// guessGame();
