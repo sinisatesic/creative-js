@@ -6,7 +6,7 @@
 //Give user ability to guess number (complete)
 //If they guess wrong, ask again (complete)
 //If they guess correctly, provide message stating so (complete)
-
+//
 function guessGame(){
     let randomNumber = Math.floor(Math.random() * 10); //if this was added in loop, it would re-generate a new number on each iteration of loop
     // console.log(randomNumber); //logging to ensure above var works
@@ -64,3 +64,22 @@ guessGame();
 //
 // }
 // guess();
+//
+// function guessGame(){
+//     let randomNum = Math.floor(Math.random() * 10);
+//     let guess;
+//
+//     do {
+//         guess = prompt('guess num between 0 and 10');
+//
+//         if (randomNum > guess) {
+//             console.log('guessed too low');
+//         } else if (randomNum < guess) {
+//             console.log('guessed too high');
+//         }
+//
+//     } while (randomNum != guess);
+//     console.log('you guessed the correct number');
+// }
+//
+// guessGame();
