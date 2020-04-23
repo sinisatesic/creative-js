@@ -7,25 +7,25 @@
 //If they guess wrong, ask again (complete)
 //If they guess correctly, provide message stating so (complete)
 //
-function guessGame(){
-    let randomNumber = Math.floor(Math.random() * 10); //if this was added in loop, it would re-generate a new number on each iteration of loop
-    // console.log(randomNumber); //logging to ensure above var works
-    let guess;
-
-    do {
-        guess = prompt('What\'s da secret number? Iz from 0 to 10'); //let guess doesn't work because of scoping; would be only available in body of do-while. Var could work but best practice is to initialize it outside of loop
-        console.log(guess);
-
-        if (randomNumber > guess){
-            console.log('guess is too low');
-        } else if (randomNumber < guess){
-            console.log('guess is too high');
-        }
-    } while (guess != randomNumber);
-    console.log('you done did it');
-}
-
-guessGame();
+// function guessGame(){
+//     let randomNumber = Math.floor(Math.random() * 10); //if this was added in loop, it would re-generate a new number on each iteration of loop
+//     // console.log(randomNumber); //logging to ensure above var works
+//     let guess;
+//
+//     do {
+//         guess = prompt('What\'s da secret number? Iz from 0 to 10'); //let guess doesn't work because of scoping; would be only available in body of do-while. Var could work but best practice is to initialize it outside of loop
+//         console.log(guess);
+//
+//         if (randomNumber > guess){
+//             console.log('guess is too low');
+//         } else if (randomNumber < guess){
+//             console.log('guess is too high');
+//         }
+//     } while (guess != randomNumber);
+//     console.log('you done did it');
+// }
+//
+// guessGame();
 
 
 
@@ -83,3 +83,21 @@ guessGame();
 // }
 //
 // guessGame();
+
+function guessGame(){
+    let randomNumber = Math.floor(Math.random() * 10);
+    let guess;
+
+    do {
+        guess = prompt('pick number from 1 to 10');
+
+        if (randomNumber < guess) {
+            console.log('guess is too high');
+        } else if (randomNumber > guess) {
+            console.log('guess is too low');
+        }
+    } while (randomNumber != guess)
+    console.log('ya did it');
+}
+
+guessGame();
