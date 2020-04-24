@@ -1,31 +1,31 @@
 //Important to have pseudo code/comments to plan out project/goals
 
-//guessing-game: so, we have to guess:
+// guessing-game: so, we have to guess:
+//
+// Generate a random number (complete)
+// Give user ability to guess number (complete)
+// If they guess wrong, ask again (complete)
+// If they guess correctly, provide message stating so (complete)
 
-//Generate a random number (complete)
-//Give user ability to guess number (complete)
-//If they guess wrong, ask again (complete)
-//If they guess correctly, provide message stating so (complete)
-//
-// function guessGame(){
-//     let randomNumber = Math.floor(Math.random() * 10); //if this was added in loop, it would re-generate a new number on each iteration of loop
-//     // console.log(randomNumber); //logging to ensure above var works
-//     let guess;
-//
-//     do {
-//         guess = prompt('What\'s da secret number? Iz from 0 to 10'); //let guess doesn't work because of scoping; would be only available in body of do-while. Var could work but best practice is to initialize it outside of loop
-//         console.log(guess);
-//
-//         if (randomNumber > guess){
-//             console.log('guess is too low');
-//         } else if (randomNumber < guess){
-//             console.log('guess is too high');
-//         }
-//     } while (guess != randomNumber);
-//     console.log('you done did it');
-// }
-//
-// guessGame();
+function guessGame(){
+    let randomNumber = Math.floor(Math.random() * 10); //if this was added in loop, it would re-generate a new number on each iteration of loop
+    // console.log(randomNumber); //logging to ensure above var works
+    let guess;
+
+    do {
+        guess = prompt('What\'s da secret number? Iz from 0 to 10'); //let guess doesn't work because of scoping; would be only available in body of do-while. Var could work but best practice is to initialize it outside of loop
+        console.log(guess);
+
+        if (randomNumber > guess){
+            console.log('guess is too low');
+        } else if (randomNumber < guess){
+            console.log('guess is too high');
+        }
+    } while (guess != randomNumber);
+    console.log('you done did it');
+}
+
+guessGame();
 
 
 
@@ -126,18 +126,18 @@
 //     else console.log(i);
 // }
 
-function fruit(name, color, shape){
-    this.name = name;
-    this.color = color;
-    this.shape = shape;
-
-    this.describe = function(){
-        return 'A '+this.name+' is the color '+this.color+' and is the shape '+this.shape;
-    }
-}
-let melon = new fruit('melon','green','round');
-console.log(melon.describe());
-let banana = new fruit('banana','yellow','banana');
-console.log(banana.describe());
-let apple = new fruit('apple','red or green','round');
-console.log(apple.describe());
+// function fruit(name, color, shape){
+//     this.name = name;
+//     this.color = color;
+//     this.shape = shape;
+//
+//     this.describe = function(){
+//         return 'A '+this.name+' is the color '+this.color+' and is the shape '+this.shape;
+//     }
+// }
+// let melon = new fruit('melon','green','round');
+// console.log(melon.describe());
+// let banana = new fruit('banana','yellow','banana');
+// console.log(banana.describe());
+// let apple = new fruit('apple','red or green','round');
+// console.log(apple.describe());
