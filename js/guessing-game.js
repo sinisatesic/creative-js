@@ -83,21 +83,61 @@
 // }
 //
 // guessGame();
+//
+// function guessGame(){
+//     let randomNumber = Math.floor(Math.random() * 10);
+//     let guess;
+//
+//     do {
+//         guess = prompt('pick number from 1 to 10');
+//
+//         if (randomNumber < guess) {
+//             console.log('guess is too high');
+//         } else if (randomNumber > guess) {
+//             console.log('guess is too low');
+//         }
+//     } while (randomNumber != guess)
+//     console.log('ya did it');
+// }
+//
+// guessGame();
 
-function guessGame(){
-    let randomNumber = Math.floor(Math.random() * 10);
-    let guess;
+// function guessGame(){
+//     let randomNum = Math.floor(Math.random() * 10);
+//     let guess;
+//
+//     do {
+//         guess = prompt('Pick num from 1 and 10');
+//
+//         if (guess < randomNum){
+//             console.log('guessed too low');
+//         } else if (guess > randomNum){
+//             console.log('guessed too high');
+//         }
+//     } while (guess != randomNum);
+//     console.log('ya did it - ya win');
+// }
+// guessGame();
 
-    do {
-        guess = prompt('pick number from 1 to 10');
+// for(var i = 1; i <= 100; i++){
+//     if (i % 15 == 0) console.log('FizzBuzz');
+//     else if (i % 3 == 0) console.log('Fizz');
+//     else if (i % 5 == 0) console.log('Buzz');
+//     else console.log(i);
+// }
 
-        if (randomNumber < guess) {
-            console.log('guess is too high');
-        } else if (randomNumber > guess) {
-            console.log('guess is too low');
-        }
-    } while (randomNumber != guess)
-    console.log('ya did it');
+function fruit(name, color, shape){
+    this.name = name;
+    this.color = color;
+    this.shape = shape;
+
+    this.describe = function(){
+        return 'A '+this.name+' is the color '+this.color+' and is the shape '+this.shape;
+    }
 }
-
-guessGame();
+let melon = new fruit('melon','green','round');
+console.log(melon.describe());
+let banana = new fruit('banana','yellow','banana');
+console.log(banana.describe());
+let apple = new fruit('apple','red or green','round');
+console.log(apple.describe());
