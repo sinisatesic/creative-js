@@ -141,3 +141,39 @@ guessGame();
 // console.log(banana.describe());
 // let apple = new fruit('apple','red or green','round');
 // console.log(apple.describe());
+
+// function guessGame(){
+//     let randomNumber = Math.floor(Math.random() * 10);
+//     let guess;
+//
+//     do {
+//         guess = prompt('Guess number from 1 to 10');
+//         if (guess < randomNumber){
+//             console.log('guess too low');
+//         } else if (guess > randomNumber){
+//             console.log('guess too high');
+//         }
+//
+//     } while (randomNumber != guess);
+//     console.log('ayy you win');
+// }
+// guessGame();
+
+// function fruit(name, color, shape){
+//     this.name = name;
+//     this.color = color;
+//     this.shape = shape;
+//
+//     this.describe = function(){
+//         return 'A '+this.name+' is the color '+this.color+' and is the shape '+this.shape;
+//     }
+// }
+// let melon = new fruit('melon','green','round');
+// console.log(melon.describe());
+
+// for (var i = 1; i <= 100; i++){
+//     if (i % 15 == 0) console.log('FizzBuzz');
+//     else if (i % 3 == 0) console.log('Fizz');
+//     else if (i % 5 == 0) console.log('Buzz');
+//     else console.log(i);
+// }
