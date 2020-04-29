@@ -7,25 +7,25 @@
 // If they guess wrong, ask again (complete)
 // If they guess correctly, provide message stating so (complete)
 
-function guessGame(){
-    let randomNumber = Math.floor(Math.random() * 10); //if this was added in loop, it would re-generate a new number on each iteration of loop
-    // console.log(randomNumber); //logging to ensure above var works
-    let guess;
-
-    do {
-        guess = prompt('What\'s da secret number? Iz from 0 to 10'); //let guess doesn't work because of scoping; would be only available in body of do-while. Var could work but best practice is to initialize it outside of loop
-        console.log(guess);
-
-        if (randomNumber > guess){
-            console.log('guess is too low');
-        } else if (randomNumber < guess){
-            console.log('guess is too high');
-        }
-    } while (guess != randomNumber);
-    console.log('you done did it');
-}
-
-guessGame();
+// function guessGame(){
+//     let randomNumber = Math.floor(Math.random() * 10); //if this was added in loop, it would re-generate a new number on each iteration of loop
+//     // console.log(randomNumber); //logging to ensure above var works
+//     let guess;
+//
+//     do {
+//         guess = prompt('What\'s da secret number? Iz from 0 to 10'); //let guess doesn't work because of scoping; would be only available in body of do-while. Var could work but best practice is to initialize it outside of loop
+//         console.log(guess);
+//
+//         if (randomNumber > guess){
+//             console.log('guess is too low');
+//         } else if (randomNumber < guess){
+//             console.log('guess is too high');
+//         }
+//     } while (guess != randomNumber);
+//     console.log('you done did it');
+// }
+//
+// guessGame();
 
 
 
@@ -177,3 +177,41 @@ guessGame();
 //     else if (i % 5 == 0) console.log('Buzz');
 //     else console.log(i);
 // }
+
+//finding second to highest value of array:
+
+function nextBiggest(arr) {
+    let max = -Infinity, result = -Infinity;
+
+    for (const value of arr) {
+        const nr = Number(value)
+
+        if (nr > max) {
+            [result, max] = [max, nr] // save previous max
+        } else if (nr < max && nr > result) {
+            result = nr; // new second biggest
+        }
+    }
+
+    return result;
+}
+
+const arr = ['20','120','111','215','54','78'];
+console.log(nextBiggest(arr));
+//with sort:
+// var arr = ['20','120','111','215','54','78'];
+//
+// arr.sort(function(a,b){
+//     return b-a;
+// });
+//
+// console.log(arr[1]);
+
+
+//check if string is a palindrome
+const isPalindrome = (string) => {
+    const regularOrder = string;
+    const reverseOrder = regularOrder.split('').reverse().join('');
+    console.log(regularOrder === reverseOrder);
+}
+isPalindrome('holloh');
