@@ -215,3 +215,46 @@ const isPalindrome = (string) => {
     console.log(regularOrder === reverseOrder);
 }
 isPalindrome('holloh');
+
+function guessGame(){
+    let randomNum = Math.floor(Math.random() * 11);
+    let guess;
+
+    do {
+        guess = prompt('guess num from 1 to 10');
+
+        if (guess < randomNum){
+            console.log('guessed too low');
+        } else if (guess > randomNum){
+            console.log('guessed too high');
+        }
+    } while (guess != randomNum);
+    console.log('you win');
+}
+// guessGame()
+
+function fruit(name,color,shape){
+    this.name = name;
+    this.color = color;
+    this.shape = shape;
+
+    this.describe = function(){
+        return 'A '+this.name+' is the color '+this.color+' and is the shape '+this.shape;
+    }
+}
+let melon = new fruit('melon','green','round');
+console.log(melon.describe());
+
+for(var i = 0; i <= 100; i++){
+    if (i % 15 == 0) console.log('FizzBuzz');
+    else if (i % 3 == 0) console.log('Fizz');
+    else if (i % 5 == 0) console.log('Buzz');
+    else console.log(i);
+}
+
+const palindrome = (string2) => {
+    let standard = string2;
+    let reversed = string2.split('').reverse().join('');
+    console.log(standard === reversed);
+};
+palindrome('aha');
