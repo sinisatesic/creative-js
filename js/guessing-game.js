@@ -272,3 +272,15 @@ isPalindrome('holloh');
 //     console.log('ya win');
 // }
 // guessGame();
+
+function fruit(name, color, shape){
+    this.name = name;
+    this.color = color;
+    this.shape = shape;
+
+    this.describe = function(){
+        return 'A '+this.name+' is the color '+this.color+' and is the shape '+this.shape;
+    }
+}
+let melon = new fruit('melon','green','round');
+console.log(melon.describe());
