@@ -298,3 +298,5 @@ const isPalin = (string) => {
     console.log(regularOrder === reverseOrder);
 }
 isPalin('oww');
+
+//**********************//learn how to find fibonacci sequence up to 10 or so //**********************
