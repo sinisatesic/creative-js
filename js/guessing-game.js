@@ -180,24 +180,24 @@
 
 //finding second to highest value of array:
 
-function nextBiggest(arr) {
-    let max = -Infinity, result = -Infinity;
-
-    for (const value of arr) {
-        const nr = Number(value)
-
-        if (nr > max) {
-            [result, max] = [max, nr] // save previous max
-        } else if (nr < max && nr > result) {
-            result = nr; // new second biggest
-        }
-    }
-
-    return result;
-}
-
-const arr = ['20','120','111','215','54','78'];
-console.log(nextBiggest(arr));
+// function nextBiggest(arr) {
+//     let max = -Infinity, result = -Infinity;
+//
+//     for (const value of arr) {
+//         const nr = Number(value)
+//
+//         if (nr > max) {
+//             [result, max] = [max, nr] // save previous max
+//         } else if (nr < max && nr > result) {
+//             result = nr; // new second biggest
+//         }
+//     }
+//
+//     return result;
+// }
+//
+// const arr = ['20','120','111','215','54','78'];
+// console.log(nextBiggest(arr));
 //with sort:
 // var arr = ['20','120','111','215','54','78'];
 //
@@ -209,12 +209,12 @@ console.log(nextBiggest(arr));
 
 
 //check if string is a palindrome
-const isPalindrome = (string) => {
-    const regularOrder = string;
-    const reverseOrder = regularOrder.split('').reverse().join('');
-    console.log(regularOrder === reverseOrder);
-}
-isPalindrome('holloh');
+// const isPalindrome = (string) => {
+//     const regularOrder = string;
+//     const reverseOrder = regularOrder.split('').reverse().join('');
+//     console.log(regularOrder === reverseOrder);
+// }
+// isPalindrome('holloh');
 
 // function guessGame(){
 //     let randomNum = Math.floor(Math.random() * 11);
@@ -273,30 +273,38 @@ isPalindrome('holloh');
 // }
 // guessGame();
 
-// function fruit(name, color, shape){
+const isPalindrome = (string) => {
+    const regularOrder = string;
+    const reverseOrder = string.split('').reverse().join('');
+    console.log(regularOrder === reverseOrder);
+    // return regularOrder === reverseOrder;
+};
+isPalindrome("ahah");
+
+// const fruit = (name, color, shape) => {
 //     this.name = name;
 //     this.color = color;
 //     this.shape = shape;
 //
-//     this.describe = function(){
+//     this.describe = () => {
 //         return 'A '+this.name+' is the color '+this.color+' and is the shape '+this.shape;
 //     }
-// }
+// };
 // let melon = new fruit('melon','green','round');
 // console.log(melon.describe());
 
-for (var i = 1; i <= 100; i++){
-    if (i % 15 == 0) console.log('FizzBuzz');
-    else if (i % 3 == 0) console.log('Fizz');
-    else if (i % 5 == 0) console.log('Buzz');
-    else console.log(i);
-}
-
-const isPalin = (string) => {
-    regularOrder = string;
-    reverseOrder = regularOrder.split('').reverse().join('');
-    console.log(regularOrder === reverseOrder);
-}
-isPalin('oww');
+// for (var i = 1; i <= 100; i++){
+//     if (i % 15 == 0) console.log('FizzBuzz');
+//     else if (i % 3 == 0) console.log('Fizz');
+//     else if (i % 5 == 0) console.log('Buzz');
+//     else console.log(i);
+// }
+//
+// const isPalin = (string) => {
+//     regularOrder = string;
+//     reverseOrder = regularOrder.split('').reverse().join('');
+//     console.log(regularOrder === reverseOrder);
+// }
+// isPalin('oww');
 
 //**********************//learn how to find fibonacci sequence up to 10 or so //**********************
