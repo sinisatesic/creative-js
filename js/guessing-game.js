@@ -349,16 +349,46 @@
 //     else console.log(i);
 // }
 
+//
+// const fib = (n) => {
+//     if (n === 1){
+//         return [0, 1];
+//     } else {
+//         let s = fib(n - 1);
+//         s.push(s[s.length - 1] + s[s.length - 2]);
+//         return s;
+//     }
+// };
+// console.log(fib(10));
 
-const fib = (n) => {
-    if (n === 1){
-        return [0, 1];
-    } else {
-        let s = fib(n - 1);
-        s.push(s[s.length - 1] + s[s.length - 2]);
-        return s;
-    }
-};
-console.log(fib(10));
+// const fi = () => {
+//     let arr = [];
+//     let i;
+//
+//     for(i = 0; i < 10; i++){
+//         if(i == 0 || i == 1){ // this is for first two sequences/places of array
+//             arr.push(i);
+//         } else {
+//             arr.push(arr[i - 1] + arr[i - 2]); //this requires 2 indices to function properly, because of the i - 2 (second to last index of array)
+//         }
+//     }
+//     return arr;
+// };
+// console.log(fi());
 
 //**********************//learn how to find fibonacci sequence up to 10 or so //**********************
+
+const fib = () => {
+    let arr = [];
+    let i;
+
+    for(i = 0; i <= 10; i++){
+        if(i == 0 || i == 1){
+            arr.push(i);
+        } else {
+            arr.push(arr[i - 1] + arr[i - 2]);
+        }
+    }
+        return arr;
+};
+console.log(fib());
