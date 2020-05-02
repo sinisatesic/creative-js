@@ -382,11 +382,11 @@ const fib = () => {
     let arr = [];
     let i;
 
-    for(i = 0; i <= 10; i++){
-        if(i == 0 || i == 1){
-            arr.push(i);
+    for(i = 0; i <= 10; i++){ //conditional parameter will determine how far fib sequence goes
+        if(i == 0 || i == 1){ //if i is first iteration of 0 - 10, so 0 value iteration, or second iteration of 1, so 1 value of iteration
+            arr.push(i); //this will just push 0 and 1 to array to set platform for enough indices so else can proceed
         } else {
-            arr.push(arr[i - 1] + arr[i - 2]);
+            arr.push(arr[i - 1] + arr[i - 2]); // last iteration and iteration before last iteration being added (main premise of fib sequence)
         }
     }
         return arr;
