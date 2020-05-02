@@ -273,13 +273,13 @@
 // }
 // guessGame();
 
-const isPalindrome = (string) => {
-    const regularOrder = string;
-    const reverseOrder = string.split('').reverse().join('');
-    console.log(regularOrder === reverseOrder);
-    // return regularOrder === reverseOrder;
-};
-isPalindrome("ahah");
+// const isPalindrome = (string) => {
+//     const regularOrder = string;
+//     const reverseOrder = string.split('').reverse().join('');
+//     console.log(regularOrder === reverseOrder);
+//     // return regularOrder === reverseOrder;
+// };
+// isPalindrome("ahah");
 
 // const fruit = (name, color, shape) => {
 //     this.name = name;
@@ -306,5 +306,59 @@ isPalindrome("ahah");
 //     console.log(regularOrder === reverseOrder);
 // }
 // isPalin('oww');
+
+// function guessGame(){
+//     let randomNum = Math.floor(Math.random() * 11);
+//     let guess;
+//
+//     do {
+//         guess = prompt('pick num from 1 and 10');
+//         if(guess < randomNum){
+//             console.log('guess is too low');
+//         } else if (guess > randomNum){
+//             console.log('guess is too high');
+//         }
+//     } while (guess != randomNum);
+//     console.log('you win');
+// }
+// guessGame();
+
+// function fruit(name, color, shape){
+//     this.name = name;
+//     this.color = color;
+//     this.shape = shape;
+//
+//     this.describe = function(){
+//         return 'A '+this.name+' is the color '+this.color+' and is the shape '+this.shape;
+//     }
+// }
+// let melon = new fruit('melon','green','round');
+// console.log(melon.describe());
+
+// const isPalindrome = (string) => {
+//     let regularOrder = string;
+//     let reverseOrder = regularOrder.split('').reverse().join('');
+//     console.log(regularOrder === reverseOrder);
+// };
+// isPalindrome('woop');
+
+// for (var i = 1; i <= 100; i++){
+//     if (i % 15 == 0) console.log('FizzBuzz');
+//     else if (i % 3 == 0) console.log('Fizz');
+//     else if (i % 5 == 0) console.log('Buzz');
+//     else console.log(i);
+// }
+
+
+const fib = (n) => {
+    if (n === 1){
+        return [0, 1];
+    } else {
+        let s = fib(n - 1);
+        s.push(s[s.length - 1] + s[s.length - 2]);
+        return s;
+    }
+};
+console.log(fib(10));
 
 //**********************//learn how to find fibonacci sequence up to 10 or so //**********************
