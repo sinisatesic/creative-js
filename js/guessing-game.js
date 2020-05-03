@@ -497,12 +497,79 @@
 // let arr3 = arr1.concat(arr2).sort();
 // console.log(arr3);
 
-function randomPosEvenNum(){
-    var randomNum = Math.ceil(Math.random() * 100);
-    if (randomNum % 2 !== 0){
-        return randomPosEvenNum();//if random num is not even, it re-runs function
+// function randomPosEvenNum(){
+//     var randomNum = Math.ceil(Math.random() * 100);
+//     if (randomNum % 2 !== 0){
+//         return randomPosEvenNum();//if random num is not even, it re-runs function
+//     }
+//     return randomNum; //function keeps re-running until rand num, which is positive and even, is generated
+// }
+//
+// console.log(randomPosEvenNum());
+
+const isPal = (string) =>{
+    let regularOrder = string;
+    let reverseOrder = string.split('').reverse().join('');
+    return regularOrder === reverseOrder;
+};
+console.log(isPal('aha'));
+
+
+function fruit(name, color, shape){
+    this.name = name;
+    this.color = color;
+    this.shape = shape;
+
+    this.describe = function(){
+        return 'A '+this.name+' is the color '+this.color+' and is the shape '+this.shape;
     }
-    return randomNum; //function keeps re-running until rand num, which is positive and even, is generated
+}
+let melon = new fruit('melon','green','round');
+console.log(melon.describe());
+
+
+for(var i = 1; i <= 100; i++){
+    if (i % 15 == 0) console.log('FizzBuzz');
+    else if (i % 3 == 0) console.log('Fizz');
+    else if (i % 5 == 0) console.log('Buzz');
+    else console.log(i);
 }
 
-console.log(randomPosEvenNum());
+
+const fib = () => {
+    let arr = [];
+    let i;
+    for(i = 0; i <= 10; i++){
+        if(i == 0 || i == 1){
+            arr.push(i);
+        } else {
+            arr.push(arr[i - 1] + arr[i - 2]);
+        }
+    }
+    return arr;
+};
+console.log(fib());
+
+
+const guessGame = () =>{
+    let randomNum = Math.floor(Math.random() * 10);
+    let guess;
+
+    do{
+        guess = prompt('pick num from 1 to 10');
+        if(guess < randomNum) console.log('num is too low');
+        else if (guess > randomNum) console.log('num is too high');
+    } while (guess != randomNum);
+    console.log('ya win');
+};
+// guessGame();
+
+
+const randPosEvenNum = () => {
+    let randomNum = Math.floor(Math.random() * 100);
+    if (randomNum % 2 !== 0){
+        return randPosEvenNum();
+    }
+        return randomNum;
+};
+console.log(randPosEvenNum());
