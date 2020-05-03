@@ -445,14 +445,64 @@
 //     else console.log(i);
 // }
 
-function fruit(name, color, shape){
-    this.name = name;
-    this.color = color;
-    this.shape = shape;
+// function fruit(name, color, shape){
+//     this.name = name;
+//     this.color = color;
+//     this.shape = shape;
+//
+//     this.describe = function(){
+//         return 'A '+this.name+' is the color '+this.color+' and is the shape'+this.shape;
+//     }
+// }
+// let melon = new fruit('melon','green','round');
+// console.log(melon.describe());
 
-    this.describe = function(){
-        return 'A '+this.name+' is the color '+this.color+' and is the shape'+this.shape;
+// function foo() {
+//
+//     function bar() {
+//         setTimeout(
+//             () => console.log('Curly'),
+//             1000);
+//     }
+//
+//     console.log('Larry');
+//     return bar;
+// }
+// let x = foo();
+// x();
+// console.log('Moe');
+
+// const f = n => n <= 1 ? 1 : n * f(n - 1);
+// let g = f(4);
+
+// let event = {
+//     name: "Hot Dog and Burger Sunday",
+//     financials: {
+//         baseCost: "$19.99",
+//         discountsAvailable: false,
+//         maxCost: "$29.99"
+//     },
+//     subscribers: [
+//
+//     ]
+// }
+//
+// let eventPrice;
+//
+// const assignEvent = ({ financials: { baseCost: price}}) => eventPrice = price;
+// assignEvent(event);
+
+// let arr1 = ['asdf', 'bdfd', 'kjkj'];
+// let arr2 = ['cdfdf', 'eedf', 'zlkdfj'];
+// let arr3 = arr1.concat(arr2).sort();
+// console.log(arr3);
+
+function randomPosEvenNum(){
+    var randomNum = Math.ceil(Math.random() * 100);
+    if (randomNum % 2 !== 0){
+        return randomPosEvenNum();//if random num is not even, it re-runs function
     }
+    return randomNum; //function keeps re-running until rand num, which is positive and even, is generated
 }
-let melon = new fruit('melon','green','round');
-console.log(melon.describe());
+
+console.log(randomPosEvenNum());
