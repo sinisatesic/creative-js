@@ -598,3 +598,13 @@ const fib = () => {
     return arr;
 };
 console.log(fib());
+
+const rev = (string) =>{
+    let i;
+    let reversed = "";
+    for(i = string.length -1; i >= 0; i--){
+        reversed += string[i];
+    }
+    return reversed;
+};
+console.log(rev('ahh'));
