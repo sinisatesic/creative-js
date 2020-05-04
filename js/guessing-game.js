@@ -593,7 +593,7 @@ const fib = () => {
     let arr = [];
     let i;
     for(i = 0; i <= 10; i++){
-        ((i == 0 || i == 1) ? arr.push(i) : arr.push(arr[i - 1] + arr[i - 2]));
+        i == 0 || i == 1 ? arr.push(i) : arr.push(arr[i - 1] + arr[i - 2]);
     }
     return arr;
 };
