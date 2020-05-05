@@ -588,23 +588,54 @@
 // };
 // console.log(fib());
 
-//ternary of fib below
-const fib = () => {
-    let arr = [];
-    let i;
-    for(i = 0; i <= 10; i++){
-        i == 0 || i == 1 ? arr.push(i) : arr.push(arr[i - 1] + arr[i - 2]);
-    }
-    return arr;
-};
-console.log(fib());
+// //ternary of fib below
+// const fib = () => {
+//     let arr = [];
+//     let i;
+//     for(i = 0; i <= 10; i++){
+//         i == 0 || i == 1 ? arr.push(i) : arr.push(arr[i - 1] + arr[i - 2]);
+//     }
+//     return arr;
+// };
+// console.log(fib());
+//
+// const rev = (string) =>{
+//     let i;
+//     let reversed = "";
+//     for(i = string.length -1; i >= 0; i--){
+//         reversed += string[i];
+//     }
+//     return reversed;
+// };
+// console.log(rev('ahh'));
+//
+// // Write a function to return a double value for the average of all numbers in a passed down int array.
+// //
+// //
+// //
+// //
+// //
+// // 4:27
+// // my answer
+// // 4:27
+// function doubleAvg(numbers) {
+//     var sum = 0;
+//     for(var i = 0; i < numbers.length; i++){
+//         sum = sum + numbers[i];
+//     }
+//     return sum / numbers.length;
+// }
 
-const rev = (string) =>{
-    let i;
-    let reversed = "";
-    for(i = string.length -1; i >= 0; i--){
-        reversed += string[i];
+// write a function that takes in array of numbers and returns highest number of array
+function arrayHigh(array){
+    var highest = 0;
+
+    for(var i = 0; i < array.length; i++){
+        if (array[i] > highest){
+            highest = array[i];
+        }
     }
-    return reversed;
-};
-console.log(rev('ahh'));
+    return highest;
+}
+
+console.log(arrayHigh([1, 2, 3, 4, 5,9]));
