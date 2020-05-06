@@ -695,18 +695,18 @@ console.log(doubleAvg([5, 5, 5, 5, 5]));
 // }
 // console.log(fib());
 
-const fib = () => {
-    let arr = [];
-    for(let i = 0; i <= 10; i++){
-        if(i == 0 || i == 1){
-            arr.push(i);
-        } else {
-            arr.push(arr[i - 1] + arr[i - 2]);
-        }
-    }
-    return arr;
-};
-console.log(fib());
+// const fib = () => {
+//     let arr = [];
+//     for(let i = 0; i <= 10; i++){
+//         if(i == 0 || i == 1){
+//             arr.push(i);
+//         } else {
+//             arr.push(arr[i - 1] + arr[i - 2]);
+//         }
+//     }
+//     return arr;
+// };
+// console.log(fib());
 
 
 // function isPal(string) {
@@ -717,9 +717,23 @@ console.log(fib());
 //
 // console.log(isPal('aha'));
 
-const isPal = (string) => {
-    let regularOrder = string;
-    let reverseOrder = string.split('').reverse().join('');
-    return regularOrder === reverseOrder;
-};
-console.log(isPal('ahah'));
+// const isPal = (string) => {
+//     let regularOrder = string;
+//     let reverseOrder = string.split('').reverse().join('');
+//     return regularOrder === reverseOrder;
+// };
+// console.log(isPal('ahah'));
+
+function titleCase(str) {
+    words = str.toLowerCase().split(' ');
+
+    for(var i = 0; i < words.length; i++) {
+        var letters = words[i].split('');
+        letters[0] = letters[0].toUpperCase();
+        words[i] = letters.join('');
+    }
+    return words.join(' ');
+}
+
+console.log(titleCase("I'm a little tea pot"));
+
