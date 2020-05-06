@@ -618,24 +618,108 @@
 // // 4:27
 // // my answer
 // // 4:27
-// function doubleAvg(numbers) {
+// function doubleAvg(arr) {
 //     var sum = 0;
-//     for(var i = 0; i < numbers.length; i++){
-//         sum = sum + numbers[i];
+//     for(var i = 0; i < arr.length; i++){
+//         sum = sum + arr[i];
 //     }
-//     return sum / numbers.length;
+//     return sum / arr.length;
 // }
 
-// write a function that takes in array of numbers and returns highest number of array
-function arrayHigh(array){
-    var highest = 0;
+// console.log(doubleAvg([5, 5, 5, 5, 5]));
 
-    for(var i = 0; i < array.length; i++){
-        if (array[i] > highest){
-            highest = array[i];
+//above refactored to e6:
+
+const doubleAvg = (arr) => {
+    let sum = 0;
+
+    for(let i = 0; i < arr.length; i++){
+        sum += arr[i];
+    }
+    return sum / arr.length;
+};
+
+console.log(doubleAvg([5, 5, 5, 5, 5]));
+
+// write a function that takes in array of numbers and returns highest number of array
+// function arrayHigh(array){
+//     var highest = 0;
+//
+//     for(var i = 0; i < array.length; i++){
+//         if (array[i] > highest){
+//             highest = array[i];
+//         }
+//     }
+//     return highest;
+// }
+//
+// console.log(arrayHigh([1, 2, 3, 4, 5,9]));
+
+//above refactored for e6:
+
+// const arrayHigh = (array) => {
+//     let highest = 0;
+//
+//     for(let i = 0; i < array.length; i++){
+//         if(array[i] > highest){
+//             highest = array[i];
+//         }
+//     }
+//     return highest;
+// };
+// console.log(arrayHigh([1, 2, 3, 4, 5,9]));
+
+// let guessGame = () => {
+//     let randomNum = Math.floor(Math.random() * 11);
+//     let guess;
+//
+//     do {
+//         guess = prompt('pick num from 1 to 10');
+//         if(guess < randomNum) console.log('num too low');
+//         else if (guess > randomNum) console.log('num too high');
+//     } while (guess != randomNum);
+//     console.log('you win');
+// };
+// guessGame();
+
+// function fib(){
+//     let arr = [];
+//     for(var i = 0; i <= 10; i++){
+//         if(i == 0 || i == 1){
+//             arr.push(i);
+//         } else {
+//             arr.push(arr[i - 1] + arr[i - 2]);
+//         }
+//     }
+//     return arr;
+// }
+// console.log(fib());
+
+const fib = () => {
+    let arr = [];
+    for(let i = 0; i <= 10; i++){
+        if(i == 0 || i == 1){
+            arr.push(i);
+        } else {
+            arr.push(arr[i - 1] + arr[i - 2]);
         }
     }
-    return highest;
-}
+    return arr;
+};
+console.log(fib());
 
-console.log(arrayHigh([1, 2, 3, 4, 5,9]));
+
+// function isPal(string) {
+//     var regularOrder = string;
+//     var reverseOrder = string.split('').reverse().join('');
+//     return regularOrder === reverseOrder;
+// }
+//
+// console.log(isPal('aha'));
+
+const isPal = (string) => {
+    let regularOrder = string;
+    let reverseOrder = string.split('').reverse().join('');
+    return regularOrder === reverseOrder;
+};
+console.log(isPal('ahah'));
