@@ -667,20 +667,20 @@ console.log(doubleAvg([5, 5, 5, 5, 5]));
 //     }
 //     return highest;
 // };
-// console.log(arrayHigh([1, 2, 3, 4, 5,9]));
+console.log(arrayHigh([1, 2, 3, 4, 5,9]));
 
-// let guessGame = () => {
-//     let randomNum = Math.floor(Math.random() * 11);
-//     let guess;
-//
-//     do {
-//         guess = prompt('pick num from 1 to 10');
-//         if(guess < randomNum) console.log('num too low');
-//         else if (guess > randomNum) console.log('num too high');
-//     } while (guess != randomNum);
-//     console.log('you win');
-// };
-// guessGame();
+let guessGame = () => {
+    let randomNum = Math.floor(Math.random() * 11);
+    let guess;
+
+    do {
+        guess = prompt('pick num from 1 to 10');
+        if(guess < randomNum) console.log('num too low');
+        else if (guess > randomNum) console.log('num too high');
+    } while (guess != randomNum);
+    console.log('you win');
+};
+guessGame();
 
 // function fib(){
 //     let arr = [];
