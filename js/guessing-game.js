@@ -667,20 +667,20 @@ console.log(doubleAvg([5, 5, 5, 5, 5]));
 //     }
 //     return highest;
 // };
-console.log(arrayHigh([1, 2, 3, 4, 5,9]));
-
-let guessGame = () => {
-    let randomNum = Math.floor(Math.random() * 11);
-    let guess;
-
-    do {
-        guess = prompt('pick num from 1 to 10');
-        if(guess < randomNum) console.log('num too low');
-        else if (guess > randomNum) console.log('num too high');
-    } while (guess != randomNum);
-    console.log('you win');
-};
-guessGame();
+// console.log(arrayHigh([1, 2, 3, 4, 5,9]));
+//
+// let guessGame = () => {
+//     let randomNum = Math.floor(Math.random() * 11);
+//     let guess;
+//
+//     do {
+//         guess = prompt('pick num from 1 to 10');
+//         if(guess < randomNum) console.log('num too low');
+//         else if (guess > randomNum) console.log('num too high');
+//     } while (guess != randomNum);
+//     console.log('you win');
+// };
+// guessGame();
 
 // function fib(){
 //     let arr = [];
@@ -724,16 +724,29 @@ guessGame();
 // };
 // console.log(isPal('ahah'));
 
-function titleCase(str) {
-    words = str.toLowerCase().split(' ');
+// function titleCase(str) {
+//     words = str.toLowerCase().split(' ');
+//
+//     for(var i = 0; i < words.length; i++) {
+//         var letters = words[i].split('');
+//         letters[0] = letters[0].toUpperCase();
+//         words[i] = letters.join('');
+//     }
+//     return words.join(' ');
+// }
+//
+// console.log(titleCase("I'm a little tea pot"));
 
-    for(var i = 0; i < words.length; i++) {
-        var letters = words[i].split('');
-        letters[0] = letters[0].toUpperCase();
-        words[i] = letters.join('');
-    }
-    return words.join(' ');
+function guessGame(){
+    let randomNum = Math.floor(Math.random() * 11);
+    let guess;
+
+    do {
+        guess = prompt('pick num from 1 to 10');
+        if(guess < randomNum) console.log('guess too low');
+        else if(guess > randomNum) console.log('guess too high');
+    } while (guess != randomNum);
+    console.log('you win');
 }
-
-console.log(titleCase("I'm a little tea pot"));
+guessGame();
 
