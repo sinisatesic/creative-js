@@ -748,7 +748,7 @@ function guessGame(){
     } while (guess != randomNum);
     console.log('you win');
 }
-guessGame();
+// guessGame();
 
 function fruit(name,color,shape){
     this.name = name;
@@ -761,3 +761,24 @@ function fruit(name,color,shape){
 }
 let melon = new fruit('melon','green','round');
 console.log(melon.describe());
+
+const isPal = (string) => {
+    let regularOrder = string;
+    let reverseOrder = string.split('').reverse().join('');
+    return regularOrder === reverseOrder;
+};
+console.log(isPal('ahah'));
+
+const fib = () =>{
+    let arr = [];
+
+    for(let i = 0; i <= 10; i++){
+        if(i == 0 || i == 1){
+            arr.push(i);
+        } else {
+            arr.push(arr[i - 1] + arr[i - 2]);
+        }
+    }
+    return arr;
+};
+console.log(fib());
