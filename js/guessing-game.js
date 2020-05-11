@@ -846,3 +846,58 @@
 //     else if (i % 5 == 0) console.log('Buzz');
 //     else console.log(i);
 // }
+
+// function fib(){
+//     let arr = [];
+//
+//     for(let i = 0; i <= 12; i++){
+//         if(i == 0 || i == 1){
+//             arr.push(i);
+//         } else {
+//             arr.push(arr[i - 1] + arr[i - 2]);
+//         }
+//     }
+//     return arr;
+// }
+//
+// console.log(fib());
+
+// function fruit(name, color, shape){
+//     this.name = name;
+//     this.color = color;
+//     this.shape = shape;
+//
+//     this.describe = function(){
+//         return 'A '+this.name+' is the color '+this.color+' and is the shape '+this.shape;
+//     }
+// }
+// let melon = new fruit('melon','green','round');
+// console.log(melon.describe());
+
+// for(var i = 1; i <= 100; i++){
+//     if (i % 15 == 0) console.log('fizzbuzz');
+//     else if (i % 3 == 0) console.log('fizz');
+//     else if (i % 5 == 0) console.log('buzz');
+//     else console.log(i);
+// }
+
+// function isPal(string){
+//     let regularOrder = string;
+//     let reverseOrder = string.split('').reverse().join('');
+//     return regularOrder === reverseOrder;
+// }
+//
+// console.log(isPal('aha'));
+
+function isHighest(array){
+    let highest = 0;
+
+    for(var i = 0; i <= array.length; i++){
+        if(highest < array[i]){
+            highest = array[i];
+        }
+    }
+    return highest;
+}
+
+console.log(isHighest([1, 2, 3, 4]));
