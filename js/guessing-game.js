@@ -889,15 +889,30 @@
 //
 // console.log(isPal('aha'));
 
-function isHighest(array){
-    let highest = 0;
+// function isHighest(array){
+//     let highest = 0;
+//
+//     for(var i = 0; i <= array.length; i++){
+//         if(highest < array[i]){
+//             highest = array[i];
+//         }
+//     }
+//     return highest;
+// }
+//
+// console.log(isHighest([1, 2, 3, 4]));
+function specialReverse(s) {
+    let splitSentence = s.split(' ');
+    let reverse;
 
-    for(var i = 0; i <= array.length; i++){
-        if(highest < array[i]){
-            highest = array[i];
+        for(var i = 0; i < splitSentence.length; i++){
+        if (splitSentence[i].charAt(0) == "h"){
+            reverse = splitSentence[i].split('').reverse().join('');
+
         }
+    // return reverse;
     }
-    return highest;
+        return reverse;
 }
 
-console.log(isHighest([1, 2, 3, 4]));
+console.log(specialReverse("hello hone two"));
