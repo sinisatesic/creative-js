@@ -970,18 +970,25 @@
 // console.log(isHighest([1, 2, 3, 4, 5]));
 
 //
-const guessGame = () => {
-    let randomNum = Math.floor(Math.random() * 11);
-    let guess;
+// const guessGame = () => {
+//     let randomNum = Math.floor(Math.random() * 11);
+//     let guess;
+//
+//     do {
+//         guess = prompt('pick num from 0 to 10');
+//         if(guess < randomNum){
+//             console.log('guess too low');
+//         } else if (guess > randomNum){
+//             console.log('guess too high');
+//         }
+//     } while (guess != randomNum);
+//     console.log('you win');
+// };
+// guessGame();
 
-    do {
-        guess = prompt('pick num from 0 to 10');
-        if(guess < randomNum){
-            console.log('guess too low');
-        } else if (guess > randomNum){
-            console.log('guess too high');
-        }
-    } while (guess != randomNum);
-    console.log('you win');
-};
-guessGame();
+for(var i = 1; i <= 100; i++){
+    if (i % 15 == 0) console.log('FizzBuzz');
+    else if (i % 3 == 0) console.log('Fizz');
+    else if (i % 5 == 0) console.log('Buzz');
+    else console.log(i);
+}
