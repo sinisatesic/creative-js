@@ -1017,3 +1017,10 @@
 //     return arr;
 // };
 // console.log(fib());
+
+const palin = (string) => {
+    let regularOrder = string;
+    let reverseOrder = string.split('').reverse().join('');
+    return regularOrder === reverseOrder
+};
+console.log(palin('aha'));
