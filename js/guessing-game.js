@@ -969,16 +969,19 @@
 //
 // console.log(isHighest([1, 2, 3, 4, 5]));
 
-const firstLetterCap = (string) =>{
-    let substrings = string.split(' ');
-    let bucket = [];
-    for(let i = 0; i < substrings.length; i++){
-        if(substrings[i].charAt(0)){
-            bucket.push(substrings[i].toUpperCase());
-        } else {
-            bucket.push(substrings[i].toLowerCase());
+//
+const guessGame = () => {
+    let randomNum = Math.floor(Math.random() * 11);
+    let guess;
+
+    do {
+        guess = prompt('pick num from 0 to 10');
+        if(guess < randomNum){
+            console.log('guess too low');
+        } else if (guess > randomNum){
+            console.log('guess too high');
         }
-    }
-    return bucket.join(' ');
+    } while (guess != randomNum);
+    console.log('you win');
 };
-console.log(firstLetterCap('hello there'));
+guessGame();
