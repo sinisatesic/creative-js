@@ -1018,9 +1018,21 @@
 // };
 // console.log(fib());
 
-const palin = (string) => {
-    let regularOrder = string;
-    let reverseOrder = string.split('').reverse().join('');
-    return regularOrder === reverseOrder
-};
-console.log(palin('aha'));
+// const palin = (string) => {
+//     let regularOrder = string;
+//     let reverseOrder = string.split('').reverse().join('');
+//     return regularOrder === reverseOrder
+// };
+// console.log(palin('aha'));
+
+function isHighest(arr){
+    let highest = 0;
+    for(var i = 0; i < arr.length; i++){
+        if (arr[i] > highest){
+            highest = arr[i];
+        }
+    }
+    return highest;
+}
+
+console.log(isHighest([1, 2, 3, 4]));
