@@ -1,0 +1,29 @@
+.circle {
+    /*position: relative;*/
+    height: 300px;
+    width: 300px;
+    margin: auto;
+    border: 10px solid blue;
+    border-radius: 50%;
+    align-items: center;
+}
+.scircle {
+    /*position: absolute;*/
+    height: 200px;
+    width: 200px;
+    margin: auto;
+    margin-top: 13.5%;
+    /*top: 25%;*/
+    border-right: 10px solid transparent;
+    border-top: 10px solid #d4af37;
+    border-left: 10px solid #d4af37;
+    border-bottom: 10px solid #d4af37;
+    border-radius: 50%;
+    transform: rotate(-45deg);
+    animation: background-colors 4s ease-in-out infinite;
+}
+@keyframes background-colors {
+    0%{
+
+    }
+}
