@@ -3,26 +3,27 @@
     height: 300px;
     width: 300px;
     margin: auto;
-    border: 10px solid blue;
+    border: 17px solid blue;
     border-radius: 50%;
     align-items: center;
     animation: border-colors 5s ease-in-out infinite;
+    /*box-shadow: 0 7px 11px rgba(0,0,0,0.30), 0 5px 5px rgba(0,0,0,0.22);*/
 }
 @keyframes border-colors {
     0%{
         border-color: #34ebd8;
     }
     20%{
-        border-color: #69cdff;
+        border-color: #40f5e3;
     }
     40%{
-        border-color: #d4cdca;
+        border-color: #40f5a4;
     }
     60%{
-        border-color: #d4cdca;
+        border-color: #19adfc;
     }
     80%{
-        border-color: #69cdff;
+        border-color: #40f5a4;
     }
     100%{
         border-color: #34ebd8;
@@ -43,11 +44,12 @@
     border-radius: 50%;
     transform: rotate(-45deg);
     animation: rotation 2s ease-in-out infinite;
+    /*box-shadow: 0 7px 11px rgba(0,0,0,0.30), 0 5px 5px rgba(0,0,0,0.22);*/
 }
 @keyframes rotation {
     0% {
         transform: rotate(-45deg);
-        border-color: #ff8754;
+        border-color: #c6934b;
         border-right: 10px solid transparent;
     }
     /*20%{*/
@@ -68,7 +70,7 @@
     }
     100%{
         transform: rotate(315deg);
-        border-color: #ff8754;
+        border-color: #c6934b;
         border-right: 10px solid transparent;
     }
 }
