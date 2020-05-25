@@ -1037,19 +1037,15 @@
 //
 // console.log(isHighest([1, 2, 3, 4]));
 
-function countSyllables(str) {
-    let num = 0;
-    for(let i = 0; i < str.length; i++){
-        if((str.charAt[0] === str.charAt[2]) && (str.charAt[1] === str.charAt[3])){
-            num++;
-            console.log(str.charAt[0]);
-            console.log(str.charAt[2]);
-        }
-        console.log(str.charAt[0]);
-        console.log(str.charAt[2]);
-    }
-
-    return num/2;
-}
-
-console.log(countSyllables("lalala"));
+// function countSyllables(str) {
+//     let num = 0;
+//     for(let i = 0; i < str.length; i++){
+//         if((str.charAt[0] === str.charAt[2]) && (str.charAt[1] === str.charAt[3])){
+//             num++;
+//         }
+//     }
+//
+//     return num/2;
+// }
+//
+// console.log(countSyllables("lalala"));
