@@ -38,12 +38,12 @@
     margin-top: 13.5%;
     /*top: 25%;*/
     border-right: 10px solid transparent;
-    border-top: 10px solid #ff8754;
-    border-left: 10px solid #ff8754;
-    border-bottom: 10px solid #ff8754;
+    border-top: 10px solid #65fce1;
+    border-left: 10px solid #65fce1;
+    border-bottom: 10px solid #65fce1;
     border-radius: 50%;
     transform: rotate(-45deg);
-    animation: rotation 2s ease-in-out infinite;
+    animation: rotation 2s ease-in-out;
     /*box-shadow: 0 7px 11px rgba(0,0,0,0.30), 0 5px 5px rgba(0,0,0,0.22);*/
 }
 @keyframes rotation {

@@ -1025,14 +1025,31 @@
 // };
 // console.log(palin('aha'));
 
-function isHighest(arr){
-    let highest = 0;
-    for(var i = 0; i < arr.length; i++){
-        if (arr[i] > highest){
-            highest = arr[i];
+// function isHighest(arr){
+//     let highest = 0;
+//     for(var i = 0; i < arr.length; i++){
+//         if (arr[i] > highest){
+//             highest = arr[i];
+//         }
+//     }
+//     return highest;
+// }
+//
+// console.log(isHighest([1, 2, 3, 4]));
+
+function countSyllables(str) {
+    let num = 0;
+    for(let i = 0; i < str.length; i++){
+        if((str.charAt[0] === str.charAt[2]) && (str.charAt[1] === str.charAt[3])){
+            num++;
+            console.log(str.charAt[0]);
+            console.log(str.charAt[2]);
         }
+        console.log(str.charAt[0]);
+        console.log(str.charAt[2]);
     }
-    return highest;
+
+    return num/2;
 }
 
-console.log(isHighest([1, 2, 3, 4]));
+console.log(countSyllables("lalala"));
