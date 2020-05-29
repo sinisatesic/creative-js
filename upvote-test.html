@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+        .number {
+            display: inline-block;
+            text-align: center;
+        }
+
+        .vote {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .up-vote {
+            color: dimgray;
+            cursor: pointer;
+        }
+
+        .down-vote {
+            cursor: pointer;
+            color: dimgray;
+        }
+    </style>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
+
+<body>
+
+<div class="vote">
+    <span class="up-vote"><i class="fas fa-angle-up"></i></span>
+    <span class="number">0</span>
+    <span class="down-vote"><i class="fas fa-angle-down"></i></span>
+</div>
+<div class="vote">
+    <span class="up-vote"><i class="fas fa-angle-up"></i></span>
+    <span class="number">0</span>
+    <span class="down-vote"><i class="fas fa-angle-down"></i></span>
+</div>
+<div class="vote">
+    <span class="up-vote"><i class="fas fa-angle-up"></i></span>
+    <span class="number">0</span>
+    <span class="down-vote"><i class="fas fa-angle-down"></i></span>
+</div>
+<div class="vote">
+    <span class="up-vote"><i class="fas fa-angle-up"></i></span>
+    <span class="number">0</span>
+    <span class="down-vote"><i class="fas fa-angle-down"></i></span>
+</div>
+
+
+<script>
+    const up_vote_spans = document.getElementsByClassName('up-vote');
+    const down_vote_spans = document.getElementsByClassName('down-vote');
+    const count = document.getElementsByClassName('number');
+
+    let votes = [];
+
+    for (let i = 0; i < count.length; i += 1) {
+        const thisUpVoteSpan = up_vote_spans[i];
+        const thisDownVoteSpan = down_vote_spans[i];
+        votes[i] = { up: false, down: false };
+
+        thisUpVoteSpan.addEventListener('click', handleUpvote.bind(null, i), false);
+        thisDownVoteSpan.addEventListener('click', handleDownvote.bind(null, i), false);
+    }
+
+    function handleUpvote(i) {
+        const currentVote = votes[i];
+        const matchingUpSpan = up_vote_spans[i];
+        const matchingDownSpan = down_vote_spans[i];
+        const matchingCount = count[i];
+        const currentCount = parseInt(matchingCount.innerHTML);
+
+        if (currentVote.down) {
+            matchingCount.innerHTML = currentCount + 2;
+        } else if (currentVote.up === false) {
+            matchingCount.innerHTML = currentCount + 1;
+        } else {
+            matchingCount.innerHTML = currentCount - 1;
+        }
+        if (!currentVote.up) {
+            matchingUpSpan.style.color = "#3CBC8D";
+            matchingDownSpan.style.color = 'dimgray';
+            currentVote.up = true;
+            currentVote.down = false;
+        } else {
+            matchingUpSpan.style.color = 'dimgray';
+            currentVote.up = false;
+        }
+    }
+
+    function handleDownvote(i) {
+        const currentVote = votes[i];
+        const matchingUpSpan = up_vote_spans[i];
+        const matchingDownSpan = down_vote_spans[i];
+        const matchingCount = count[i];
+        const currentCount = parseInt(matchingCount.innerHTML);
+
+        if (currentVote.up) {
+            matchingCount.innerHTML = currentCount - 2;
+        } else if (currentVote.down === false) {
+            matchingCount.innerHTML = currentCount - 1;
+        } else {
+            matchingCount.innerHTML = currentCount + 1;
+        }
+        if (!currentVote.down) {
+            matchingDownSpan.style.color = "#3CBC8D";
+            matchingUpSpan.style.color = 'dimgray';
+            currentVote.down = true;
+            currentVote.up = false;
+        } else {
+            matchingDownSpan.style.color = 'dimgray';
+            currentVote.down = false;
+        }
+    }
+</script>
+</body>
+</html>
