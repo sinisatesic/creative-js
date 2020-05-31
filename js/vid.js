@@ -39,7 +39,7 @@ function shareScreen(){
             //create new Audio Context
             var context = new AudioContext();
 
-            //create new MediaStream destination. This is were our final stream will be.
+            //create new MediaStream destination. This is where our final stream will be.
             var audioDestinationNode = context.createMediaStreamDestination();
 
             //check to see if we have a screen stream and only then add it
