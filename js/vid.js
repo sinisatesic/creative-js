@@ -61,7 +61,7 @@ function shareScreen(){
                 //get the audio from the microphone stream
                 const micSource = context.createMediaStreamSource(micStream);
 
-                //set it's volume
+                //set its volume
                 const micGain = context.createGain();
                 micGain.gain.value = 1.0;
 
@@ -113,6 +113,7 @@ function onBtnRecordClicked() {
             downloadLink.href = videoURL;
             videoElement.src = videoURL;
             downloadLink.innerHTML = "Download video file";
+            // console.log(videoURL);
         }
 
         let chunks = [];
