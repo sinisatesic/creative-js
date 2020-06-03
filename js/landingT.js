@@ -119,12 +119,12 @@ t3.from(".circle", 1, { //will need to be id on home page
 let leftPara = new TimelineMax();
 
 leftPara.from(".left-home-para", 2, {
-    delay: 2.5,
+    delay: 2.61,
     opacity: 0,
     y: 20,
     ease: Expo.easeIn
 }).from(".left-home-para", 2, {
-    delay: 2.5,
+    delay: 2.61,
     opacity: 0,
     y: 20,
     ease: Expo.easeIn
@@ -133,12 +133,12 @@ leftPara.from(".left-home-para", 2, {
 let rightPara = new TimelineMax();
 
 rightPara.from(".right-home-para", 2, {
-    delay: 2.5,
+    delay: 2.61,
     opacity: 0,
     y: 20,
     ease: Expo.easeIn
 }).from(".right-home-para", 2, {
-    delay: 2.5,
+    delay: 2.61,
     opacity: 0,
     y: 20,
     ease: Expo.easeIn
