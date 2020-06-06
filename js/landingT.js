@@ -104,7 +104,7 @@ t3.from(".circle", 1, { //will need to be id on home page
     opacity: 0,
     x: -70,
     ease: Expo.easeOut
-}).from(".slide", 1, {
+}).from(".home-button", 1, {
     delay: 0.77,
     opacity: 0,
     y: -70,
