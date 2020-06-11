@@ -1056,6 +1056,126 @@
 // // }
 // //
 // // console.log(countArr([1, 2, 3, 4]));
+// function fruit(name, color, shape){
+//     this.name = name;
+//     this.color = color;
+//     this.shape = shape;
+//
+//     this.describe = function(){
+//         return 'A '+this.name+' is the color '+this.color+' and is the shape '+this.shape;
+//     }
+// }
+// let melon = new fruit('melon','green','round');
+// console.log(melon.describe());
+//
+// // function guessingGame(){
+// //     let randomNum = Math.floor(Math.random() * 11);
+// //     let guess;
+// //
+// //     do {
+// //         guess = prompt("pick num from 1 to 10");
+// //         if(guess < randomNum) console.log('guess too low');
+// //         else if (guess > randomNum) console.log('guess too high');
+// //     } while (guess != randomNum);
+// //     console.log('you win');
+// // }
+// // guessingGame();
+//
+// function highest(arr){
+//     let num = 0;
+//     for(var i = 0; i <= arr.length; i++){
+//         if (arr[i] > num){
+//             num = arr[i];
+//         }
+//     }
+//     return num;
+// }
+//
+// console.log(highest([1, 2, 3]));
+//
+// function isPal(str){
+//     let regularOrder = str;
+//     let reverseOrder = str.split('').reverse().join('');
+//     return regularOrder === reverseOrder;
+// }
+//
+// console.log(isPal('ahah'));
+//
+// function fib(){
+//     let bucket = [];
+//     for(var i = 0; i <= 10; i++){
+//         if(i == 0 || i == 1){
+//             bucket.push(i);
+//         } else {
+//             bucket.push(bucket[i - 1] + bucket[i - 2]);
+//         }
+//     }
+//     return bucket;
+// }
+//
+// console.log(fib());
+//
+//
+//
+//
+//
+//
+// const isPal = (string) => {
+//     let regular = string;
+//     let reverse = regular.split('').reverse().join('');
+//     return regular === reverse;
+// };
+// console.log(isPal('ahah'));
+//
+// const fib = () => {
+//     let arr = [];
+//     for(let i = 0; i <= 10; i++){
+//         if (i == 0 || i == 1){
+//             arr.push(i);
+//         } else {
+//             arr.push(arr[i - 1] + arr[i - 2]);
+//         }
+//     }
+//     return arr;
+// };
+// console.log(fib());
+//
+// const guessGame = () => {
+//     let guess;
+//     let randomNum = Math.floor(Math.random() * 11);
+//
+//     do{
+//
+//         guess = prompt('Pick num from 1 to 10');
+//         if(guess < randomNum){
+//             console.log('guess too low');
+//         } else if (guess > randomNum){
+//             console.log('guess too high');
+//         }
+//     } while (guess != randomNum);
+//     console.log('you win');
+// };
+// guessGame();
+
+for(let i = 1; i <= 100; i++){
+    if (i % 15 == 0) console.log('FizzBuzz');
+    else if (i % 3 == 0) console.log('Fizz');
+    else if (i % 5 == 0) console.log('Buzz');
+    else console.log(i);
+}
+
+// const fruit = (name, color, shape) => {
+//     this.name = name;
+//     this.color = color;
+//     this.shape = shape;
+//
+//     this.describe = function(){
+//         return 'A '+this.name+' is the color '+this.color+' and is the shape '+this.shape;
+//     }
+// }
+// let melon = new fruit('melon','green','round');
+// console.log(melon.describe());
+
 function fruit(name, color, shape){
     this.name = name;
     this.color = color;
@@ -1068,56 +1188,21 @@ function fruit(name, color, shape){
 let melon = new fruit('melon','green','round');
 console.log(melon.describe());
 
-// function guessingGame(){
-//     let randomNum = Math.floor(Math.random() * 11);
-//     let guess;
-//
-//     do {
-//         guess = prompt("pick num from 1 to 10");
-//         if(guess < randomNum) console.log('guess too low');
-//         else if (guess > randomNum) console.log('guess too high');
-//     } while (guess != randomNum);
-//     console.log('you win');
-// }
-// guessingGame();
-
-function highest(arr){
+const isHighest = (arr) => {
     let num = 0;
-    for(var i = 0; i <= arr.length; i++){
-        if (arr[i] > num){
+    for(let i = 0; i < arr.length; i++){
+        if (arr[i] > num) {
             num = arr[i];
         }
     }
     return num;
-}
+};
+console.log(isHighest([1, 2, 3, 4]));
 
-console.log(highest([1, 2, 3]));
 
-function isPal(str){
-    let regularOrder = str;
-    let reverseOrder = str.split('').reverse().join('');
-    return regularOrder === reverseOrder;
-}
 
-console.log(isPal('ahah'));
 
-function fib(){
-    let bucket = [];
-    for(var i = 0; i <= 10; i++){
-        if(i == 0 || i == 1){
-            bucket.push(i);
-        } else {
-            bucket.push(bucket[i - 1] + bucket[i - 2]);
-        }
-    }
-    return bucket;
-}
 
-console.log(fib());
 
-for(var i = 1; i <= 100; i++){
-    if(i % 15 == 0) console.log('FizzBuzz');
-    else if (i % 3 == 0) console.log('Fizz');
-    else if (i % 5 == 0) console.log('Buzz');
-    else console.log(i);
-}
+
+
