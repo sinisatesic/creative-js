@@ -1157,12 +1157,12 @@
 // };
 // guessGame();
 
-for(let i = 1; i <= 100; i++){
-    if (i % 15 == 0) console.log('FizzBuzz');
-    else if (i % 3 == 0) console.log('Fizz');
-    else if (i % 5 == 0) console.log('Buzz');
-    else console.log(i);
-}
+// for(let i = 1; i <= 100; i++){
+//     if (i % 15 == 0) console.log('FizzBuzz');
+//     else if (i % 3 == 0) console.log('Fizz');
+//     else if (i % 5 == 0) console.log('Buzz');
+//     else console.log(i);
+// }
 
 // const fruit = (name, color, shape) => {
 //     this.name = name;
@@ -1176,7 +1176,62 @@ for(let i = 1; i <= 100; i++){
 // let melon = new fruit('melon','green','round');
 // console.log(melon.describe());
 
-function fruit(name, color, shape){
+// function fruit(name, color, shape){
+//     this.name = name;
+//     this.color = color;
+//     this.shape = shape;
+//
+//     this.describe = function(){
+//         return 'A '+this.name+' is the color '+this.color+' and is the shape '+this.shape;
+//     }
+// }
+// let melon = new fruit('melon','green','round');
+// console.log(melon.describe());
+//
+// const isHighest = (arr) => {
+//     let num = 0;
+//     for(let i = 0; i < arr.length; i++){
+//         if (arr[i] > num) {
+//             num = arr[i];
+//         }
+//     }
+//     return num;
+// };
+// console.log(isHighest([1, 2, 3, 4]));
+//
+//
+//
+// for(let i = 1; i <= 100; i++){
+//     if (i % 3 == 0) console.log('Fizz');
+//     else if (i % 5 == 0) console.log('Buzz');
+//     else if (i % 15 == 0) console.log('FizzBuzz');
+//     else console.log(i);
+// }
+//
+//
+// const isHighest = (arr) => {
+//     let highest = 0;
+//     for(let i = 0; i < arr.length; i++){
+//         if(arr[i] > highest) highest = arr[i];
+//     }
+//     return highest;
+// };
+// isHighest([1,2,3,4]);
+//
+// const fib = () => {
+//     let arr = [];
+//     for(let i = 0; i <= 10; i++){
+//         if(i == 0 || i == 1){
+//             arr.push(i);
+//         } else {
+//             arr.push(arr[i - 1] + arr[i - 2]);
+//         }
+//     }
+//     return arr;
+// };
+// fib();
+
+function fruit(name,color,shape){
     this.name = name;
     this.color = color;
     this.shape = shape;
@@ -1187,36 +1242,6 @@ function fruit(name, color, shape){
 }
 let melon = new fruit('melon','green','round');
 console.log(melon.describe());
-
-const isHighest = (arr) => {
-    let num = 0;
-    for(let i = 0; i < arr.length; i++){
-        if (arr[i] > num) {
-            num = arr[i];
-        }
-    }
-    return num;
-};
-console.log(isHighest([1, 2, 3, 4]));
-
-
-
-for(let i = 1; i <= 100; i++){
-    if (i % 3 == 0) console.log('Fizz');
-    else if (i % 5 == 0) console.log('Buzz');
-    else if (i % 15 == 0) console.log('FizzBuzz');
-    else console.log(i);
-}
-
-
-const isHighest = (arr) => {
-    let highest = 0;
-    for(let i = 0; i < arr.length; i++){
-        if(arr[i] > highest) highest = arr[i];
-    }
-    return highest;
-};
-isHighest([1,2,3,4]);
 
 const fib = () => {
     let arr = [];
@@ -1229,9 +1254,45 @@ const fib = () => {
     }
     return arr;
 };
-fib();
+console.log(fib());
 
+const isHighest = (arr) => {
+    let highest = 0;
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] > highest){
+            highest = arr[i];
+        }
+    }
+    return highest;
+};
+console.log(isHighest([1, 2, 3, 4, 5]));
 
+const isPal = (string) => {
+    let regular = string;
+    let reverse = string.split('').reverse().join('');
+    return regular === reverse;
+};
+console.log(isPal('aha'));
+
+const guessGame = () => {
+    let guess;
+    let randomNum = Math.floor(Math.random() * 11);
+
+    do {
+        guess = prompt('Pick num from 1 to 10');
+        if(guess < randomNum) console.log('guess too low');
+        else if(guess > randomNum) console.log('guess too high');
+    } while (guess != randomNum);
+    console.log('you win');
+};
+guessGame();
+
+for(let i = 1; i <= 100; i++){
+    if(i % 15 == 0) console.log('FizzBuzz');
+    else if(i % 3 == 0) console.log('Fizz');
+    else if(i % 5 == 0) console.log('Buzz');
+    else console.log(i);
+}
 
 
 
