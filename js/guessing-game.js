@@ -1294,17 +1294,29 @@
 //     else console.log(i);
 // }
 
-const reverse = (string) => {
-    return string.split('').reverse().join('');
-}
-console.log(reverse('hello there'));
+// const reverse = (string) => {
+//     return string.split('').reverse().join('');
+// }
+// console.log(reverse('hello there'));
+//
+// const rev = (string) => {
+//     for(let i = string.length - 1; i > string.length; i--){
+//        return string[i];
+//     }
+// }
+// console.log(rev('hello there'));
 
-const rev = (string) => {
-    for(let i = string.length - 1; i > string.length; i--){
-       return string[i];
+const fib = () => {
+    let arr = [];
+    for(let i = 0; i <= 10; i++){
+        if(i == 0 || i == 1){
+            arr.push(i);
+        }
+        arr.push(arr[i - 1] + arr[i - 2]);
     }
-}
-console.log(rev('hello there'));
+    return arr;
+};
+console.log(fib([1, 2, 3, 4]));
 
 
 

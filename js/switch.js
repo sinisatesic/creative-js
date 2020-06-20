@@ -28,7 +28,7 @@ switch(convertedValue){
         alert('Kiwi is first food invented by the ocean boys');
         break;
     case 'banana':
-        alert('My girlfriend bought 12 bananas for no reason');
+        alert('My dog ate 12 bananas for no reason');
         break;
     case 'apple':
         alert('Depending on which apple you buy, you may have a good or bad time');
