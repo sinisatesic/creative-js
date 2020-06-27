@@ -1,0 +1,20 @@
+.party {
+    animation: pourty .5s infinite ease-in-out;
+    color: red;
+}
+@keyframes pourty {
+    0%{
+        transform: translate3d(0, 0, 0);
+    }
+    50%{
+        transform: translate3d(10px, 0, 0);
+    }
+    100%{
+        transform: translate3d(0, 0, 0);
+        color: #f7d000;
+    }
+}
+
+.transition {
+    transition: all 1s ease;
+}
