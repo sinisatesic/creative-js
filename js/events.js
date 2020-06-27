@@ -5,17 +5,17 @@ const todoNr = document.querySelector(".todo-nr b");
 
 const mainTitle = document.querySelector(".main-title");
 
-// const items = todoList.children;
+const items = todoList.children;
 //
 // //ATTACH AN EVENT LISTENER - CLICK, SCROLL, RESIZING THE BROWSER; event listener listens to one of these
-// button.addEventListener('click', function(){
-//     // console.log('NEW ITEM ADDED -(anonymous function event)- ');
-//     const newItem = document.createElement('li');
-//     newItem.classList.add('item');
-//     newItem.innerText = `Item ${items.length + 1}`;
-//     todoList.appendChild(newItem); //adding li tag item to todoList, which is ul with id todoList
-//     todoNr.innerText = items.length; //this is here so inner text updates itself with each event
-// }); //one time use: anonymous function
+button.addEventListener('click', function(){
+    // console.log('NEW ITEM ADDED -(anonymous function event)- ');
+    const newItem = document.createElement('li');
+    newItem.classList.add('item');
+    newItem.innerText = `Item ${items.length + 1}`;
+    todoList.appendChild(newItem); //adding li tag item to todoList, which is ul with id todoList
+    todoNr.innerText = items.length; //this is here so inner text updates itself with each event
+}); //one time use: anonymous function
 //
 // // function addItem(){
 // //     console.log('FUNCTION FOR EVENT');
