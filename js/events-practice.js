@@ -94,6 +94,19 @@ button.addEventListener('click', e => {
     numTasks.innerText = tasks.length;
 });
 
+const buttonTwo = document.querySelector('.second-submit');
+const arts = document.querySelector('.arts');
+const sections = arts.children;
+
+buttonTwo.addEventListener('click', e => {
+    const newSection = document.createElement('section');
+    newSection.innerText = `party time`;
+    newSection.classList.add('sec');
+    newSection.classList.add('testy');
+    arts.appendChild(newSection);
+
+})
+
 
 
 

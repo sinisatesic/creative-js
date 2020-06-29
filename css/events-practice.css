@@ -31,3 +31,28 @@
         transform: rotate(360deg);
     }
 }
+
+.sec {
+    font-size: 1.5em;
+    color: #ffffff;
+    background-color: purple;
+}
+
+.testy {
+    animation: shifty 2s infinite ease-in-out;
+    background-color: gold;
+}
+@keyframes shifty {
+    0%{
+        transform: translateY(0);
+        background-color: teal;
+    }
+    50%{
+        transform: translateY(-150px);
+        background-color: purple;
+    }
+    100%{
+        transform: translateY(0);
+        background-color: gold;
+    }
+}
