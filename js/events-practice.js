@@ -146,6 +146,19 @@ third.addEventListener('mouseenter', e => {
 //     numTasks.innerText = tasks.length;
 // });
 
+// const button = document.querySelector('.submit');
+// const list = document.querySelector('.list');
+// const tasks = list.children;
+// const numTasks = document.querySelector('.numTasks b');
+//
+// button.addEventListener('click', e => {
+//     const newTask = document.createElement('li');
+//     newTask.innerText = `task ${tasks.length + 1}`;
+//     newTask.classList.add('task');
+//     list.appendChild(newTask);
+//     numTasks.innerText = tasks.length;
+// });
+
 const button = document.querySelector('.submit');
 const list = document.querySelector('.list');
 const tasks = list.children;
