@@ -1487,3 +1487,14 @@ function fruit(name, color, shape){
 let melon = new fruit('melon', 'green', 'round');
 console.log(melon.describe());
 
+const isFib = () => {
+    let arr = [];
+    for(let i = 0; i <= 10; i++){
+        if(i == 0 || i == 1){
+            arr.push(i);
+        } else {
+            arr.push(arr[i - 1] + arr[i - 2]);
+        }
+    }
+    return arr;
+};
