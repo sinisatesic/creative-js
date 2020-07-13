@@ -1498,3 +1498,19 @@ const isFib = () => {
     }
     return arr;
 };
+
+let isPal = (string) => {
+    let reg = string;
+    let rev = string.split('').reverse().join('');
+    return reg === rev;
+};
+
+let isHighest = (arr) => {
+    let highest = 0;
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] > highest){
+            highest = arr[i];
+        }
+    }
+    return highest;
+};
