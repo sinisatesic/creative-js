@@ -42,14 +42,16 @@ function addTodo(e) {
     todoInput.value = "";
 }
 
-function deleteCheck(e) {
+function deleteCheck(e) { // better to remember as delete AND check - toggle
     const item = e.target;
     //Delete todo item
     if (item.classList[0] === 'trash-btn') {
+        //below targets parent element of trash button, so specific todo
         const todo = item.parentElement;
         //Animation when removing item
         todo.classList.add('fall');
         removeLocalTodos(todo);
+        //transitionend ensures after fall animation, todo is removed from list
         todo.addEventListener('transitionend', function () {
             todo.remove();
         });
@@ -150,5 +152,6 @@ function removeLocalTodos(todo){
     const todoIndex = todo.children[0].innerText;
     //^ inner text of first child of todo div
     todos.splice(todos.indexOf(todoIndex), 1);
+    //removes from array 1 todo (todos.indexOf(todoIndex)
     localStorage.setItem('todos', JSON.stringify(todos));
 }
