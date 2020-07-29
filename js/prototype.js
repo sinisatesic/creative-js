@@ -47,4 +47,9 @@ console.log(objName);
 
 //constructor functions are pretty common; new String, new Number, new Object, new Array, etc.
 
-
+const analyzeColor = (string) => {
+    if(string === 'blue') {return 'blue'}
+    else if(string === 'red') {return 'strawberrus'}
+    else if(string === 'cyan') {return 'cyananan'}
+    else {return 'idk man'}
+};
