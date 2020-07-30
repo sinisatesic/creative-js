@@ -1715,6 +1715,7 @@ function one(){
         alert('ya num plus 100 IS ' + parseInt(100 + prompty));
         if (prompty < 0) {
             alert('AND IZ NEGATIVE');
+            break;
         } else if (prompty > 0) {
             alert('AND IS POSITIVE');
             break;
@@ -1724,5 +1725,66 @@ function one(){
 }
 
 
+function showMultTable(num){
+    for(let i = 1; i <= 10; i++){
+        console.log(num + ' x ' + i + ' = ' + (num*i));
+    }
+}
+
+for(let i = 0; i < 10; i++){
+    let rand = Math.floor((Math.random() * 180) + 20);
+    rand % 2 === 0 ? console.log(rand + ' is even') : console.log(rand + ' is odd');
+}
+
+for(let i = 100; i >= 5; i-=5){
+    console.log(i);
+}
 
 
+let userNum = Number(prompt('pick odd njm from 1 to 50'));
+for(let i = 1; i <= 50; i+=2){
+    if (i === userNum){
+        console.log('skippy');
+        continue;
+    }else {
+        console.log(i);
+    }
+}
+do{
+
+    var userNumber = parseFloat(prompt("Please pick odd number from 1 to 50"));
+
+    if(userNumber < 1 && userNumber > 50){
+        alert('user number not between 1 and 50; please pick diff number');
+    } else if(userNumber % 2 === 0){
+        alert('user number not odd; please pick diff number');
+    } else if (isNaN(userNumber)){
+        alert('this is not a number; please pick number');
+    } else {
+        alert('Yes, you picked an odd number between 1 and 50');
+        break;
+    }
+
+} while(true);
+
+for(var i = 1; i < 10; i++){
+    console.log(i.toString().repeat(i));
+}
+
+let k = 2;
+while(k < 65536){
+    console.log(k);
+    k*=2;
+}
+
+let allCones = Math.floor(Math.random() * 50) + 50;
+do {
+    let conesBought = Math.floor(Math.random() * 5) + 1;
+    if (allCones >= conesBought){
+        allCones -= conesBought;
+        console.log(conesBought + ' cones sold');
+    } else if (allCones < conesBought){
+        console.log('Cannot sell you ' + conesBought + ', I only have '+allCones+' left')
+    }
+} while (allCones > 0);
+console.log('all cones sold');
