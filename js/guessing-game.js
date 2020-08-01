@@ -1576,49 +1576,247 @@
 //     else console.log(i);
 // }
 
-const guessGame = () => {
+// const guessGame = () => {
+//     let guess;
+//     let randomNum = Math.floor(Math.random() * 11);
+//
+//     do {
+//         guess = prompt('pick num from 1 to 10');
+//         if (guess < randomNum) {
+//             console.log('too low');
+//         } else if (guess > randomNum) {
+//             console.log('too high');
+//         }
+//     } while (guess != randomNum);
+//     console.log('you did it');
+// };
+//
+// function fruit(name, color, shape) {
+//     this.name = name;
+//     this.color = color;
+//     this.shape = shape;
+//
+//     this.describe = function () {
+//         return 'A ' + this.name + ' is the color ' + this.color + ' and is the shape ' + this.shape;
+//     }
+// }
+//
+// let melon = new fruit('melon', 'green', 'round');
+// console.log(melon.describe());
+//
+// const isHighest = (arr) => {
+//     let highest = 0;
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] > highest) {
+//             highest = arr[i];
+//         }
+//     }
+//     return highest;
+// };
+//
+// const isPal = (string) => {
+//     let reg = string;
+//     let rev = string.split('').reverse().join('');
+//     return reg === rev;
+// };
+//
+// const fib = () => {
+//     let arr = [];
+//     for (let i = 0; i <= 10; i++) {
+//         if (i == 0 || i == 1) {
+//             arr.push(i);
+//         } else {
+//             arr.push(arr[i - 1] + arr[i - 2]);
+//         }
+//     }
+//     return arr;
+// };
+//
+// for (let i = 0; i <= 100; i++) {
+//     if (i % 15 == 0) console.log('FizzBuzz');
+//     else if (i % 3 == 0) console.log('Fizz');
+//     else if (i % 5 == 0) console.log('Buzz');
+//     else console.log(i);
+// }
+// ;
+//
+// const poop = '';
+// switch (poop) {
+//     case 'a' :
+//         console.log('lsdkf');
+//         break;
+//     case 'b' :
+//         console.log('oiuoiu');
+//         break;
+//     default:
+//         console.log('pooop');
+// }
+//
+// document.addEventListener('DOMContentLoaded', analyzeColor);
+//
+// let userCol;
+//
+// function analyzeColor() {
+//     userCol = prompt('pick a color');
+//
+//     if (userCol == 'blue') {
+//         alert('blue abidibadidai');
+//     } else if (userCol == 'red') {
+//         alert('ladksfjkasdfj');
+//     } else if (userCol == 'purp') {
+//         alert('skurp');
+//     } else {
+//         alert('idk man');
+//     }
+// }
+//
+// analyzeColor();
+//
+//
+// function calculateTotal(luckNum, total) {
+//     // luckNum = Math.floor(Math.random() * 6);
+//     // total = prompt('total bill?');
+//
+//     if (luckNum == 0) {
+//         return total;
+//     } else if (luckNum == 1) {
+//         return total - (total * .10);
+//     } else if (luckNum == 2) {
+//         return total - (total * .25);
+//     } else if (luckNum == 3) {
+//         return total - (total * .35);
+//     } else if (luckNum == 4) {
+//         return total - (total * .5);
+//     } else if (luckNum == 5) {
+//         return total - total;
+//     }
+// }
+//
+// let luckyNum = Math.floor(Math.random() * 6);
+// let total = prompt('what total is');
+// alert('ya lucky waz ' + luckyNum);
+// alert('ya price be ' + total + ' befo, and now iz ' + calculateTotal(luckyNum, total));
+//
+//
+//
+// function one(){
+//     let ask = confirm('wanna number?');
+//     let prompty;
+//     while (ask === true){
+//         prompty = Number(prompt('enter num then'));
+//         if (isNaN(prompty)){
+//             alert('NaN fam');
+//             break;
+//         }else if (prompty % 2 == 0){
+//             alert('dis be even');
+//         }else if (prompty % 2 != 0){
+//             alert('dis be odd');
+//         }
+//         alert('ya num plus 100 IS ' + parseInt(100 + prompty));
+//         if (prompty < 0) {
+//             alert('AND IZ NEGATIVE');
+//             break;
+//         } else if (prompty > 0) {
+//             alert('AND IS POSITIVE');
+//             break;
+//         }
+//     }
+//     alert('ok bai');
+// }
+//
+//
+// function showMultTable(num){
+//     for(let i = 1; i <= 10; i++){
+//         console.log(num + ' x ' + i + ' = ' + (num*i));
+//     }
+// }
+//
+// for(let i = 0; i < 10; i++){
+//     let rand = Math.floor((Math.random() * 180) + 20);
+//     rand % 2 === 0 ? console.log(rand + ' is even') : console.log(rand + ' is odd');
+// }
+//
+// for(let i = 100; i >= 5; i-=5){
+//     console.log(i);
+// }
+//
+//
+// let userNum = Number(prompt('pick odd njm from 1 to 50'));
+// for(let i = 1; i <= 50; i+=2){
+//     if (i === userNum){
+//         console.log('skippy');
+//         continue;
+//     }else {
+//         console.log(i);
+//     }
+// }
+// do{
+//
+//     var userNumber = parseFloat(prompt("Please pick odd number from 1 to 50"));
+//
+//     if(userNumber < 1 && userNumber > 50){
+//         alert('user number not between 1 and 50; please pick diff number');
+//     } else if(userNumber % 2 === 0){
+//         alert('user number not odd; please pick diff number');
+//     } else if (isNaN(userNumber)){
+//         alert('this is not a number; please pick number');
+//     } else {
+//         alert('Yes, you picked an odd number between 1 and 50');
+//         break;
+//     }
+//
+// } while(true);
+//
+// for(var i = 1; i < 10; i++){
+//     console.log(i.toString().repeat(i));
+// }
+//
+// let k = 2;
+// while(k < 65536){
+//     console.log(k);
+//     k*=2;
+// }
+//
+// let allCones = Math.floor(Math.random() * 50) + 50;
+// do {
+//     let conesBought = Math.floor(Math.random() * 5) + 1;
+//     if (allCones >= conesBought){
+//         allCones -= conesBought;
+//         console.log(conesBought + ' cones sold');
+//     } else if (allCones < conesBought){
+//         console.log('Cannot sell you ' + conesBought + ', I only have '+allCones+' left')
+//     }
+// } while (allCones > 0);
+// console.log('all cones sold');
+
+// const guessGame = () => {
+//     let guess;
+//     let randomNum = Math.floor(Math.random() * 11);
+//
+//     do {
+//         guess = prompt('pick num from 1 to 10');
+//         if(guess < randomNum){
+//             console.log('num is too low');
+//         }else if(guess > randomNum){
+//             console.log('num is too high');
+//         }
+//     } while (guess !== randomNum);
+//     console.log('you did it!');
+// };
+
+function guessGame() {
     let guess;
     let randomNum = Math.floor(Math.random() * 11);
-
     do {
         guess = prompt('pick num from 1 to 10');
-        if (guess < randomNum) {
-            console.log('too low');
-        } else if (guess > randomNum) {
-            console.log('too high');
+        if (randomNum < guess) {
+            console.log('num is too high');
+        } else if (randomNum > guess) {
+            console.log('num is too low');
         }
-    } while (guess != randomNum);
-    console.log('you did it');
-};
-
-function fruit(name, color, shape) {
-    this.name = name;
-    this.color = color;
-    this.shape = shape;
-
-    this.describe = function () {
-        return 'A ' + this.name + ' is the color ' + this.color + ' and is the shape ' + this.shape;
-    }
+    } while (randomNum != guess);
+    console.log('you win');
 }
-
-let melon = new fruit('melon', 'green', 'round');
-console.log(melon.describe());
-
-const isHighest = (arr) => {
-    let highest = 0;
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] > highest) {
-            highest = arr[i];
-        }
-    }
-    return highest;
-};
-
-const isPal = (string) => {
-    let reg = string;
-    let rev = string.split('').reverse().join('');
-    return reg === rev;
-};
 
 const fib = () => {
     let arr = [];
@@ -1631,160 +1829,3 @@ const fib = () => {
     }
     return arr;
 };
-
-for (let i = 0; i <= 100; i++) {
-    if (i % 15 == 0) console.log('FizzBuzz');
-    else if (i % 3 == 0) console.log('Fizz');
-    else if (i % 5 == 0) console.log('Buzz');
-    else console.log(i);
-}
-;
-
-const poop = '';
-switch (poop) {
-    case 'a' :
-        console.log('lsdkf');
-        break;
-    case 'b' :
-        console.log('oiuoiu');
-        break;
-    default:
-        console.log('pooop');
-}
-
-document.addEventListener('DOMContentLoaded', analyzeColor);
-
-let userCol;
-
-function analyzeColor() {
-    userCol = prompt('pick a color');
-
-    if (userCol == 'blue') {
-        alert('blue abidibadidai');
-    } else if (userCol == 'red') {
-        alert('ladksfjkasdfj');
-    } else if (userCol == 'purp') {
-        alert('skurp');
-    } else {
-        alert('idk man');
-    }
-}
-
-analyzeColor();
-
-
-function calculateTotal(luckNum, total) {
-    // luckNum = Math.floor(Math.random() * 6);
-    // total = prompt('total bill?');
-
-    if (luckNum == 0) {
-        return total;
-    } else if (luckNum == 1) {
-        return total - (total * .10);
-    } else if (luckNum == 2) {
-        return total - (total * .25);
-    } else if (luckNum == 3) {
-        return total - (total * .35);
-    } else if (luckNum == 4) {
-        return total - (total * .5);
-    } else if (luckNum == 5) {
-        return total - total;
-    }
-}
-
-let luckyNum = Math.floor(Math.random() * 6);
-let total = prompt('what total is');
-alert('ya lucky waz ' + luckyNum);
-alert('ya price be ' + total + ' befo, and now iz ' + calculateTotal(luckyNum, total));
-
-
-
-function one(){
-    let ask = confirm('wanna number?');
-    let prompty;
-    while (ask === true){
-        prompty = Number(prompt('enter num then'));
-        if (isNaN(prompty)){
-            alert('NaN fam');
-            break;
-        }else if (prompty % 2 == 0){
-            alert('dis be even');
-        }else if (prompty % 2 != 0){
-            alert('dis be odd');
-        }
-        alert('ya num plus 100 IS ' + parseInt(100 + prompty));
-        if (prompty < 0) {
-            alert('AND IZ NEGATIVE');
-            break;
-        } else if (prompty > 0) {
-            alert('AND IS POSITIVE');
-            break;
-        }
-    }
-    alert('ok bai');
-}
-
-
-function showMultTable(num){
-    for(let i = 1; i <= 10; i++){
-        console.log(num + ' x ' + i + ' = ' + (num*i));
-    }
-}
-
-for(let i = 0; i < 10; i++){
-    let rand = Math.floor((Math.random() * 180) + 20);
-    rand % 2 === 0 ? console.log(rand + ' is even') : console.log(rand + ' is odd');
-}
-
-for(let i = 100; i >= 5; i-=5){
-    console.log(i);
-}
-
-
-let userNum = Number(prompt('pick odd njm from 1 to 50'));
-for(let i = 1; i <= 50; i+=2){
-    if (i === userNum){
-        console.log('skippy');
-        continue;
-    }else {
-        console.log(i);
-    }
-}
-do{
-
-    var userNumber = parseFloat(prompt("Please pick odd number from 1 to 50"));
-
-    if(userNumber < 1 && userNumber > 50){
-        alert('user number not between 1 and 50; please pick diff number');
-    } else if(userNumber % 2 === 0){
-        alert('user number not odd; please pick diff number');
-    } else if (isNaN(userNumber)){
-        alert('this is not a number; please pick number');
-    } else {
-        alert('Yes, you picked an odd number between 1 and 50');
-        break;
-    }
-
-} while(true);
-
-for(var i = 1; i < 10; i++){
-    console.log(i.toString().repeat(i));
-}
-
-let k = 2;
-while(k < 65536){
-    console.log(k);
-    k*=2;
-}
-
-let allCones = Math.floor(Math.random() * 50) + 50;
-do {
-    let conesBought = Math.floor(Math.random() * 5) + 1;
-    if (allCones >= conesBought){
-        allCones -= conesBought;
-        console.log(conesBought + ' cones sold');
-    } else if (allCones < conesBought){
-        console.log('Cannot sell you ' + conesBought + ', I only have '+allCones+' left')
-    }
-} while (allCones > 0);
-console.log('all cones sold');
