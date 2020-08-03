@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Arial Black";
+}
+i, svg {
+    pointer-events: none;
+    /*to ensure mute button can be clicked for intended functionality */
+}
+
+.kick-pad,
+.snare-pad,
+.hihat-pad,
+.perc-pad,
+.clap-pad,
+.tom-pad,
+.horn-pad {
+    width: 5rem;
+    height: 5rem;
+    margin: 1rem 0.5rem;
+    cursor: pointer;
+}
+.kick-pad {
+    background: lightblue;
+}
+.snare-pad {
+    background: violet;
+}
+.hihat-pad {
+    background: lightseagreen;
+}
+.perc-pad {
+    background: #ff6f47;
+}
+.clap-pad {
+    background: crimson;
+}
+.tom-pad {
+    background: #84ab67;
+}
+.horn-pad {
+    background: #d4c850;
+}
+
+/*when tiles are active their background color to change:*/
+.kick-pad.active {
+    background: blue;
+}
+.snare-pad.active {
+    background: purple;
+}
+.hihat-pad.active {
+    background: teal;
+}
+.perc-pad.active {
+    background: orangered;
+}
+.clap-pad.active {
+    background: darkred;
+}
+.tom-pad.active {
+    background: darkgreen;
+}
+.horn-pad.active {
+    background: goldenrod;
+}
+
+
+.kick-track,
+.snare-track,
+.hihat-track,
+.perc-track,
+.clap-track,
+.tom-track,
+.horn-track {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.sequencer {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.kick,
+.snare,
+.hihat,
+.perc,
+.clap,
+.tom,
+.horn {
+    display: flex;
+}
+
+.controls {
+    /*display: flex;*/
+    /*justify-content: space-between;*/
+    /*align-items: center;*/
+}
+.controls button {
+    padding: 1rem;
+    border: none;
+    background: grey;
+    cursor: pointer;
+    color: white;
+    font-size: 1rem;
+    transition: all .5s ease;
+}
+
+.pad {
+    transition: all .5s ease;
+}
+
+.play {
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    background: grey;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 3rem;
+}
+
+select {
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+
+
