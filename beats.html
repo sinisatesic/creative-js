@@ -64,7 +64,7 @@
     <div class="hihat-track">
         <div class="controls">
             <h1>Hihat</h1>
-            <button data-track="1" class="mute hihat-volume">
+            <button data-track="2" class="mute hihat-volume">
                 <i class="fas fa-volume-mute"></i>
             </button>
             <select name="hihat-select" id="hihat-select">
@@ -84,6 +84,102 @@
             <div class="pad hihat-pad b7"></div>
         </div>
     </div>
+<!--    beginning of perc track(s)-->
+    <div class="perc-track">
+    <div class="controls">
+        <h1>Percussion</h1>
+        <button data-track="3" class="mute perc-volume">
+            <i class="fas fa-volume-mute"></i>
+        </button>
+        <select name="perc-select" id="perc-select">
+            <option value="./sounds/perc-808.wav">808 Perc</option>
+            <option value="./sounds/perc-tambo.wav">Tambo Perc</option>
+            <option value="./sounds/perc-chirpy.wav">Cherp Perc</option>
+        </select>
+    </div>
+    <div class="perc">
+        <div class="pad perc-pad b0"></div>
+        <div class="pad perc-pad b1"></div>
+        <div class="pad perc-pad b2"></div>
+        <div class="pad perc-pad b3"></div>
+        <div class="pad perc-pad b4"></div>
+        <div class="pad perc-pad b5"></div>
+        <div class="pad perc-pad b6"></div>
+        <div class="pad perc-pad b7"></div>
+    </div>
+</div>
+<!--    beginning of clap track(s)-->
+    <div class="clap-track">
+        <div class="controls">
+            <h1>Clap</h1>
+            <button data-track="4" class="mute clap-volume">
+                <i class="fas fa-volume-mute"></i>
+            </button>
+            <select name="clap-select" id="clap-select">
+                <option value="./sounds/clap-808.wav">808 Clap</option>
+                <option value="./sounds/clap-tape.wav">Tape Clap</option>
+                <option value="./sounds/clap-analog.wav">Analog Clap</option>
+            </select>
+        </div>
+        <div class="clap">
+            <div class="pad clap-pad b0"></div>
+            <div class="pad clap-pad b1"></div>
+            <div class="pad clap-pad b2"></div>
+            <div class="pad clap-pad b3"></div>
+            <div class="pad clap-pad b4"></div>
+            <div class="pad clap-pad b5"></div>
+            <div class="pad clap-pad b6"></div>
+            <div class="pad clap-pad b7"></div>
+        </div>
+    </div>
+<!--    beginning of tom track(s)-->
+    <div class="tom-track">
+    <div class="controls">
+        <h1>Toms</h1>
+        <button data-track="5" class="mute tom-volume">
+            <i class="fas fa-volume-mute"></i>
+        </button>
+        <select name="tom-select" id="tom-select">
+            <option value="./sounds/tom-808.wav">808 Tom</option>
+            <option value="./sounds/tom-fm.wav">FM Tom</option>
+            <option value="./sounds/tom-analog.wav">Analog Tom</option>
+        </select>
+    </div>
+    <div class="tom">
+        <div class="pad tom-pad b0"></div>
+        <div class="pad tom-pad b1"></div>
+        <div class="pad tom-pad b2"></div>
+        <div class="pad tom-pad b3"></div>
+        <div class="pad tom-pad b4"></div>
+        <div class="pad tom-pad b5"></div>
+        <div class="pad tom-pad b6"></div>
+        <div class="pad tom-pad b7"></div>
+    </div>
+</div>
+<!--    beginning of air horn track(s)-->
+    <div class="horn-track">
+        <div class="controls">
+            <h1>Air Horns</h1>
+            <button data-track="6" class="mute horn-volume">
+                <i class="fas fa-volume-mute"></i>
+            </button>
+            <select name="horn-select" id="horn-select">
+                <option value="./sounds/horn-1.mp3">Dancehall Horn 1</option>
+                <option value="./sounds/horn-2.mp3">Dancehall Horn 2</option>
+                <option value="./sounds/horn-3.mp3">Dancehall Horn 3</option>
+            </select>
+        </div>
+        <div class="horn">
+            <div class="pad horn-pad b0"></div>
+            <div class="pad horn-pad b1"></div>
+            <div class="pad horn-pad b2"></div>
+            <div class="pad horn-pad b3"></div>
+            <div class="pad horn-pad b4"></div>
+            <div class="pad horn-pad b5"></div>
+            <div class="pad horn-pad b6"></div>
+            <div class="pad horn-pad b7"></div>
+        </div>
+    </div>
 
 </div>
 <!--above /div is end of sequencer-->
@@ -91,6 +187,10 @@
 <audio src="./sounds/kick-classic.wav" class="kick-sound"></audio>
 <audio src="./sounds/snare-808.wav" class="snare-sound"></audio>
 <audio src="./sounds/hihat-analog.wav" class="hihat-sound"></audio>
+<audio src="./sounds/perc-808.wav" class="perc-sound"></audio>
+<audio src="./sounds/clap-808.wav" class="clap-sound"></audio>
+<audio src="./sounds/tom-808.wav" class="tom-sound"></audio>
+<audio src="./sounds/horn-1.mp3" class="tom-sound"></audio>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
 <script src="js/beats.js"></script>
