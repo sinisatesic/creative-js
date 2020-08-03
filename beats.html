@@ -11,6 +11,88 @@
 
 <body>
 
+<div class="sequencer">
+<!--    beginning of kick track(s)-->
+    <div class="kick-track">
+        <div class="controls">
+            <h1>Kick</h1>
+            <button data-track="0" class="mute kick-volume">
+                <i class="fas fa-volume-mute"></i>
+            </button>
+            <select name="kick-select" id="kick-select">
+                <option value="./sounds/kick-classic.wav">CLassic Kick</option>
+                <option value="./sounds/kick-newwave.wav">New-wave Kick</option>
+                <option value="./sounds/kick-thump.wav">Thump Kick</option>
+            </select>
+        </div>
+        <div class="kick">
+            <div class="pad kick-pad b0"></div>
+            <div class="pad kick-pad b1"></div>
+            <div class="pad kick-pad b2"></div>
+            <div class="pad kick-pad b3"></div>
+            <div class="pad kick-pad b4"></div>
+            <div class="pad kick-pad b5"></div>
+            <div class="pad kick-pad b6"></div>
+            <div class="pad kick-pad b7"></div>
+        </div>
+    </div>
+<!--    beginning of snare track(s)-->
+    <div class="snare-track">
+        <div class="controls">
+            <h1>Snare</h1>
+            <button data-track="1" class="mute snare-volume">
+                <i class="fas fa-volume-mute"></i>
+            </button>
+            <select name="snare-select" id="snare-select">
+                <option value="./sounds/snare-808.wav">808 Snare</option>
+                <option value="./sounds/snare-modular.wav">Modular Snare</option>
+                <option value="./sounds/snare-sumo.wav">Sumo Snare</option>
+            </select>
+        </div>
+        <div class="snare">
+            <div class="pad snare-pad b0"></div>
+            <div class="pad snare-pad b1"></div>
+            <div class="pad snare-pad b2"></div>
+            <div class="pad snare-pad b3"></div>
+            <div class="pad snare-pad b4"></div>
+            <div class="pad snare-pad b5"></div>
+            <div class="pad snare-pad b6"></div>
+            <div class="pad snare-pad b7"></div>
+        </div>
+    </div>
+<!--    beginning of hihat track(s)-->
+    <div class="hihat-track">
+        <div class="controls">
+            <h1>Hihat</h1>
+            <button data-track="1" class="mute hihat-volume">
+                <i class="fas fa-volume-mute"></i>
+            </button>
+            <select name="hihat-select" id="hihat-select">
+                <option value="./sounds/hihat-reso.wav">Reso Hihat</option>
+                <option value="./sounds/hihat-808.wav">808 Hihat</option>
+                <option value="./sounds/hihat-analog.wav">Analog Hihat</option>
+            </select>
+        </div>
+        <div class="hihat">
+            <div class="pad hihat-pad b0"></div>
+            <div class="pad hihat-pad b1"></div>
+            <div class="pad hihat-pad b2"></div>
+            <div class="pad hihat-pad b3"></div>
+            <div class="pad hihat-pad b4"></div>
+            <div class="pad hihat-pad b5"></div>
+            <div class="pad hihat-pad b6"></div>
+            <div class="pad hihat-pad b7"></div>
+        </div>
+    </div>
+
+</div>
+<!--above /div is end of sequencer-->
+<button class="play">Play</button>
+<audio src="./sounds/kick-classic.wav" class="kick-sound"></audio>
+<audio src="./sounds/snare-808.wav" class="snare-sound"></audio>
+<audio src="./sounds/hihat-analog.wav" class="hihat-sound"></audio>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
 <script src="js/beats.js"></script>
 </body>
 </html>
