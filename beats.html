@@ -6,10 +6,13 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/beats.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap" rel="stylesheet">
     <title>SLAP DA BASS</title>
 </head>
 
 <body>
+
+<h1 class="title">Slappin' da bass</h1>
 
 <div class="sequencer">
 <!--    beginning of kick track-->
@@ -87,7 +90,7 @@
 <!--    beginning of perc track-->
     <div class="perc-track">
     <div class="controls">
-        <h1>Percussion</h1>
+        <h1>Perc</h1>
         <button data-track="3" class="mute perc-volume">
             <i class="fas fa-volume-mute"></i>
         </button>
@@ -180,6 +183,30 @@
             <div class="pad horn-pad b7"></div>
         </div>
     </div>
+<!--    beginning of strings track-->
+    <div class="string-track">
+        <div class="controls">
+            <h1>Strings</h1>
+            <button data-track="7" class="mute string-volume">
+                <i class="fas fa-volume-mute"></i>
+            </button>
+            <select name="string-select" id="string-select">
+                <option value="./sounds/string1.mp3">Strings/Orch 1</option>
+                <option value="./sounds/string2.mp3">Strings/Orch 2</option>
+                <option value="./sounds/string3.mp3">Strings/Orch 3</option>
+            </select>
+        </div>
+        <div class="string">
+            <div class="pad string-pad b0"></div>
+            <div class="pad string-pad b1"></div>
+            <div class="pad string-pad b2"></div>
+            <div class="pad string-pad b3"></div>
+            <div class="pad string-pad b4"></div>
+            <div class="pad string-pad b5"></div>
+            <div class="pad string-pad b6"></div>
+            <div class="pad string-pad b7"></div>
+        </div>
+    </div>
     <button class="play">Play</button>
     <div class="tempo">
         <input type="range" class="tempo-change" max="300" min="20" value="150">
@@ -189,13 +216,14 @@
 </div>
 <!--above /div is end of sequencer-->
 
-<audio src="./sounds/kick-classic.wav" class="kick-sound"></audio>
-<audio src="./sounds/snare-808.wav" class="snare-sound"></audio>
-<audio src="./sounds/hihat-analog.wav" class="hihat-sound"></audio>
-<audio src="./sounds/perc-808.wav" class="perc-sound"></audio>
-<audio src="./sounds/clap-808.wav" class="clap-sound"></audio>
-<audio src="./sounds/tom-808.wav" class="tom-sound"></audio>
-<audio src="./sounds/horn-1.mp3" class="horn-sound"></audio>
+<audio src=".sounds/kick-classic.wav" class="kick-sound"></audio>
+<audio src=".sounds/snare-808.wav" class="snare-sound"></audio>
+<audio src=".sounds/hihat-analog.wav" class="hihat-sound"></audio>
+<audio src=".sounds/perc-808.wav" class="perc-sound"></audio>
+<audio src=".sounds/clap-808.wav" class="clap-sound"></audio>
+<audio src=".sounds/tom-808.wav" class="tom-sound"></audio>
+<audio src=".sounds/horn-1.mp3" class="horn-sound"></audio>
+<audio src=".sounds/string1.mp3" class="string-sound"></audio>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
 <script src="js/beats.js"></script>

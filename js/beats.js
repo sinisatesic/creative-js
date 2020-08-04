@@ -12,6 +12,7 @@ class Kit {
         this.currentClap = './sounds/clap-808.wav';
         this.currentTom = './sounds/tom-808.wav';
         this.currentHorn = './sounds/horn-1.mp3';
+        this.currentString = './sounds/string1.mp3';
 
         this.kickAudio = document.querySelector('.kick-sound'); //grabs audio tag/sound file for kick
         this.snareAudio = document.querySelector('.snare-sound');
@@ -20,6 +21,7 @@ class Kit {
         this.clapAudio = document.querySelector('.clap-sound');
         this.tomAudio = document.querySelector('.tom-sound');
         this.hornAudio = document.querySelector('.horn-sound');
+        this.stringAudio = document.querySelector('.string-sound');
 
         this.index = 0; //will track the tracks
 
@@ -46,7 +48,6 @@ class Kit {
                 if (bar.classList.contains('kick-pad')) {
                     this.kickAudio.currentTime = 0; //set current time of this audio back to 0; each time sound is played
                     this.kickAudio.play();
-                    // this.classList.toggle('jump');
                 }
                 if (bar.classList.contains('snare-pad')) {
                     this.snareAudio.currentTime = 0;
@@ -71,6 +72,10 @@ class Kit {
                 if (bar.classList.contains('horn-pad')) {
                     this.hornAudio.currentTime = 0;
                     this.hornAudio.play();
+                }
+                if (bar.classList.contains('string-pad')) {
+                    this.stringAudio.currentTime = 0;
+                    this.stringAudio.play();
                 }
             }
         });
@@ -126,6 +131,9 @@ class Kit {
             case "horn-select":
                 this.hornAudio.src = selectionValue;
                 break;
+            case "string-select":
+                this.stringAudio.src = selectionValue;
+                break;
         }
     }
     mute(e){
@@ -155,6 +163,9 @@ class Kit {
                 case "6":
                     this.hornAudio.volume = 0;
                     break;
+                case "7":
+                    this.stringAudio.volume = 0;
+                    break;
             }
         } else {
             switch(muteIndex){ // if muted, change target audio to have value
@@ -178,6 +189,9 @@ class Kit {
                     break;
                 case "6":
                     this.hornAudio.volume = 1;
+                    break;
+                case "7":
+                    this.stringAudio.volume = 1;
                     break;
             }
         }
