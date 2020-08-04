@@ -3,6 +3,14 @@ class Kit {
         this.pads = document.querySelectorAll('.pad'); //grabs each individual pad
         this.playBtn = document.querySelector('.play');
 
+        this.currentKick = './sounds/kick-classic.wav';
+        this.currentSnare = './sounds/snare-808.wav';
+        this.currentHihat = './sounds/hihat-analog.wav';
+        this.currentPerc = './sounds/perc-808.wav';
+        this.currentClap = './sounds/clap-808.wav';
+        this.currentTom = './sounds/tom-808.wav';
+        this.currentHorn = './sounds/horn-1.mp3';
+
         this.kickAudio = document.querySelector('.kick-sound'); //grabs audio tag/sound file for kick
         this.snareAudio = document.querySelector('.snare-sound');
         this.hihatAudio = document.querySelector('.hihat-sound');
@@ -16,6 +24,8 @@ class Kit {
         this.bpm = 150;
 
         this.isPlaying = null;
+
+        this.selects = document.querySelectorAll('select');
     }
 
     activePad() {
@@ -88,9 +98,41 @@ class Kit {
             this.playBtn.classList.remove('active');
         }
     }
+    changeSound(e){ //want to grab event
+        // console.log(e); //will log event
+        const selectionName = e.target.name;
+        const selectionValue = e.target.value; //will return actual source (sound file in sounds directory)
+        // console.log(selectionName); //ensuring selection of proper track
+        switch(selectionName){ //checking which track is clicked on, then ensure source is whatever value is in that input
+            case "kick-select":
+                this.kickAudio.src = selectionValue;
+                break;
+            case "snare-select":
+                this.snareAudio.src = selectionValue;
+                break;
+            case "hihat-select":
+                this.hihatAudio.src = selectionValue;
+                break;
+            case "perc-select":
+                this.percAudio.src = selectionValue;
+                break;
+            case "clap-select":
+                this.clapAudio.src = selectionValue;
+                break;
+            case "tom-select":
+                this.tomAudio.src = selectionValue;
+                break;
+            case "horn-select":
+                this.hornAudio.src = selectionValue;
+                break;
+        }
+
+    }
 }
 
 const drumKit = new Kit();
+
+// Event Listeners:
 
 drumKit.pads.forEach(pad => {
     pad.addEventListener('click', drumKit.activePad);
@@ -102,4 +144,10 @@ drumKit.pads.forEach(pad => {
 drumKit.playBtn.addEventListener('click', function () {
     drumKit.updateBtn();
     drumKit.start(); //invokes start function, as well as repeat inherited in it
+});
+
+drumKit.selects.forEach(select => {
+    select.addEventListener('change', function(e){ //need call-back function here otherwise it will automatically be invoked
+        drumKit.changeSound(e);
+    });
 });
