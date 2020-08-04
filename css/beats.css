@@ -136,5 +136,14 @@ select {
     font-size: 1rem;
 }
 
+/*below are keyframes for playTrack animation in repeat function*/
+@keyframes playTrack {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
 
 
