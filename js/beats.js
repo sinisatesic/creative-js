@@ -1,7 +1,9 @@
 class Kit {
     constructor() {
         this.pads = document.querySelectorAll('.pad'); //grabs each individual pad
+
         this.playBtn = document.querySelector('.play');
+        this.muteBtns = document.querySelectorAll('.mute');
 
         this.currentKick = './sounds/kick-classic.wav';
         this.currentSnare = './sounds/snare-808.wav';
@@ -126,7 +128,60 @@ class Kit {
                 this.hornAudio.src = selectionValue;
                 break;
         }
-
+    }
+    mute(e){
+        // console.log(e);
+        const muteIndex = e.target.getAttribute('data-track');
+        e.target.classList.toggle('active');
+        if(e.target.classList.contains('active')){ // depending on data-track number set in html, mute target audio; if active, mute it
+            switch(muteIndex) {
+                case "0":
+                    this.kickAudio.volume = 0;
+                    break;
+                case "1":
+                    this.snareAudio.volume = 0;
+                    break;
+                case "2":
+                    this.hihatAudio.volume = 0;
+                    break;
+                case "3":
+                    this.percAudio.volume = 0;
+                    break;
+                case "4":
+                    this.clapAudio.volume = 0;
+                    break;
+                case "5":
+                    this.tomAudio.volume = 0;
+                    break;
+                case "6":
+                    this.hornAudio.volume = 0;
+                    break;
+            }
+        } else {
+            switch(muteIndex){ // if muted, change target audio to have value
+                case "0":
+                    this.kickAudio.volume = 1;
+                    break;
+                case "1":
+                    this.snareAudio.volume = 1;
+                    break;
+                case "2":
+                    this.hihatAudio.volume = 1;
+                    break;
+                case "3":
+                    this.percAudio.volume = 1;
+                    break;
+                case "4":
+                    this.clapAudio.volume = 1;
+                    break;
+                case "5":
+                    this.tomAudio.volume = 1;
+                    break;
+                case "6":
+                    this.hornAudio.volume = 1;
+                    break;
+            }
+        }
     }
 }
 
@@ -151,3 +206,9 @@ drumKit.selects.forEach(select => {
         drumKit.changeSound(e);
     });
 });
+
+drumKit.muteBtns.forEach(btn => {
+    btn.addEventListener('click', function(e){
+        drumKit.mute(e);
+    })
+})

@@ -136,6 +136,10 @@ select {
     font-size: 1rem;
 }
 
+.mute.active {
+    background: lightgrey;
+}
+
 /*below are keyframes for playTrack animation in repeat function*/
 @keyframes playTrack {
     from {
