@@ -140,6 +140,27 @@ select {
     background: lightgrey;
 }
 
+.tempo {
+    margin: 3rem;
+    width: 25%;
+}
+.tempo p {
+    font-size: 1.5rem;
+    margin: 2rem;
+    text-align: center;
+}
+.tempo-change {
+    padding: 0.2rem;
+    -webkit-appearance: none;
+    margin: 1rem 0rem;
+    width: 100%;
+    position: relative;
+    background-color: grey;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+
+
 /*below are keyframes for playTrack animation in repeat function*/
 @keyframes playTrack {
     from {

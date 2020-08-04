@@ -28,13 +28,13 @@ class Kit {
         this.isPlaying = null;
 
         this.selects = document.querySelectorAll('select');
-    }
 
+        this.tempoChange = document.querySelector('.tempo-change');
+    }
     activePad() {
         // console.log(this); //ensuring its pad that's clicked
         this.classList.toggle('active');
     }
-
     repeat() {
         let step = this.index % 8; //from 0 index to last (8th) pad
         // console.log(`step: ${step} and index: ${this.index}`);
@@ -76,7 +76,6 @@ class Kit {
         });
         this.index++; //with above log, will see logs of 0 - 7 via 1 sec increments
     }
-
     start() {
         const interval = (60 / this.bpm) * 1000;
         //check if it's playing:
@@ -183,6 +182,20 @@ class Kit {
             }
         }
     }
+    changeTempo(e){
+        // console.log(e);
+        const tempoText = document.querySelector('.tempo-nr');
+        this.bpm = e.target.value; //change value of bpm
+        tempoText.innerText = e.target.value; //change text of selected tempo
+    }
+    updateTempo(){
+        clearInterval(this.isPlaying); //resetting
+        this.isPlaying = null; // if interval not cleared and restarted, bpm will not update
+        const playBtn = document.querySelector('.play');
+        if (playBtn.classList.contains('active')){ // if play button NOT active, tracks will not start even if tempo being changed
+            this.start(); // runs again after reset
+        }
+    }
 }
 
 const drumKit = new Kit();
@@ -211,4 +224,12 @@ drumKit.muteBtns.forEach(btn => {
     btn.addEventListener('click', function(e){
         drumKit.mute(e);
     })
-})
+});
+
+drumKit.tempoChange.addEventListener('input', function(e){ //'input' if logged will show multiple times; 'change' will only show when click is let go
+    drumKit.changeTempo(e);
+});
+
+drumKit.tempoChange.addEventListener('change', function(e){ //'input' if logged will show multiple times; 'change' will only show when click is let go
+    drumKit.updateTempo(e);
+});
