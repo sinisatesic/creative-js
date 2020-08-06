@@ -223,6 +223,19 @@ third.addEventListener('mouseenter', e => {
 //     list.appendChild(newTask);
 //     numTasks.innerText = tasks.length;
 // });
+//
+// const button = document.querySelector('.submit');
+// const list = document.querySelector('.list');
+// const tasks = list.children;
+// const numTasks = document.querySelector('.numTasks b');
+//
+// button.addEventListener('click', e => {
+//     const newTask = document.createElement('li');
+//     newTask.innerText = `tasks ${tasks.length + 1}`;
+//     newTask.classList.add('tasks');
+//     list.appendChild(newTask);
+//     numTasks.innerText = tasks.length;
+// });
 
 const button = document.querySelector('.submit');
 const list = document.querySelector('.list');
@@ -232,7 +245,7 @@ const numTasks = document.querySelector('.numTasks b');
 button.addEventListener('click', e => {
     const newTask = document.createElement('li');
     newTask.innerText = `tasks ${tasks.length + 1}`;
-    newTask.classList.add('tasks');
+    newTasks.classList.add('tasks');
     list.appendChild(newTask);
     numTasks.innerText = tasks.length;
 });
