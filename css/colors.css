@@ -2,14 +2,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: 2px solid red;
 }
 
 body {
     color: rgb(51, 51, 51);
+    font-family: Arial;
 }
 
 button {
-    font-family: Optima;
+    font-family: Arial;
 }
 
 path, i, svg {
@@ -19,8 +21,8 @@ path, i, svg {
 .colors {
     min-height: 80vh;
     display: flex;
-    color: white;
-    background: #d4c850;
+    color: rgb(212, 212, 212);
+    /*background: #d4c850;*/
 }
 
 .color {
@@ -32,7 +34,7 @@ path, i, svg {
     justify-content: space-evenly;
     position: relative;
     overflow: hidden;
-    background: limegreen;
+    /*background: limegreen;*/
 }
 
 .color h2 {
@@ -45,7 +47,7 @@ path, i, svg {
     flex-direction: column;
     position: absolute;
     bottom: 0%;
-    background: white;
+    background: rgb(172, 148, 148);
     padding: 1rem;
     width: 85%;
     opacity: 0;
@@ -58,10 +60,12 @@ path, i, svg {
 
 .sliders.active {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0px);
     pointer-events: all;
 }
-.sliders button {
+.sliders button,
+.close-save,
+.close-library {
     position: absolute;
     top: 0;
     right: 0;
@@ -69,7 +73,7 @@ path, i, svg {
     border-top-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
     border: none;
-    background: darkslategray;
+    background: rgb(73, 73, 73);
     color: white;
     cursor: pointer;
     font-weight: bold;
@@ -78,7 +82,7 @@ path, i, svg {
 .controls {
     display: flex;
     flex-direction: column;
-    background: limegreen;
+    /*background: limegreen;*/
 }
 
 .panel {
@@ -91,7 +95,7 @@ path, i, svg {
     font-size: 1.2rem;
     margin: 1rem;
     padding: 1rem 2rem;
-    background: lightseagreen;
+    background: rgb(31, 33, 63);
     border: none;
     color: white;
     cursor: pointer;
@@ -101,7 +105,9 @@ path, i, svg {
     font-size: 1.2rem;
 }
 
-.library-panel, .generate-panel, .save-panel {
+.library-panel,
+.generate-panel,
+.save-panel {
     display: flex;
     flex-direction: column;
     align-items: center;
