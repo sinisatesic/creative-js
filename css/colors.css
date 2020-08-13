@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 2px solid red;
+    /*border: 2px solid red;*/
 }
 
 body {
@@ -50,12 +50,22 @@ path, i, svg {
     background: rgb(172, 148, 148);
     padding: 1rem;
     width: 85%;
-    opacity: 0;
+    /*opacity: 0;*/
     border-top-right-radius: 1rem;
     border-top-left-radius: 1rem;
-    transform: translateY(100px);
+    /*transform: translateY(100px);*/
+    /*adding adjustment class*/
     transition: all .5s ease-in-out;
-    pointer-events: none;
+    /*pointer-events: none;*/
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    margin: 1rem 0rem;
+    width: 100%;
+    position: relative;
+    border-radius: 1rem;
+    cursor: pointer;
 }
 
 .sliders.active {

@@ -29,7 +29,8 @@ function randomColors(){
     //for each color div, generate random hex color code, and add it as background and innerText
     colorDivs.forEach((div, index) => {
         // console.log(div);
-        const hexText = div.children[0];
+        const hexText = div.children[0]; //grabbing the h2 in color divs
+        // console.log(hexText);
         const randomColor = generateHex();
 
         //Add color to the background
@@ -37,16 +38,30 @@ function randomColors(){
         hexText.innerText = randomColor;
         //check for contrast of hex word:
         checkTextContrast(randomColor, hexText);
+        //Initial colorize sliders
+        const color = chroma(randomColor);
+        const sliders = div.querySelectorAll(".sliders input");
+        const hue = sliders[0];
+        const brightness = sliders[1];
+        const saturation = sliders[2];
+
+        colorizeSliders(color, hue, brightness, saturation);
     });
 }
 
 function checkTextContrast(color, text){
     const luminance = chroma(color).luminance();
-    if (luminance > 0.5){
-        text.style.color = "black";
-    } else {
-        text.style.color = "white";
-    }
+    luminance > 0.5 ? text.style.color = "black" : text.style.color = "white";
+}
+
+function colorizeSliders(color, hue, brightness, saturation){
+    //Scale saturation
+    const noSat = color.set('hsl.s', 0); //gets color and de-saturation it as much as possible
+    const fullSat = color.set('hsl.s', 0); //saturate as much as possible
+    const scaleSat = chroma.scale([noSat, color, fullSat]);
+
+    //Updating input colors
+    saturation.style.backgroundImage = `linear-gradient(to right,${scaleSat(0)}, ${scaleSat(1)})`
 }
 
 randomColors();
