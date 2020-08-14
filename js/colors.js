@@ -57,7 +57,7 @@ function checkTextContrast(color, text){
 function colorizeSliders(color, hue, brightness, saturation){
     //Scale saturation
     const noSat = color.set('hsl.s', 0); //gets color and de-saturation it as much as possible
-    const fullSat = color.set('hsl.s', 0); //saturate as much as possible
+    const fullSat = color.set('hsl.s', 1); //saturate as much as possible
     const scaleSat = chroma.scale([noSat, color, fullSat]);
     //Scale brightness
     const midBright = color.set('hsl.l', 0.5);

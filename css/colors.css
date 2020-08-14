@@ -59,6 +59,7 @@ path, i, svg {
     /*pointer-events: none;*/
 }
 
+/*for sliders:*/
 input[type="range"] {
     -webkit-appearance: none;
     margin: 1rem 0rem;
