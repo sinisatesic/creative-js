@@ -7,8 +7,13 @@ const currentHexes = document.querySelectorAll('.color h2');
 
 let initialColors;
 
-//Functions
+//Event listeners
 
+sliders.forEach(slider => {
+    slider.addEventListener('input', hslControls);
+});
+
+//Functions
 
 function generateHex(){
     // const letters = '#0123456789ABCDEF';
@@ -70,5 +75,31 @@ function colorizeSliders(color, hue, brightness, saturation){
     hue.style.backgroundImage = `linear-gradient(to right, rgb(204,75,75), rgb(204,204,75), rgb(75, 204, 75), rgb(75, 204, 204), rgb(75, 75, 204), rgb(204, 75, 204), rgb(204, 75, 75))`;
 
 }
+
+function hslControls(e){
+    // console.log(e);
+    const index =
+        e.target.getAttribute('data-bright') ||
+        e.target.getAttribute('data-sat') ||
+        e.target.getAttribute('data-hue');
+    // console.log(index);
+
+    let sliders = e.target.parentElement.querySelectorAll('input[type="range"]');
+    // console.log(sliders);
+    const hue = sliders[0];
+    const brightness = sliders[1];
+    const saturation = sliders[2];
+
+    const bgColor = colorDivs[index].querySelector('h2').innerText;
+    // console.log(bgColor);
+
+    let color = chroma(bgColor)
+        .set('hsl.s', saturation.value)
+        .set('hsl.l', brightness.value)
+        .set('hsl.h', hue.value);
+
+        colorDivs[index].style.backgroundColor = color;
+}
+
 
 randomColors();
