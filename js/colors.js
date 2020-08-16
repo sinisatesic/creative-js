@@ -13,6 +13,12 @@ sliders.forEach(slider => {
     slider.addEventListener('input', hslControls);
 });
 
+colorDivs.forEach((div, index) => {
+    div.addEventListener('change', () => {
+        updateTextUI(index);
+    });
+});
+
 //Functions
 
 function generateHex(){
@@ -99,6 +105,15 @@ function hslControls(e){
         .set('hsl.h', hue.value);
 
         colorDivs[index].style.backgroundColor = color;
+}
+
+function updateTextUI(index){
+    const activeDiv = colorDivs[index]; //selecting color off of the background
+    const color = chroma(activeDiv.style.backgroundColor); //adding it to chroma to be able to convert to hex
+    // console.log(color);
+    const textHex = activeDiv.querySelector('h2');
+    const icons = activeDiv.querySelectorAll('.controls button');
+    textHex.innerText = color.hex(); //after releasing slider on a new hex code, it will update inner text to reflect new hex
 }
 
 
