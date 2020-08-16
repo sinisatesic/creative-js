@@ -114,6 +114,10 @@ function updateTextUI(index){
     const textHex = activeDiv.querySelector('h2');
     const icons = activeDiv.querySelectorAll('.controls button');
     textHex.innerText = color.hex(); //after releasing slider on a new hex code, it will update inner text to reflect new hex
+    checkTextContrast(color, textHex); //ensures text color is update based on contrast of new color selected from sliders
+    for(icon of icons){
+        checkTextContrast(color, icon); //ensuring contrast of hex color on icons
+    }
 }
 
 
