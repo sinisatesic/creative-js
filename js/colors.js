@@ -61,6 +61,8 @@ function randomColors(){
 
         colorizeSliders(color, hue, brightness, saturation);
     });
+    //reset inputs:
+    resetInputs();
 }
 
 function checkTextContrast(color, text){
@@ -123,5 +125,28 @@ function updateTextUI(index){
     }
 }
 
+function resetInputs(){
+    const sliders = document.querySelectorAll('.sliders input'); //all the inputs
+    sliders.forEach(slider => {
+        if(slider.name === 'hue'){
+            const hueColor = initialColors[slider.getAttribute('data-hue')];
+            const hueValue = chroma(hueColor).hsl()[0]
+            // console.log(hueValue);
+            slider.value = Math.floor(hueValue); //ensure hue value is correct when new color populated
+        }
+        if(slider.name === 'brightness'){
+            const brightColor = initialColors[slider.getAttribute('data-bright')];
+            const brightValue = chroma(brightColor).hsl()[2]
+            // console.log(brightValue);
+            slider.value = Math.floor(brightValue * 100)/100; //ensure bright value is correct when new color populated; multiply and divide by 100 will give first 3 decimal points
+        }
+        if(slider.name === 'saturation'){
+            const satColor = initialColors[slider.getAttribute('data-sat')];
+            const satValue = chroma(satColor).hsl()[1]
+            // console.log(satValue);
+            slider.value = Math.floor(satValue * 100)/100; //ensure sat value is correct when new color populated
+        }
+    });
+}
 
 randomColors();
