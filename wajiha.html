@@ -7,131 +7,333 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
 <body>
-<div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #f7d000">
-        <a class="navbar-brand" href="#">HELLO HOW YOU DOIN</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<!--<div class="container">-->
+<!--&lt;!&ndash;    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #f7d000">&ndash;&gt;-->
+<!--&lt;!&ndash;        <a class="navbar-brand" href="#">HELLO HOW YOU DOIN</a>&ndash;&gt;-->
+<!--&lt;!&ndash;        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">&ndash;&gt;-->
+<!--&lt;!&ndash;            <span class="navbar-toggler-icon"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;        </button>&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="collapse navbar-collapse" id="navbarNav">&ndash;&gt;-->
+<!--&lt;!&ndash;            <ul class="navbar-nav">&ndash;&gt;-->
+<!--&lt;!&ndash;                <li class="nav-item active">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>&ndash;&gt;-->
+<!--&lt;!&ndash;                </li>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <a class="nav-link" href="#">Features</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                </li>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <a class="nav-link" href="#">Pricing</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                </li>&ndash;&gt;-->
+<!--&lt;!&ndash;                <li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <a class="nav-link disabled" href="#">Wassuuuup</a>&ndash;&gt;-->
+<!--&lt;!&ndash;                </li>&ndash;&gt;-->
+<!--&lt;!&ndash;            </ul>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    </nav>&ndash;&gt;-->
+<!--&lt;!&ndash;    <nav class="navbar navbar-default">&ndash;&gt;-->
+<!--&lt;!&ndash;        &lt;!&ndash; awesome navbar goes here &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        <ul class="nav navbar-nav">&ndash;&gt;-->
+<!--&lt;!&ndash;            <li class="nav-item"><a href="/home">Home</a> </li>&ndash;&gt;-->
+<!--&lt;!&ndash;            <li class="nav-item"><a href="/hello/Fortuna">Hello</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;            <li class="nav-item"><a href="/roll-dice">Dice Game</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;            <li class="nav-item"><a href="/posts">Posts</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;            <li class="nav-item"><a href="/posts/create">Create Post</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;            <li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;            <li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;                <form th:action="@{/login}" th:method="post">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <button class="nav-link" style="margin-top: 2px">Login</button>&ndash;&gt;-->
+<!--&lt;!&ndash;                </form>&ndash;&gt;-->
+<!--&lt;!&ndash;            </li>&ndash;&gt;-->
+<!--&lt;!&ndash;            <li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;                <form th:action="@{/logout}" th:method="post">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <button class="nav-link" style="margin-top: 2px">Logout</button>&ndash;&gt;-->
+<!--&lt;!&ndash;                </form>&ndash;&gt;-->
+<!--&lt;!&ndash;            </li>&ndash;&gt;-->
+<!--&lt;!&ndash;            <li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;                <a href="/register">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <button class="nav-link register-button">Register</button>&ndash;&gt;-->
+<!--&lt;!&ndash;                </a>&ndash;&gt;-->
+<!--&lt;!&ndash;            </li>&ndash;&gt;-->
+<!--&lt;!&ndash;        </ul>&ndash;&gt;-->
+<!--&lt;!&ndash;    </nav>&ndash;&gt;-->
+
+<!--    <nav class="navbar navbar-expand-md navbar-light bg-light">-->
+<!--        <a href="#" class="navbar-brand">Brand</a>-->
+<!--        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">-->
+<!--            <span class="navbar-toggler-icon"></span>-->
+<!--        </button>-->
+<!--        <div id="navbarCollapse" class="collapse navbar-collapse">-->
+<!--            <ul class="nav navbar-nav">-->
+<!--                <li class="nav-item">-->
+<!--                    <a href="#" class="nav-link">Home</a>-->
+<!--                </li>-->
+<!--                <li class="nav-item">-->
+<!--                    <a href="#" class="nav-link">Profile</a>-->
+<!--                </li>-->
+<!--                <li class="nav-item dropdown">-->
+<!--                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Messages</a>-->
+<!--                    <div class="dropdown-menu">-->
+<!--                        <a href="#" class="dropdown-item">Inbox</a>-->
+<!--                        <a href="#" class="dropdown-item">Drafts</a>-->
+<!--                        <a href="#" class="dropdown-item">Sent Items</a>-->
+<!--                        <div class="dropdown-divider"></div>-->
+<!--                        <a href="#"class="dropdown-item">Trash</a>-->
+<!--                    </div>-->
+<!--                </li>-->
+<!--            </ul>-->
+<!--            <ul class="nav navbar-nav ml-auto">-->
+<!--                <li class="nav-item dropdown">-->
+<!--                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Admin</a>-->
+<!--                    <div class="dropdown-menu dropdown-menu-right">-->
+<!--                        <a href="#" class="dropdown-item">Reports</a>-->
+<!--                        <a href="#" class="dropdown-item">Settings</a>-->
+<!--                        <div class="dropdown-divider"></div>-->
+<!--                        <a href="#"class="dropdown-item">Logout</a>-->
+<!--                    </div>-->
+<!--                </li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--    </nav>-->
+
+<!--    <div class="jumbotron jumbotron-fluid">-->
+<!--        <div class="container">-->
+<!--            <h1 class="display-4">Fluid jumbotron</h1>-->
+<!--            <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <div class="card mb-3">-->
+<!--        <img src="img/hands.jpg" class="card-img-top" alt="...">-->
+<!--&lt;!&ndash;        Image by <a href="https://pixabay.com/users/stokpic-692575/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=600497">stokpic</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=600497">Pixabay</a>&ndash;&gt;-->
+<!--        <div class="card-body">-->
+<!--            <h5 class="card-title">Card title</h5>-->
+<!--            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+<!--            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--</div>-->
+
+<!--<div class="card mb-3">-->
+<!--    <div class="row">-->
+<!--        <div class="col-md-4">-->
+<!--            <img src="img/world.jpg" class="card-img" alt="...">-->
+<!--        </div>-->
+<!--        <div class="col-md-8">-->
+<!--            <div class="card-body">-->
+<!--                <h5 class="card-title">Card title</h5>-->
+<!--                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+<!--                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <div class="card-group">-->
+<!--        <div class="card">-->
+<!--            <img src="..." class="card-img-top" alt="...">-->
+<!--            <div class="card-body">-->
+<!--                <h5 class="card-title">Card title</h5>-->
+<!--                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+<!--                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="card">-->
+<!--            <img src="..." class="card-img-top" alt="...">-->
+<!--            <div class="card-body">-->
+<!--                <h5 class="card-title">Card title</h5>-->
+<!--                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>-->
+<!--                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="card">-->
+<!--            <img src="..." class="card-img-top" alt="...">-->
+<!--            <div class="card-body">-->
+<!--                <h5 class="card-title">Card title</h5>-->
+<!--                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>-->
+<!--                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+
+<!--    <div class="row row-cols-1 row-cols-md-2">-->
+<!--        <div class="col mb-4">-->
+<!--            <div class="card">-->
+<!--                <img src="..." class="card-img-top" alt="...">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Card title</h5>-->
+<!--                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="col mb-4">-->
+<!--            <div class="card">-->
+<!--                <img src="..." class="card-img-top" alt="...">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Card title</h5>-->
+<!--                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="col mb-4">-->
+<!--            <div class="card">-->
+<!--                <img src="..." class="card-img-top" alt="...">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Card title</h5>-->
+<!--                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="col mb-4">-->
+<!--            <div class="card">-->
+<!--                <img src="..." class="card-img-top" alt="...">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Card title</h5>-->
+<!--                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+
+<!--    <div class="slideshow-container">-->
+
+<!--        &lt;!&ndash; Full-width images with number and caption text &ndash;&gt;-->
+<!--        <div class="mySlides fade">-->
+<!--            &lt;!&ndash;            <div class="numbertext">1 / 3</div>&ndash;&gt;-->
+<!--            <img src="img/world.jpg" style="width:100%; border-radius: 80px">-->
+<!--        </div>-->
+
+<!--        <div class="mySlides fade">-->
+<!--            &lt;!&ndash;            <div class="numbertext">2 / 3</div>&ndash;&gt;-->
+<!--            <img src="img/moja2.jpg" style="width:100%; border-radius: 100px">-->
+<!--        </div>-->
+
+<!--        <div class="mySlides fade">-->
+<!--            &lt;!&ndash;            <div class="numbertext">3 / 3</div>&ndash;&gt;-->
+<!--            <img src="img/moja3.jpg" style="width:100%; border-radius: 120px; transform: scale(.75); margin-top: -10%">-->
+<!--        </div>-->
+
+<!--        <div class="mySlides fade">-->
+<!--            &lt;!&ndash;            <div class="numbertext">3 / 3</div>&ndash;&gt;-->
+<!--            <img src="img/moja4.jpg" style="width:100%; border-radius: 140px; transform: scale(.75); margin-top: -7%">-->
+<!--        </div>-->
+
+<!--        <div class="mySlides fade">-->
+<!--            &lt;!&ndash;            <div class="numbertext">3 / 3</div>&ndash;&gt;-->
+<!--            <img src="img/moja6.jpg" style="width:100%; border-radius: 160px; transform: scale(.75); margin-top: -10%">-->
+<!--        </div>-->
+
+<!--        <div class="mySlides fade">-->
+<!--            &lt;!&ndash;            <div class="numbertext">3 / 3</div>&ndash;&gt;-->
+<!--            <img src="img/moja8.jpg" style="width:100%; border-radius: 180px; transform: scale(.75)">-->
+<!--        </div>-->
+
+<!--        <div class="mySlides fade">-->
+<!--            &lt;!&ndash;            <div class="numbertext">3 / 3</div>&ndash;&gt;-->
+<!--            <img src="img/IMG_20190923_062623_867.jpg" style="width:100%; border-radius: 200px; transform: scale(.75)">-->
+<!--        </div>-->
+
+<!--        &lt;!&ndash; Next and previous buttons &ndash;&gt;-->
+<!--        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>-->
+<!--        <a class="next" onclick="plusSlides(1)">&#10095;</a>-->
+<!--    </div>-->
+
+<!--</div>-->
+
+<div class="container-fluid">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Wassuuuup</a>
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                 </li>
             </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
         </div>
     </nav>
 
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <h1 class="display-4">Fluid jumbotron</h1>
-            <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+
+    <div class="native-full-screen">
+
+        <div class="logo">
+            <span class="logo-span">CCLI</span>
         </div>
     </div>
 
-    <div class="card mb-3">
-        <img src="img/hands.jpg" class="card-img-top" alt="...">
-<!--        Image by <a href="https://pixabay.com/users/stokpic-692575/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=600497">stokpic</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=600497">Pixabay</a>-->
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-        </div>
+
+    <div class="jumbotron">
+        <h1 class="display-4">Hello, world!</h1>
+        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        <hr class="my-4">
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
     </div>
 
-</div>
-
-<div class="card mb-3">
-    <div class="row">
-        <div class="col-md-4">
-            <img src="img/world.jpg" class="card-img" alt="...">
-        </div>
-        <div class="col-md-8">
+    <div class="card-deck">
+        <div class="card">
+            <img src="img/books.jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
-        </div>
-    </div>
-
-    <div class="card-group">
-        <div class="card">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
             </div>
         </div>
         <div class="card">
-            <img src="..." class="card-img-top" alt="...">
+            <img src="img/books.jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
             </div>
         </div>
         <div class="card">
-            <img src="..." class="card-img-top" alt="...">
+            <img src="img/books.jpg" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
-        </div>
-    </div>
-
-
-    <div class="row row-cols-1 row-cols-md-2">
-        <div class="col mb-4">
-            <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col mb-4">
-            <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col mb-4">
-            <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col mb-4">
-            <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                </div>
+            <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins ago</small>
             </div>
         </div>
     </div>
 
 </div>
 
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="js/wajiha.js"></script>
 </body>
 </html>
