@@ -26,3 +26,18 @@ function showSlides(n) {
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
 }
+
+
+
+const cards = document.querySelectorAll('.card');
+
+cards.addEventListener('hover', () => {
+    enlargeCards();
+});
+
+function enlargeCards(){
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+        card.classList.add('cardy');
+    });
+}

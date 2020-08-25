@@ -13,6 +13,12 @@
     background-position: center;
 }
 
+.jumbotron {
+    -webkit-box-shadow: 13px 18px 73px -23px rgba(0,0,0,0.71);
+    -moz-box-shadow: 13px 18px 73px -23px rgba(0,0,0,0.71);
+    box-shadow: 13px 18px 73px -23px rgba(0,0,0,0.71);
+}
+
 .logo {
     background-image: url("../img/color.jpg");
     background-position: center;
@@ -70,3 +76,34 @@
 /*    !*max-height: 500px;*!*/
 /*    position: relative;*/
 /*}*/
+
+
+.reg-card {
+    transition: 3.5ms all ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.cardy{
+    transition: 3.5ms all ease-in;
+    overflow: hidden;
+    size: 2.5rem;
+    -webkit-box-shadow: 13px 18px 73px -23px rgba(0,0,0,0.71);
+    -moz-box-shadow: 13px 18px 73px -23px rgba(0,0,0,0.71);
+    box-shadow: 13px 18px 73px -23px rgba(0,0,0,0.71);
+}
+.cardy:hover {
+    animation: enlarge .55s ease-out;
+    cursor: pointer;
+}
+@keyframes enlarge {
+    0%{
+        transform: scale(1);
+    }
+    35%{
+        transform: scale(1.02);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
