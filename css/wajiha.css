@@ -1,11 +1,17 @@
 * {
     padding: 0;
     box-sizing: border-box;
+    /*width: ma;*/
     /*background-color: snow;*/
 }
 
 .native-full-screen {
-    width: 100%;
+    width: 100vw;
+    position: relative;
+    margin-left: -50vw;
+    height: 100px;
+    /*margin-top: 100px;*/
+    left: 50%;
     height: 100vh;
     background-color: #84ab67;
     background-image: url("../img/sur.jpg");
@@ -17,16 +23,20 @@
     -webkit-box-shadow: 13px 18px 73px -23px rgba(0,0,0,0.71);
     -moz-box-shadow: 13px 18px 73px -23px rgba(0,0,0,0.71);
     box-shadow: 13px 18px 73px -23px rgba(0,0,0,0.71);
+    text-align: center;
+    padding: 15px 0;
 }
 
 .logo {
-    background-image: url("../img/color.jpg");
+    background-image: url("../img/logoccil.png");
     background-position: center;
     background-size: cover;
-    height: 200px;
-    width: 200px;
-    /*border-radius: 50%;*/
-    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    height: 85px;
+    width: 85px;
+    border-radius: 50%;
+    left: 35px;
+    position: relative;
+    /*clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);*/
 
 }
 
@@ -76,6 +86,13 @@
 /*    !*max-height: 500px;*!*/
 /*    position: relative;*/
 /*}*/
+
+.navbar {
+    width: 100vw;
+    position: relative;
+    margin-left: -50vw;
+    left: 50%;
+}
 
 
 .reg-card {
