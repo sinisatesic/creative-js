@@ -25,6 +25,10 @@
     box-shadow: 13px 18px 73px -23px rgba(0,0,0,0.71);
     text-align: center;
     padding: 15px 0;
+    background-color: #e3fafc;
+}
+div.jumbotron {
+    background-color: #e3fafc;
 }
 
 .logo {
@@ -93,6 +97,9 @@
     margin-left: -50vw;
     left: 50%;
 }
+nav.navbar.navbar-expand-lg.navbar-light.bg-light {
+    background-color: #e3fafc;
+}
 
 
 .reg-card {
@@ -101,10 +108,16 @@
     overflow: hidden;
 }
 
+div.card.reg-card.cardy {
+    background-color: #e3fafc;
+    border: 3px dashed #cce8eb;
+}
+
 .cardy{
     transition: 3.5ms all ease-in;
     overflow: hidden;
     size: 2.5rem;
+    background-color: #e3fafc;
     -webkit-box-shadow: 13px 18px 73px -23px rgba(0,0,0,0.71);
     -moz-box-shadow: 13px 18px 73px -23px rgba(0,0,0,0.71);
     box-shadow: 13px 18px 73px -23px rgba(0,0,0,0.71);
