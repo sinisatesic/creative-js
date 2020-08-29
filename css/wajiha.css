@@ -52,10 +52,46 @@
     box-shadow: 13px 18px 73px -23px rgba(0,0,0,0.71);
     text-align: center;
     padding: 15px 0;
-    background-color: #e3fafc;
+    color: white;
+    font-weight: bolder;
+    background-image: url("../img/book.jpg");
+    background-size: cover;
+    background-position: center;
 }
 div.jumbotron {
+    color: white;
+    font-size: 1.75rem;
+    font-weight: bolder;
+}
+
+.mini-jumbo {
     background-color: #e3fafc;
+    height: 100%;
+    width: 100%;
+    margin: auto 0;
+    opacity: .8;
+    padding: 15px;
+    border-radius: 15px;
+}
+div.mini-jumbo p {
+    font-family: 'Cabin', sans-serif;
+    color: #0f114f;
+    opacity: 1;
+    font-weight: bolder;
+    font-size: 1.50rem;
+}
+div.mini-jumbo h1 {
+    font-family: 'Libre Baskerville', serif;
+    color: #0f114f;
+    opacity: 1;
+    font-weight: bolder;
+}
+
+p.lead {
+    color: white;
+    font-size: 1.75rem;
+    font-weight: bold;
+    /*outline: 1px solid white;*/
 }
 
 .logo {
