@@ -5,6 +5,10 @@
     /*background-color: snow;*/
 }
 
+html {
+    background-color: #ea907a;
+}
+
 .native-full-screen {
     width: 100vw;
     position: relative;
@@ -154,6 +158,10 @@ p.lead {
 /*    position: relative;*/
 /*}*/
 
+div.container-fluid {
+    background-color: #f4f7c5;
+}
+
 .navbar {
     width: 100vw;
     position: relative;
@@ -162,6 +170,7 @@ p.lead {
 }
 nav.navbar.navbar-expand-lg.navbar-light.bg-light {
     background-color: #e3fafc;
+    z-index: 1;
 }
 
 
@@ -210,4 +219,23 @@ div.card.mb-3 {
 }
 img.card-img {
     /*border-radius: 50%;*/
+}
+div.card.mb-3 {
+    background-color: #fbc687;
+}
+div.col-md-8 {
+    background-color: #fbc687;
+}
+
+.carousel {
+    padding-top: 25px;
+}
+
+.card-img-top {
+
+}
+.team {
+    margin: 0 auto;
+    max-height: 150px;
+    max-width: 100px;
 }
