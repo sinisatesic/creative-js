@@ -245,7 +245,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /*--------------------------------------------------------------
-# Mission-img Section
+# Mission-page Section
 --------------------------------------------------------------*/
 #mission {
   width: 100%;
@@ -333,6 +333,192 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #mission .btn-get-started:hover {
+  background: #2dc997;
+  border: 2px solid #2dc997;
+}
+
+/*--------------------------------------------------------------
+# News-page Section
+--------------------------------------------------------------*/
+#news {
+  width: 100%;
+  height: 100vh;
+  background: url(../img/book.jpg) top center;
+  background-size: cover;
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  #news {
+    background-attachment: fixed;
+  }
+}
+
+#news:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#news .hero-container {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
+}
+
+#news h1 {
+  margin: 30px 0 10px 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  text-transform: uppercase;
+  color: #fff;
+  /*background-image: url("../img/sur.jpg");*/
+}
+
+@media (max-width: 768px) {
+  #news h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+#news h2 {
+  color: #eee;
+  margin-bottom: 50px;
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  #news h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+#news .btn-get-started {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 2px solid #fff;
+  color: #fff;
+
+}
+
+#news .btn-get-started:hover {
+  background: #2dc997;
+  border: 2px solid #2dc997;
+}
+
+/*--------------------------------------------------------------
+# Events-page Section
+--------------------------------------------------------------*/
+#events {
+  width: 100%;
+  height: 100vh;
+  background: url(../img/events.jpg) top center;
+  background-size: cover;
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  #events {
+    background-attachment: fixed;
+  }
+}
+
+#events:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#events .hero-container {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
+}
+
+#events h1 {
+  margin: 30px 0 10px 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  text-transform: uppercase;
+  color: #fff;
+  /*background-image: url("../img/sur.jpg");*/
+}
+
+@media (max-width: 768px) {
+  #events h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+#events h2 {
+  color: #eee;
+  margin-bottom: 50px;
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  #events h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+#events .btn-get-started {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 2px solid #fff;
+  color: #fff;
+
+}
+
+#events .btn-get-started:hover {
   background: #2dc997;
   border: 2px solid #2dc997;
 }
