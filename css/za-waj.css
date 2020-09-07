@@ -617,13 +617,6 @@ section {
   padding: 0 0 30px 0;
 }
 
-.icon {
-  /*width: 100%;*/
-  /*height: 100vh;*/
-  /*background: url(../img/logoccil.png) top center;*/
-  background-color: red;
-
-}
 
 #about .about-container .icon-box .icon {
   float: left;
@@ -688,6 +681,7 @@ section {
   background: url(../img/group_hands.jpg) top center;
   background-size: cover;
   position: relative;
+  /*opacity: .4;*/
 }
 
 /* Services Section
