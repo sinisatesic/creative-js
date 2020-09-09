@@ -7,16 +7,27 @@
 !(function($) {
   "use strict";
 
-  const langSection = document.querySelector('#lang-training-info')
+  const langSection = document.querySelector('#lang-training-info');
+  const currSection = document.querySelector('#curr-dev-info');
   const langButton = document.querySelector('#langButton');
+  const curriculumButton = document.querySelector('#curriculumButton');
 
   langButton.addEventListener('click', () => {
     showLangSection();
   });
 
+  curriculumButton.addEventListener('click', () => {
+    showCurrSection();
+  });
+
   function showLangSection(){
     langSection.classList.add('lang-section-ease');
     langSection.style.display = 'block';
+  }
+
+  function showCurrSection(){
+    currSection.classList.add('curr-section-ease');
+    currSection.style.display = 'block';
   }
 
 
