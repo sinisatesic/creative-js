@@ -7,6 +7,23 @@
 !(function($) {
   "use strict";
 
+  const langSection = document.querySelector('#lang-training-info')
+  const langButton = document.querySelector('#langButton');
+
+  langButton.addEventListener('click', () => {
+    showLangSection();
+  });
+
+  function showLangSection(){
+    langSection.classList.add('lang-section-ease');
+    langSection.style.display = 'block';
+  }
+
+
+
+
+
+
   // Header fixed and Back to top button
   $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {

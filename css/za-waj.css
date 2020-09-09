@@ -45,7 +45,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100%;
   overflow: visible;
-  background: #fff url("../img/preloader.svg") no-repeat center center;
+  /*background: #fff url("../img/preloader.svg") no-repeat center center;*/
 }
 
 /* Back to top button */
@@ -82,11 +82,11 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Disable AOS delay on mobile
 --------------------------------------------------------------*/
-@media screen and (max-width: 768px) {
-  [data-aos-delay] {
-    transition-delay: 0 !important;
-  }
-}
+/*@media screen and (max-width: 768px) {*/
+/*  [data-aos-delay] {*/
+/*    transition-delay: 0 !important;*/
+/*  }*/
+/*}*/
 
 /*--------------------------------------------------------------
 # Header
@@ -804,6 +804,123 @@ h1, h2, h3, h4, h5, h6 {
   border: 2px solid #2dc997;
 }
 
+/*--------------------------------------------------------------
+# Lang-training Section
+--------------------------------------------------------------*/
+#lang-training-info {
+  display: none;
+}
+
+#langButton {
+  cursor: pointer;
+}
+
+.lang-section-ease {
+  /*background-color: #ff6f47;*/
+  transition: 255ms ease-in all;
+  animation: section-ease 1s ease-in;
+}
+@keyframes section-ease {
+  0% {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+#lang-training {
+  width: 100%;
+  height: 100vh;
+  background: url(../img/lang.jpg) top center;
+  background-size: cover;
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  #lang-training {
+    background-attachment: fixed;
+  }
+}
+
+#lang-training:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#lang-training .hero-container {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
+}
+
+#lang-training h1 {
+  margin: 30px 0 10px 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  text-transform: uppercase;
+  color: #fff;
+  /*background-image: url("../img/sur.jpg");*/
+}
+
+@media (max-width: 768px) {
+  #lang-training h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+#lang-training h2 {
+  color: #eee;
+  margin-bottom: 50px;
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  #lang-training h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+#lang-training .btn-get-started {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 2px solid #fff;
+  color: #fff;
+
+}
+
+#lang-training .btn-get-started:hover {
+  background: #2dc997;
+  border: 2px solid #2dc997;
+}
+
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -1145,7 +1262,7 @@ section {
 
 #about .about-container .background {
   min-height: 300px;
-  background: url(../img/about-img.jpg) center top no-repeat;
+  background: url(../img/about-us-page.jpg) center top no-repeat;
   margin-bottom: 10px;
 }
 
@@ -1720,9 +1837,9 @@ section {
   font-size: 14px;
 }
 
-#contact .php-email-form input::focus, #contact .php-email-form textarea::focus {
-  background-color: #2dc997;
-}
+/*#contact .php-email-form input::focus, #contact .php-email-form textarea::focus {*/
+/*  background-color: #2dc997;*/
+/*}*/
 
 #contact .php-email-form button[type="submit"] {
   background: #2dc997;
