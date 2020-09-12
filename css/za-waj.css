@@ -1039,6 +1039,123 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------------------------------------------------
+# Translation/Interpretation Section
+--------------------------------------------------------------*/
+.translation-info{
+  display: none;
+}
+
+.translationButton {
+  cursor: pointer;
+}
+
+.section-ease {
+  /*background-color: #ff6f47;*/
+  transition: 255ms ease-in all;
+  animation: section-ease 1s ease-in;
+}
+@keyframes section-ease {
+  0% {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+#translation-services {
+  width: 100%;
+  height: 100vh;
+  background: url(../img/pixel-globe.jpg) top center;
+  background-size: cover;
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  #translation-services{
+    background-attachment: fixed;
+  }
+}
+
+#translation-services:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#translation-services .hero-container {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
+}
+
+#translation-services h1 {
+  margin: 30px 0 10px 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  text-transform: uppercase;
+  color: #fff;
+  /*background-image: url("../img/sur.jpg");*/
+}
+
+@media (max-width: 768px) {
+  #translation-services h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+#translation-services h2 {
+  color: #eee;
+  margin-bottom: 50px;
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  #translation-services h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+#translation-services .btn-get-started {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 2px solid #fff;
+  color: #fff;
+
+}
+
+#translation-services .btn-get-started:hover {
+  background: #2dc997;
+  border: 2px solid #2dc997;
+}
+
+/*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Nav Menu Essentials */
