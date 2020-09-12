@@ -1156,6 +1156,357 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------------------------------------------------
+# Testing Section
+--------------------------------------------------------------*/
+.testing-info{
+  display: none;
+}
+
+.testingButton {
+  cursor: pointer;
+}
+
+.section-ease {
+  /*background-color: #ff6f47;*/
+  transition: 255ms ease-in all;
+  animation: section-ease 1s ease-in;
+}
+@keyframes section-ease {
+  0% {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+#testing-services {
+  width: 100%;
+  height: 100vh;
+  background: url(../img/research.jpg) top center;
+  background-size: cover;
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  #testing-services{
+    background-attachment: fixed;
+  }
+}
+
+#testing-services:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#testing-services .hero-container {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
+}
+
+#testing-services h1 {
+  margin: 30px 0 10px 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  text-transform: uppercase;
+  color: #fff;
+  /*background-image: url("../img/sur.jpg");*/
+}
+
+@media (max-width: 768px) {
+  #testing-services h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+#testing-services h2 {
+  color: #eee;
+  margin-bottom: 50px;
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  #testing-services h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+#testing-services .btn-get-started {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 2px solid #fff;
+  color: #fff;
+
+}
+
+#testing-services .btn-get-started:hover {
+  background: #2dc997;
+  border: 2px solid #2dc997;
+}
+
+/*--------------------------------------------------------------
+# Lang-immersion Section
+--------------------------------------------------------------*/
+.lang-immersion-info {
+  display: none;
+}
+
+.langImmersionButton {
+  cursor: pointer;
+}
+
+.section-ease {
+  /*background-color: #ff6f47;*/
+  transition: 255ms ease-in all;
+  animation: section-ease 1s ease-in;
+}
+@keyframes section-ease {
+  0% {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+#lang-immersion {
+  width: 100%;
+  height: 100vh;
+  background: url(../img/lang-immersion.jpg) top center;
+  background-size: cover;
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  #lang-immersion{
+    background-attachment: fixed;
+  }
+}
+
+#lang-immersion:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#lang-immersion .hero-container {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
+}
+
+#lang-immersion h1 {
+  margin: 30px 0 10px 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  text-transform: uppercase;
+  color: #fff;
+  /*background-image: url("../img/sur.jpg");*/
+}
+
+@media (max-width: 768px) {
+  #lang-immersion h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+#lang-immersion h2 {
+  color: #eee;
+  margin-bottom: 50px;
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  #lang-immersion h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+#lang-immersion .btn-get-started {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 2px solid #fff;
+  color: #fff;
+
+}
+
+#lang-immersion .btn-get-started:hover {
+  background: #2dc997;
+  border: 2px solid #2dc997;
+}
+
+/*--------------------------------------------------------------
+# Prof-dev Section
+--------------------------------------------------------------*/
+.prof-dev-info {
+  display: none;
+}
+
+.profDevButton {
+  cursor: pointer;
+}
+
+.section-ease {
+  /*background-color: #ff6f47;*/
+  transition: 255ms ease-in all;
+  animation: section-ease 1s ease-in;
+}
+@keyframes section-ease {
+  0% {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+#prof-dev {
+  width: 100%;
+  height: 100vh;
+  background: url(../img/prof-dev.jpg) top center;
+  background-size: cover;
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  #prof-dev{
+    background-attachment: fixed;
+  }
+}
+
+#prof-dev:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#prof-dev .hero-container {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
+}
+
+#prof-dev h1 {
+  margin: 30px 0 10px 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  text-transform: uppercase;
+  color: #fff;
+  /*background-image: url("../img/sur.jpg");*/
+}
+
+@media (max-width: 768px) {
+  #prof-dev h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+#prof-dev h2 {
+  color: #eee;
+  margin-bottom: 50px;
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  #prof-dev h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+#prof-dev .btn-get-started {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 2px solid #fff;
+  color: #fff;
+
+}
+
+#prof-dev .btn-get-started:hover {
+  background: #2dc997;
+  border: 2px solid #2dc997;
+}
+
+/*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Nav Menu Essentials */
