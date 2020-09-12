@@ -807,15 +807,15 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Lang-training Section
 --------------------------------------------------------------*/
-#lang-training-info {
+.lang-training-info {
   display: none;
 }
 
-#langButton {
+.langButton {
   cursor: pointer;
 }
 
-.lang-section-ease {
+.section-ease {
   /*background-color: #ff6f47;*/
   transition: 255ms ease-in all;
   animation: section-ease 1s ease-in;
@@ -924,11 +924,11 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Curriculum Dev Section
 --------------------------------------------------------------*/
-#curr-dev-info {
+.curr-dev-info {
   display: none;
 }
 
-#curriculumButton {
+.currButton {
   cursor: pointer;
 }
 

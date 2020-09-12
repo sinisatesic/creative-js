@@ -1,36 +1,8 @@
-/**
-* Template Name: Regna - v2.1.0
-* Template URL: https://bootstrapmade.com/regna-bootstrap-onepage-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
+
+
 !(function($) {
   "use strict";
-
-  const langSection = document.querySelector('#lang-training-info');
-  const currSection = document.querySelector('#curr-dev-info');
-  const langButton = document.querySelector('#langButton');
-  const curriculumButton = document.querySelector('#curriculumButton');
-
-  langButton.addEventListener('click', () => {
-    showLangSection();
-  });
-
-  curriculumButton.addEventListener('click', () => {
-    showCurrSection();
-  });
-
-  function showLangSection(){
-    langSection.classList.add('lang-section-ease');
-    langSection.style.display = 'block';
-  }
-
-  function showCurrSection(){
-    currSection.classList.add('curr-section-ease');
-    currSection.style.display = 'block';
-  }
-
-
 
 
 
@@ -216,42 +188,4 @@
 })(jQuery);
 
 
-var logo = new TimelineMax();
-var navbar = new TimelineMax();
-var screen = new TimelineMax();
 
-logo.from(".gsap1", 3, {
-  delay: .1,
-  opacity: 0,
-  x: -50,
-  ease: Expo.easeInOut
-}).from(".gsap1", 3, {
-  delay: .1,
-  opacity: 0,
-  x: -50,
-  ease: Expo.easeInOut
-}, "-=5");
-
-navbar.from(".navbar", 3, {
-  delay: .1,
-  opacity: 0,
-  y: -40,
-  ease: Expo.easeInOut
-}).from(".navbar", 3, {
-  delay: .1,
-  opacity: 0,
-  y: -40,
-  ease: Expo.easeInOut
-}, "-=5");
-
-screen.from(".native-full-screen", 3, {
-  delay: .1,
-  opacity: 0,
-  y: 40,
-  ease: Expo.easeInOut
-}).from(".native-full-screen", 3, {
-  delay: .1,
-  opacity: 0,
-  y: 40,
-  ease: Expo.easeInOut
-}, "-=5");
