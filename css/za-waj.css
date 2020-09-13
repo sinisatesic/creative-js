@@ -1624,9 +1624,246 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------------------------------------------------
+# Cross-culture Section
+--------------------------------------------------------------*/
+.cross-culture-info {
+  display: none;
+}
+
+.crossCultureButton {
+  cursor: pointer;
+}
+
+.section-ease {
+  /*background-color: #ff6f47;*/
+  transition: 255ms ease-in all;
+  animation: section-ease 1s ease-in;
+}
+@keyframes section-ease {
+  0% {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+#cross-culture {
+  width: 100%;
+  height: 100vh;
+  background: url(../img/cross-cultural.jpg) top center;
+  background-size: cover;
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  #cross-culture{
+    background-attachment: fixed;
+  }
+}
+
+#cross-culture:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#cross-culture .hero-container {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
+}
+
+#cross-culture h1 {
+  margin: 30px 0 10px 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  text-transform: uppercase;
+  color: #fff;
+  /*background-image: url("../img/sur.jpg");*/
+}
+
+@media (max-width: 768px) {
+  #cross-culture h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+#cross-culture h2 {
+  color: #eee;
+  margin-bottom: 50px;
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  #cross-culture h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+#cross-culture .btn-get-started {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 2px solid #fff;
+  color: #fff;
+
+}
+
+#cross-culture .btn-get-started:hover {
+  background: #2dc997;
+  border: 2px solid #2dc997;
+}
+
+/*--------------------------------------------------------------
+# Expertise Section
+--------------------------------------------------------------*/
+.expertise-info {
+  display: none;
+}
+
+.expertiseButton {
+  cursor: pointer;
+}
+
+.section-ease {
+  /*background-color: #ff6f47;*/
+  transition: 255ms ease-in all;
+  animation: section-ease 1s ease-in;
+}
+@keyframes section-ease {
+  0% {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+#expertise {
+  width: 100%;
+  height: 100vh;
+  background: url(../img/expertise.jpg) top center;
+  background-size: cover;
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  #expertise{
+    background-attachment: fixed;
+  }
+}
+
+#expertise:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#expertise .hero-container {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
+}
+
+#expertise h1 {
+  margin: 30px 0 10px 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  text-transform: uppercase;
+  color: #fff;
+  /*background-image: url("../img/sur.jpg");*/
+}
+
+@media (max-width: 768px) {
+  #expertise h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+#expertise h2 {
+  color: #eee;
+  margin-bottom: 50px;
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  #expertise h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+#expertise .btn-get-started {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 2px solid #fff;
+  color: #fff;
+
+}
+
+#expertise .btn-get-started:hover {
+  background: #2dc997;
+  border: 2px solid #2dc997;
+}
+
+/*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Nav Menu Essentials */
+div.nav-bar-icon {
+  margin-top: 11px;
+}
 .nav-menu, .nav-menu * {
   margin: 0;
   padding: 0;
@@ -1667,6 +1904,27 @@ h1, h2, h3, h4, h5, h6 {
 nav#nav-menu-container {
   position: absolute;
   margin-left: 28%;
+}
+
+.nav-bar-icon {
+  animation: circle-move 4s infinite ease-in-out;
+  transition: 255ms ease all;
+}
+@keyframes circle-move {
+  from {
+    transform: rotate(0deg) translate(-30px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translate(-30px) rotate(360deg);
+  }
+  /*from {*/
+  /*  transform: rotate(0deg)*/
+  /*  translate(-50px)*/
+  /*  rotate(0deg);*/
+  /*}*/
+  /*to {*/
+  /*  transform: rotate(360deg) translate(-50px) rotate(-360deg);*/
+  /*}*/
 }
 
 /* Nav Menu Arrows */
@@ -2033,6 +2291,32 @@ section {
   margin-left: 80px;
   line-height: 24px;
   font-size: 14px;
+}
+
+#first-body-icon {
+  animation: horiz-shift 2s infinite ease-in-out;
+  transition: 255ms ease-in all;
+}
+@keyframes horiz-shift {
+  0%{
+    transform: translate3d(0, 0, 0);
+  }
+  50%{
+    transform: translate3d(25px, 0, 0);
+  }
+  100%{
+    transform: translate3d(0, 0, 0);
+  }
+}
+#second-body-icon {
+  animation: horiz-shift 2s infinite ease-in-out;
+  animation-delay: .5s;
+  transition: 255ms ease-in all;
+}
+#third-body-icon {
+  animation: horiz-shift 2s infinite ease-in-out;
+  animation-delay: 1s;
+  transition: 255ms ease-in all;
 }
 
 /* Facts Section
