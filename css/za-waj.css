@@ -10,6 +10,7 @@
 --------------------------------------------------------------*/
 * {
   box-sizing: border-box;
+  font-family: 'Taviraj', serif;
 }
 
 body {
@@ -34,7 +35,7 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Taviraj', serif;
   font-weight: 400;
   margin: 0 0 20px 0;
   padding: 0;
@@ -116,7 +117,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 6px 0;
   line-height: 1;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Taviraj', serif;
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -231,7 +232,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero .btn-get-started {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Taviraj', serif;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 16px;
@@ -325,7 +326,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #mission .btn-get-started {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Taviraj', serif;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 16px;
@@ -418,7 +419,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #news .btn-get-started {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Taviraj', serif;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 16px;
@@ -511,7 +512,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #events .btn-get-started {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Taviraj', serif;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 16px;
@@ -609,7 +610,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #about-us .btn-get-started {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Taviraj', serif;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 16px;
@@ -703,7 +704,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #meet-the-team .btn-get-started {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Taviraj', serif;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 16px;
@@ -796,7 +797,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #advisor-board .btn-get-started {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Taviraj', serif;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 16px;
@@ -929,7 +930,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #lang-training .btn-get-started {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Taviraj', serif;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 16px;
@@ -1046,7 +1047,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #curr-dev .btn-get-started {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Taviraj', serif;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 16px;
@@ -1163,7 +1164,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #translation-services .btn-get-started {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Taviraj', serif;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 16px;
@@ -1280,7 +1281,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #testing-services .btn-get-started {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Taviraj', serif;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 16px;
@@ -1397,7 +1398,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #lang-immersion .btn-get-started {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Taviraj', serif;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 16px;
@@ -1514,7 +1515,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #prof-dev .btn-get-started {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Taviraj', serif;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 16px;
@@ -1631,7 +1632,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #regional .btn-get-started {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Taviraj', serif;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 16px;
@@ -1748,7 +1749,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #cross-culture .btn-get-started {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Taviraj', serif;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 16px;
@@ -1865,7 +1866,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #expertise .btn-get-started {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Taviraj', serif;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 16px;
@@ -1982,7 +1983,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #careers .btn-get-started {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Taviraj', serif;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 16px;
@@ -2073,22 +2074,22 @@ nav#nav-menu-container {
 }
 
 /* Nav Menu Arrows */
-.sf-arrows .sf-with-ul {
-  padding-right: 30px;
-}
+/*.sf-arrows .sf-with-ul {*/
+/*  padding-right: 30px;*/
+/*}*/
 
-.sf-arrows .sf-with-ul:after {
-  content: "\f107";
-  position: absolute;
-  right: 15px;
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-}
+/*.sf-arrows .sf-with-ul:after {*/
+/*  content: "\f107";*/
+/*  position: absolute;*/
+/*  right: 15px;*/
+/*  font-family: FontAwesome;*/
+/*  font-style: normal;*/
+/*  font-weight: normal;*/
+/*}*/
 
-.sf-arrows ul .sf-with-ul:after {
-  content: "\f105";
-}
+/*.sf-arrows ul .sf-with-ul:after {*/
+/*  content: "\f105";*/
+/*}*/
 
 /* Nav Meu Container */
 #nav-menu-container {
@@ -2108,7 +2109,7 @@ nav#nav-menu-container {
   text-decoration: none;
   display: inline-block;
   color: #fff;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Taviraj', serif;
   font-weight: 400;
   text-transform: uppercase;
   font-size: 13px;
@@ -2360,7 +2361,7 @@ section {
 /* About Us Section
 --------------------------------*/
 #about {
-  background: #fff;
+  background: #bed0fa;
   padding: 80px 0;
 }
 
@@ -2480,7 +2481,7 @@ section {
 .facts .counters p {
   padding: 0;
   margin: 0 0 20px 0;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Taviraj', serif;
   font-size: 14px;
 }
 
@@ -2571,7 +2572,7 @@ section {
 #call-to-action {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/group_hands.jpg) fixed center center;
   background-size: cover;
-  padding: 80px 0;
+  padding: 120px 0;
 }
 
 @media (max-width: 1024px) {
@@ -2599,7 +2600,7 @@ section {
 }
 
 #call-to-action .cta-btn {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Taviraj', serif;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 16px;
@@ -2966,6 +2967,10 @@ section {
   font-size: 14px;
 }
 
+.contact-info {
+  font-size: 4rem;
+}
+
 /*#contact .php-email-form input::focus, #contact .php-email-form textarea::focus {*/
 /*  background-color: #23859e;*/
 /*}*/
@@ -3012,6 +3017,7 @@ section {
 
 #footer .copyright {
   text-align: center;
+  padding-top: 25px;
 }
 
 #footer .credits {
@@ -3049,6 +3055,7 @@ section {
 .footer-subtext {
   color: #e5c84f;
   text-decoration: none;
+  font-size: 1.2em;
 }
 .footer-link a, .footer-link a:hover {
   text-decoration: none;
@@ -3078,7 +3085,7 @@ section {
 
 
 .column1 {
-  max-height: 500px;
+  max-height: 590px;
   width: 112px;
   background: #bdc0f6;
   position: absolute;
@@ -3106,7 +3113,7 @@ section {
 }
 
 .column2 {
-  max-height: 500px;
+  max-height: 590px;
   width: 112px;
   background: #7fcef6;
   position: absolute;
@@ -3117,7 +3124,7 @@ section {
 }
 
 .column3 {
-  max-height: 500px;
+  max-height: 570px;
   width: 112px;
   background: #b28fe5;
   position: absolute;
@@ -3128,7 +3135,7 @@ section {
 }
 
 .column4 {
-  max-height: 500px;
+  max-height: 570px;
   width: 112px;
   background: #c6bef6;
   position: absolute;
@@ -3151,7 +3158,7 @@ section {
 /*}*/
 
 .column6 {
-  max-height: 500px;
+  max-height: 570px;
   width: 112px;
   background: #577df6;
   position: absolute;
@@ -3162,7 +3169,7 @@ section {
 }
 
 .column7 {
-  max-height: 500px;
+  max-height: 570px;
   width: 112px;
   background: #7176e5;
   position: absolute;
@@ -3173,7 +3180,7 @@ section {
 }
 
 .column8 {
-  max-height: 500px;
+  max-height: 590px;
   width: 112px;
   background: #7139e5;
   position: absolute;
@@ -3184,7 +3191,7 @@ section {
 }
 
 .column9 {
-  max-height: 500px;
+  max-height: 590px;
   width: 112px;
   background: #a784e5;
   position: absolute;
@@ -3220,7 +3227,7 @@ img.card-img {
     border: 10px solid #23859e;
   }
   50%{
-    border: 10px solid #87e7ff;
+    border: 10px solid #c0f0fc;
   }
   100%{
     border: 10px solid #23859e;
@@ -3238,6 +3245,8 @@ img.card-img:hover {
 
 .card-title {
   margin-top: 25px;
+  font-size: 1.5em;
+  color: #343b40;
 }
 
 .card-text {
