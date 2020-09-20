@@ -8,6 +8,9 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+* {
+  box-sizing: border-box;
+}
 
 body {
   background: #bed0fa;
@@ -16,7 +19,7 @@ body {
 }
 
 a {
-  color: #2dc997;
+  color: #23859e;
 }
 
 a:hover, a:active, a:focus {
@@ -76,7 +79,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .back-to-top:hover {
-  background: #2dc997;
+  background: #23859e;
   color: #fff;
 }
 
@@ -144,7 +147,7 @@ h1, h2, h3, h4, h5, h6 {
 #header.header-fixed {
   background: rgba(52, 59, 64, 0.9);
   padding: 20px 0;
-  height: 72px;
+  height: 122px;
   transition: all 0.5s;
 }
 
@@ -244,8 +247,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero .btn-get-started:hover {
-  background: #2dc997;
-  border: 2px solid #2dc997;
+  background: #23859e;
+  border: 2px solid #23859e;
 }
 
 
@@ -338,8 +341,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #mission .btn-get-started:hover {
-  background: #2dc997;
-  border: 2px solid #2dc997;
+  background: #23859e;
+  border: 2px solid #23859e;
 }
 
 /*--------------------------------------------------------------
@@ -431,8 +434,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #news .btn-get-started:hover {
-  background: #2dc997;
-  border: 2px solid #2dc997;
+  background: #23859e;
+  border: 2px solid #23859e;
 }
 
 /*--------------------------------------------------------------
@@ -524,8 +527,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #events .btn-get-started:hover {
-  background: #2dc997;
-  border: 2px solid #2dc997;
+  background: #23859e;
+  border: 2px solid #23859e;
 }
 
 
@@ -622,8 +625,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #about-us .btn-get-started:hover {
-  background: #2dc997;
-  border: 2px solid #2dc997;
+  background: #23859e;
+  border: 2px solid #23859e;
 }
 
 
@@ -716,8 +719,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #meet-the-team .btn-get-started:hover {
-  background: #2dc997;
-  border: 2px solid #2dc997;
+  background: #23859e;
+  border: 2px solid #23859e;
 }
 
 /*--------------------------------------------------------------
@@ -809,8 +812,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #advisor-board .btn-get-started:hover {
-  background: #2dc997;
-  border: 2px solid #2dc997;
+  background: #23859e;
+  border: 2px solid #23859e;
 }
 
 /*--------------------------------------------------------------
@@ -837,6 +840,22 @@ h1, h2, h3, h4, h5, h6 {
   100% {
     opacity: 1;
     transform: translateY(0px);
+  }
+}
+.section-ease-reverse {
+  transition: 255ms ease-in all;
+  animation: section-ease-reverse 1s ease-in;
+}
+@keyframes section-ease-reverse {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: 355ms ease all;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: 355ms ease all;
   }
 }
 
@@ -926,8 +945,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #lang-training .btn-get-started:hover {
-  background: #2dc997;
-  border: 2px solid #2dc997;
+  background: #23859e;
+  border: 2px solid #23859e;
 }
 
 /*--------------------------------------------------------------
@@ -1043,8 +1062,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #curr-dev .btn-get-started:hover {
-  background: #2dc997;
-  border: 2px solid #2dc997;
+  background: #23859e;
+  border: 2px solid #23859e;
 }
 
 /*--------------------------------------------------------------
@@ -1160,8 +1179,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #translation-services .btn-get-started:hover {
-  background: #2dc997;
-  border: 2px solid #2dc997;
+  background: #23859e;
+  border: 2px solid #23859e;
 }
 
 /*--------------------------------------------------------------
@@ -1277,8 +1296,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #testing-services .btn-get-started:hover {
-  background: #2dc997;
-  border: 2px solid #2dc997;
+  background: #23859e;
+  border: 2px solid #23859e;
 }
 
 /*--------------------------------------------------------------
@@ -1394,8 +1413,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #lang-immersion .btn-get-started:hover {
-  background: #2dc997;
-  border: 2px solid #2dc997;
+  background: #23859e;
+  border: 2px solid #23859e;
 }
 
 /*--------------------------------------------------------------
@@ -1511,8 +1530,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #prof-dev .btn-get-started:hover {
-  background: #2dc997;
-  border: 2px solid #2dc997;
+  background: #23859e;
+  border: 2px solid #23859e;
 }
 
 /*--------------------------------------------------------------
@@ -1628,8 +1647,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #regional .btn-get-started:hover {
-  background: #2dc997;
-  border: 2px solid #2dc997;
+  background: #23859e;
+  border: 2px solid #23859e;
 }
 
 /*--------------------------------------------------------------
@@ -1745,8 +1764,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #cross-culture .btn-get-started:hover {
-  background: #2dc997;
-  border: 2px solid #2dc997;
+  background: #23859e;
+  border: 2px solid #23859e;
 }
 
 /*--------------------------------------------------------------
@@ -1862,8 +1881,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #expertise .btn-get-started:hover {
-  background: #2dc997;
-  border: 2px solid #2dc997;
+  background: #23859e;
+  border: 2px solid #23859e;
 }
 
 /*--------------------------------------------------------------
@@ -1979,8 +1998,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #careers .btn-get-started:hover {
-  background: #2dc997;
-  border: 2px solid #2dc997;
+  background: #23859e;
+  border: 2px solid #23859e;
 }
 
 /*--------------------------------------------------------------
@@ -2107,7 +2126,7 @@ nav#nav-menu-container {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #2dc997;
+  background-color: #23859e;
   visibility: hidden;
   transform: scaleX(0);
   transition: all 0.3s ease-in-out 0s;
@@ -2141,7 +2160,7 @@ nav#nav-menu-container {
 }
 
 .nav-menu ul li a:hover {
-  background: #2dc997;
+  background: #23859e;
   color: #fff;
 }
 
@@ -2229,11 +2248,11 @@ nav#nav-menu-container {
 }
 
 #mobile-nav ul .menu-has-children i.fa-chevron-up {
-  color: #2dc997;
+  color: #23859e;
 }
 
 #mobile-nav ul .menu-item-active {
-  color: #2dc997;
+  color: #23859e;
 }
 
 #mobile-body-overly {
@@ -2393,11 +2412,11 @@ section {
   flex-direction: column;
   text-align: center;
   border-radius: 50%;
-  border: 2px solid #2dc997;
+  border: 2px solid #23859e;
 }
 
 #about .about-container .icon-box .icon i {
-  color: #2dc997;
+  color: #23859e;
   font-size: 24px;
 }
 
@@ -2455,7 +2474,7 @@ section {
 .facts .counters span {
   font-size: 48px;
   display: block;
-  color: #2dc997;
+  color: #23859e;
 }
 
 .facts .counters p {
@@ -2506,7 +2525,7 @@ section {
   text-align: center;
   width: 72px;
   height: 72px;
-  background: #2dc997;
+  background: #23859e;
 }
 
 #services .icon a {
@@ -2520,15 +2539,15 @@ section {
 
 #services .box:hover .icon {
   background: #fff;
-  border: 2px solid #2dc997;
+  border: 2px solid #23859e;
 }
 
 #services .box:hover .icon i {
-  color: #2dc997;
+  color: #23859e;
 }
 
 #services .box:hover .icon a {
-  color: #2dc997;
+  color: #23859e;
 }
 
 #services .title {
@@ -2595,8 +2614,8 @@ section {
 }
 
 #call-to-action .cta-btn:hover {
-  background: #2dc997;
-  border: 2px solid #2dc997;
+  background: #23859e;
+  border: 2px solid #23859e;
 }
 
 /* Portfolio Section
@@ -2630,7 +2649,7 @@ section {
 
 #portfolio #portfolio-flters li:hover, #portfolio #portfolio-flters li.filter-active {
   color: #fff;
-  background: #2dc997;
+  background: #23859e;
 }
 
 #portfolio #portfolio-flters li:last-child {
@@ -2656,7 +2675,7 @@ section {
   bottom: -50px;
   z-index: 3;
   transition: all ease-in-out 0.3s;
-  background: #2dc997;
+  background: #23859e;
   padding: 15px 20px;
 }
 
@@ -2729,7 +2748,7 @@ section {
 }
 
 .portfolio-details .portfolio-details-carousel .owl-dot.active {
-  background-color: #2dc997 !important;
+  background-color: #23859e !important;
 }
 
 .portfolio-details .portfolio-info {
@@ -2828,7 +2847,7 @@ section {
 }
 
 #team .member .social a:hover {
-  color: #2dc997;
+  color: #23859e;
 }
 
 #team .member .social i {
@@ -2854,7 +2873,7 @@ section {
 
 #contact .info i {
   font-size: 32px;
-  color: #2dc997;
+  color: #23859e;
   float: left;
 }
 
@@ -2888,7 +2907,7 @@ section {
 }
 
 #contact .social-links a:hover {
-  background: #2dc997;
+  background: #23859e;
   color: #fff;
 }
 
@@ -2949,11 +2968,11 @@ section {
 }
 
 /*#contact .php-email-form input::focus, #contact .php-email-form textarea::focus {*/
-/*  background-color: #2dc997;*/
+/*  background-color: #23859e;*/
 /*}*/
 
 #contact .php-email-form button[type="submit"] {
-  background: #2dc997;
+  background: #23859e;
   border: 0;
   padding: 10px 24px;
   color: #fff;
@@ -3166,4 +3185,51 @@ section {
 
 .card {
   margin-top: 20px;
+}
+
+/*za slike*/
+
+img.card-img {
+  border-radius: 50%;
+  /*border: 10px solid #23859e;*/
+  margin-top: 25px;
+  cursor: pointer;
+  box-shadow: 0 8px 6px -6px black;
+  transition: 255ms ease-out all;
+  animation: border-color 4s infinite ease-in-out;
+}
+@keyframes border-color {
+  0%{
+    border: 10px solid #23859e;
+  }
+  50%{
+    border: 10px solid #87e7ff;
+  }
+  100%{
+    border: 10px solid #23859e;
+  }
+}
+img.card-img:hover {
+  opacity: .8;
+  transition: 255ms ease-in all;
+}
+
+#meet-the-team-bio1,
+#meet-the-team-bio2 {
+  display: none;
+}
+
+.card-title {
+  margin-top: 25px;
+}
+
+.card-text {
+  margin-top: 25px;
+}
+
+#advisory-bio1,
+#advisory-bio2,
+#advisory-bio3,
+#advisory-bio4 {
+  display: none;
 }
