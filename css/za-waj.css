@@ -3021,6 +3021,24 @@ section {
   color: #ccc;
 }
 
+.footer-button {
+  border-radius: 100vmax;
+  height: 35px;
+  width: 90px;
+  border: 3px solid white;
+  cursor: pointer;
+  transition: 255ms ease-out all;
+  color: white;
+  background: transparent;
+}
+.footer-button:hover {
+  transition: 255ms ease-in all;
+  /*background: white;*/
+  color: #23859e;
+  border: 3px solid #23859e;
+
+}
+
 
 /*footer section*/
 .footer {
@@ -3232,3 +3250,4 @@ img.card-img:hover {
 #advisory-bio4 {
   display: none;
 }
+
