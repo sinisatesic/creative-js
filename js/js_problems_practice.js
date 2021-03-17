@@ -203,3 +203,93 @@ function triangle(n) {
 //
 
 triangle=n=>n*++n/2
+
+
+///////////////
+
+// Array of Multiples
+// Create a function that takes two numbers as arguments (num, length) and returns an array of multiples of num until the array length reaches length.
+
+// Examples
+// arrayOfMultiples(7, 5) ➞ [7, 14, 21, 28, 35]
+
+// arrayOfMultiples(12, 10) ➞ [12, 24, 36, 48, 60, 72, 84, 96, 108, 120]
+
+// arrayOfMultiples(17, 6) ➞ [17, 34, 51, 68, 85, 102]
+// Notes
+// Notice that num is also included in the returned array.
+
+function arrayOfMultiples (num, length) {
+    let arr = [];
+    for(let i = 1; i <= length; i++){
+        arr.push(i * num);
+    }
+    return arr;
+}
+
+///////
+
+// Your task is to create a Circle constructor that creates a circle with a radius provided by an argument. The circles constructed must have two methods getArea() (PI*r^2) and getPerimeter() (2*PI*r) which give both respective areas and perimeter (circumference).
+
+// For help with this class, I have provided you with a Rectangle constructor which you can use as a base example.
+
+// Examples
+// let circy = new Circle(11)
+// circy.getArea()
+
+// // Should return 380.132711084365
+// let circy = new Circle(4.44)
+// circy.getPerimeter()
+
+// // Should return 27.897342763877365
+// Notes
+// Don't worry about floating point precision - I've factored in the chance that your answer may be more or less accurate than mine. This is more of a tutorial than a challenge so the topic covered may be considered advanced, yet the challenge is more simple - so if this challenge gets labelled as easy, don't worry too much.
+
+/*class Rectangle {
+  constructor(sideA,sideB){
+    this.sideA = sideA;
+    this.sideB = sideB;
+  }
+  getArea(){return this.sideA*this.sideB};
+  getPerimeter(){return (this.sideA + this.sideB) *2 };
+}*/
+
+
+class Circle {
+    constructor(radius){
+        this.radius = radius;
+    }
+    getArea(){return Math.PI*((this.radius)*(this.radius))}
+    getPerimeter(){return 2*Math.PI*(this.radius)};
+}
+
+//unquote and use run to test these cases
+let q = new Circle(4.44);
+console.log(q.getArea());
+console.log(q.getPerimeter());
+
+
+///////////
+
+// Create a function that takes an array of numbers and returns the second largest number.
+
+// Examples
+// secondLargest([10, 40, 30, 20, 50]) ➞ 40
+
+// secondLargest([25, 143, 89, 13, 105]) ➞ 105
+
+// secondLargest([54, 23, 11, 17, 10]) ➞ 23
+// Notes
+// There will be at least two numbers in the array.
+
+const secondLargest = a => a.sort((a,b)=> b - a)[1];
+
+// drugi odgovor:
+
+function secondLargest(arr) {
+    max = Math.max(...arr);
+    let newArr = arr.filter(item => item != max)
+    console.log(newArr)
+    return Math.max(...newArr)
+
+}
