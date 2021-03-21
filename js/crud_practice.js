@@ -91,4 +91,5 @@ app.FetchAll(); //displays initial table presented;
 
 
 function CloseInput() {
-    document.getElementById('spoiler').style.display = 'none';
+    document.getElementById('spoiler').style.display = 'none'
+    }
