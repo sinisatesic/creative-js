@@ -382,3 +382,57 @@ const goodGames = games.filter(function(game){
     // console.log(game);
     return game.rating > 1
 });
+
+
+// some practice with guard clause:
+
+// quick reference to functional programming without else/else-if
+
+// original syntax with nested else/if-else
+
+function canDrink(person) {
+    if (person?.age != null) {
+        if (person.age < 18) {
+            console.log("Nope")
+        } else if (person.age < 21) {
+            console.log("Not in the US")
+        } else {
+            console.log("Yes")
+        }
+    } else {
+        console.log("You are not a person")
+    }
+}
+
+const p = {
+    age: 22,
+}
+
+canDrink(p);
+
+// reminder: guard clauses can help with removal of nesting
+
+// refactored, without hested conditionals, and guard clause:
+
+// "Exit early whenever possible"
+
+function canDrinkBetter(person) {
+    if (person?.age == null) {
+        return console.log("You are not a person");
+    }
+
+    const result = canDrinkResponse(person.age)
+    console.log(result)
+}
+
+function canDrinkResponse(age) {
+    if (age < 18) return "Nope";
+    if (age < 21) return "Not in the US";
+    return "Yarp";
+}
+
+const p = {
+    age: 9,
+}
+
+canDrinkBetter(p);
