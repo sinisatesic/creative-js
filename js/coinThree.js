@@ -18,7 +18,7 @@ const buttonTwo = document.getElementById('daButtonTwo');
 
 let jsonTrends;
 let jsonPrices;
-let jsonGlobal;
+
 
 
 const getTrends = async () => {
@@ -119,14 +119,14 @@ const getPrices = async () => {
 }
 
 
-const getGlobalInfo = async () => {
-    const globalResponse = await fetch(globalAPI);
-    const globalJSON = await globalResponse.json();
-
-    console.log(globalJSON);
-}
-
-getGlobalInfo();
+// const getGlobalInfo = async () => {
+//     const globalResponse = await fetch(globalAPI);
+//     const globalJSON = await globalResponse.json();
+//
+//     console.log(globalJSON);
+// };
+//
+// getGlobalInfo().then(r => console.log('lkdjf'));
 
 // getPrices();
 
