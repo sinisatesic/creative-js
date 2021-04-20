@@ -9,49 +9,12 @@ const popularButton = document.getElementById('popularButton');
 const newsButton = document.getElementById('newsButton');
 const platformsButton = document.getElementById('platformsButton');
 
-const loader = document.querySelector('.loader');
-
-document.onreadystatechange = function() {
-
-    if (container.innerHTML.length !== 0) {
-        // alert('PPOOOP');
-        container.style.visibility = "hidden";
-        loader.style.visibility = "visible";
-        console.log('happy');
-    } else {
-        loader.style.display = "none";
-        container.style.visibility = "visible";
-        console.log('sad');
-    }
-};
-
-// const loading = () =>{
-//   let loader = document.createElement('div');
-//  if (container.innerHTML.length < 1){
-//    loader.classList.add('loader');
-//    container.appendChild(loader);
-//    console.log('yes');
-//  } else {
-//    loader.style.visibility = "hidden";
-//    console.log('none');
-//  }
-// }
-
 
 const getTrends = async () => {
-
-    // loading();
     container.innerHTML = '';
 
     const response = await fetch(trendingAPI);
     const jsonTrends = await response.json();
-    console.log(jsonTrends);
-
-    // const responsePrice = await fetch(pricesAPI);
-    // const jsonPrices = await responsePrice.json();
-    // console.log(jsonPrices);
-
-    // let price;
 
     jsonTrends.coins.forEach(e => {
 
@@ -83,18 +46,13 @@ const getTrends = async () => {
         firstColumn.appendChild(firstCard);
         container.appendChild(firstColumn);
     });
-    console.log(container.innerHTML.length);
-}
+};
 
 const getPrices = async () => {
-    // loading();
     container.innerHTML = '';
-
 
     const responsePrice = await fetch(pricesAPI);
     const jsonPrices = await responsePrice.json();
-
-    console.log(jsonPrices);
 
     jsonPrices.forEach(e => {
         let secondColumn = document.createElement('div');
@@ -137,18 +95,16 @@ const getPrices = async () => {
         secondCard.appendChild(secondCardContent);
         secondColumn.appendChild(secondCard);
         container.appendChild(secondColumn);
-    })
-}
+    });
+};
 
 
 const getStatusInfo = async () => {
-    // loading();
     container.innerHTML = '';
 
     const statusResponse = await fetch(statusAPI);
     const statusJSON = await statusResponse.json();
 
-    console.log(statusJSON);
 
     statusJSON.status_updates.forEach(e => {
         let columns = document.createElement('div');
@@ -176,17 +132,15 @@ const getStatusInfo = async () => {
         card.appendChild(cardContent);
         columns.appendChild(card);
         container.appendChild(columns);
-    })
-}
+    });
+};
 
 const getPlatformsInfo = async () => {
-    // loading();
     container.innerHTML = '';
 
     const fiPlatformsResponse = await fetch(fiPlatformsAPI);
     const jsonFiPlatforms = await fiPlatformsResponse.json();
 
-    console.log(jsonFiPlatforms);
     let columns = document.createElement('div');
     columns.classList.add('columns');
     columns.classList.add('is-multiline');
@@ -216,41 +170,14 @@ const getPlatformsInfo = async () => {
         card.appendChild(cardContent);
         column.appendChild(card);
         columns.appendChild(column);
-        // container.appendChild(columns);
-    })
+
+    });
     container.appendChild(columns);
-}
+};
 
 
-
-
-// getPlatformsInfo();
-
-// getGlobalInfo();
-
-// getPrices();
-
-// getInfo();
 
 trendingButton.addEventListener('click', getTrends);
 popularButton.addEventListener('click', getPrices);
 newsButton.addEventListener('click', getStatusInfo);
 platformsButton.addEventListener('click', getPlatformsInfo);
-
-
-
-// let $rows = $('#smartTable tbody tr');
-//                     // Once a key has been released in the search filter...
-//                     $('#search').keyup(function () {
-//                         // Convert the entry to lowercase...
-//                         let val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
-//                         // Search through each row...
-//                         $rows.show().filter(function () {
-//                             // And for the rows that match the search field value...
-//                             let text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
-//                             // take all rows that do NOT match this criteria...
-//                             return !~text.indexOf(val);
-//                             // and hide them.
-//                         }).hide();
-//                     });
-

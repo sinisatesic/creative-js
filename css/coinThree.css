@@ -2,6 +2,26 @@
     box-sizing: border-box;
 }
 
+html, body {
+    scroll-behavior: smooth;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+#containerYes {
+    background-image:url("img/bitcoin.gif");
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh;
+    overflow-y: auto;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
 .pointer {
     width: 200px;
     height: 20px;
@@ -16,7 +36,7 @@
     bottom: 0;
     width: 0;
     height: 0;
-    border-left: 10px solid white;
+    border-left: 10px solid #eff9e0;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
 }
@@ -77,7 +97,7 @@
     background: #333333;
 }
 .pacmanMouth {
-    background: white;
+    background: #eff9e0;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -151,4 +171,39 @@
     font-size: 2rem;
     color: black;
     text-shadow: .5px .5px black;
+}
+
+div.card {
+    margin: 10px;
+}
+
+div.card-content {
+    background-color: #d4ff91;
+    border: 4px solid #6fb95b;
+}
+
+div.content {
+    padding: 30px;
+    background-color: #eff9e0;
+}
+
+.navbar {
+    position: fixed;
+}
+
+
+
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    /* visibility: visible; */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
