@@ -1,14 +1,42 @@
 const trendingAPI = `https://api.coingecko.com/api/v3/search/trending`;
 const pricesAPI = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd`;
 const statusAPI = `https://api.coingecko.com/api/v3/status_updates`;
-const fiPlatformsAPI = `https://api.coingecko.com/api/v3/finance_platforms`
+const fiPlatformsAPI = `https://api.coingecko.com/api/v3/finance_platforms`;
+const productsAPI = `https://api.coingecko.com/api/v3/finance_products`;
+const globalAPI = `https://api.coingecko.com/api/v3/global`;
 
 const container = document.getElementById('containerYes');
 const trendingButton = document.getElementById('trendingButton');
 const popularButton = document.getElementById('popularButton');
 const newsButton = document.getElementById('newsButton');
 const platformsButton = document.getElementById('platformsButton');
+const navBarItems = document.getElementById('navBarItems');
+const productsButton = document.getElementById('productsButton');
 
+const audio = new Audio("sounds/chalo.mp3");
+document.addEventListener('click', () => {
+    audio.play();
+});
+
+//for burger for mobile:
+document.addEventListener('click', () => {
+    let burger = document.getElementById('navBarItems');
+    burger.classList.toggle('is-active');
+});
+//////
+
+
+
+// const audio = new Audio("sounds/chalo.mp3");
+// audio.play();
+//
+// if (document.readyState === "complete"){
+//     audio.play();
+// }
+//
+// window.addEventListener('scroll', function(e){
+//     audio.play().then(e => audio.play());
+// });
 
 const getTrends = async () => {
     container.innerHTML = '';
@@ -79,12 +107,26 @@ const getPrices = async () => {
         <span class="pricesInfo"">24HR Price Change %: <span style="color: olive">${e.price_change_percentage_24h}</span></span>
     </div>`;
 
+        // let pacmanBody = document.createElement('div');
+        // pacmanBody.classList.add('pacmanBody');
+        // let pacmanMouth = document.createElement('div');
+        // pacmanMouth.classList.add('pacmanMouth');
+        // let pacmanEye = document.createElement('div');
+        // pacmanEye.classList.add('pacmanEye');
+
         let pacmanBody = document.createElement('div');
-        pacmanBody.classList.add('pacmanBody');
         let pacmanMouth = document.createElement('div');
-        pacmanMouth.classList.add('pacmanMouth');
         let pacmanEye = document.createElement('div');
-        pacmanEye.classList.add('pacmanEye');
+
+        if (container.children.length % 2 == 0){
+            pacmanBody.classList.add('pacmanBody');
+            pacmanMouth.classList.add('pacmanMouth');
+            pacmanEye.classList.add('pacmanEye');
+        } else {
+            pacmanBody.classList.add('pacmanBodyBlue');
+            pacmanMouth.classList.add('pacmanMouthBlue');
+            pacmanEye.classList.add('pacmanEyeBlue');
+        }
 
         pacmanBody.appendChild(pacmanEye);
         pacmanBody.appendChild(pacmanMouth);
@@ -175,9 +217,60 @@ const getPlatformsInfo = async () => {
     container.appendChild(columns);
 };
 
+const getProductsInfo = async () => {
+    container.innerHTML = '';
+
+    const productsResponse = await fetch(productsAPI);
+    const productsJSON = await productsResponse.json();
+
+    console.log(productsJSON);
+
+    let columns = document.createElement('div');
+    columns.classList.add('columns');
+    columns.classList.add('is-multiline');
+
+    productsJSON.forEach(e => {
+        let column = document.createElement('div');
+        column.classList.add('column');
+        column.classList.add('is-one-quarter');
+
+        let card = document.createElement('div');
+        card.classList.add('card');
+
+        let cardContent = document.createElement('div');
+        cardContent.classList.add('card-content');
+
+        let content = document.createElement('div');
+        content.classList.add('content');
+
+        content.innerHTML = `
+    <div>Platform: <span style="color: purple;">${e.platform}</span></div>
+    <div>Identifier: <span style="color: purple; word-wrap: break-word;">${e.identifier}</span></div>
+    <div>Borrow-rate %: <span style="color: purple;">${e.borrow_rate_percentage}</span></div>
+    <div>Supply-rate %: <span style="color: purple;">${e.supply_rate_percentage}</span></div>
+    `;
+
+        cardContent.appendChild(content);
+        card.appendChild(cardContent);
+        column.appendChild(card);
+        columns.appendChild(column);
+    });
+    container.appendChild(columns);
+};
+
+// getDerivativeInfo();
+const getGlobalInfo = async () => {
+    const globalResponse = await fetch(globalAPI);
+    const globalJSON = await globalResponse.json();
+
+    console.log(globalJSON);
+}
+getGlobalInfo();
 
 
 trendingButton.addEventListener('click', getTrends);
 popularButton.addEventListener('click', getPrices);
 newsButton.addEventListener('click', getStatusInfo);
 platformsButton.addEventListener('click', getPlatformsInfo);
+productsButton.addEventListener('click', getProductsInfo)
+// document.addEventListener('scroll', playAudio);
