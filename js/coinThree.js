@@ -267,6 +267,16 @@ const getGlobalInfo = async () => {
 }
 getGlobalInfo();
 
+//dom shortcut for rendering even listeners:
+// document.addEventListener("DOMContentLoaded", () => {
+// ​
+//     trendingButton && trendingButton.addEventListener('click', getTrends);
+//     popularButton && popularButton.addEventListener('click', getPrices);
+//     newsButton && newsButton.addEventListener('click', getStatusInfo);
+//     platformsButton && platformsButton.addEventListener('click', getPlatformsInfo);
+//     productsButton && productsButton.addEventListener('click', getProductsInfo)
+// })
+
 
 trendingButton.addEventListener('click', getTrends);
 popularButton.addEventListener('click', getPrices);
