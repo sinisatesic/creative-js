@@ -491,3 +491,20 @@ productsButton.addEventListener('click', getProductsInfo)
 //         productsButton && productsButton.addEventListener('click', getProductsInfo)
 //
 //     })
+
+//document.addEventListener("DOMContentLoaded", () => {
+// //         const trendingButton = document.getElementById('trendingButton');
+// //         trendingButton && trendingButton.addEventListener('click', getTrends);
+// //
+// //         const popularButton = document.getElementById('popularButton');
+// //         popularButton && popularButton.addEventListener('click', getPrices);
+// //
+// //         const newsButton = document.getElementById('newsButton');
+// //         newsButton && newsButton.addEventListener('click', getStatusInfo);
+// //
+// //         const platformsButton = document.getElementById('platformsButton');
+// //         platformsButton && platformsButton.addEventListener('click', getPlatformsInfo);
+// //
+// //         const productsButton = document.getElementById('productsButton');
+// //         productsButton && productsButton.addEventListener('click', getProductsInfo)
+// //
