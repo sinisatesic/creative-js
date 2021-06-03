@@ -1,20 +1,22 @@
 *, *:after, *:before {
     box-sizing: border-box;
+    /* cursor: url("cursor.png") 5 5, default; */
 }
 
 html, body {
     scroll-behavior: smooth;
     max-width: 100%;
     overflow-x: hidden;
-    overflow-y: auto;
+    /* cursor: url("cursor.png"), default; */
 }
 
 #containerYes {
-    background-image: url("bitcoin.gif");
+    background-image:url('bitcoin.gif');
+    background-repeat:no-repeat;
     background-attachment: fixed;
     background-size: cover;
     min-height: 100vh;
-    overflow-y: hidden;
+    overflow-y: auto;
     padding: 0;
     margin: 0;
     max-width: 100%;
@@ -84,7 +86,7 @@ html, body {
     }
     100%{
         opacity: 0;
-        transform: translateX(1000px);
+        transform: translateX(1200px);
     }
 }
 .pacmanEye {
@@ -105,6 +107,69 @@ html, body {
     animation: eat 0.5s infinite;
 }
 @keyframes eat {
+    0% {
+        clip-path: polygon(100% 74%, 44% 48%, 100% 21%);
+    }
+    25% {
+        clip-path: polygon(100% 60%, 44% 48%, 100% 40%);
+    }
+
+    50% {
+        clip-path: polygon(100% 50%, 44% 48%, 100% 50%);
+    }
+
+    75% {
+        clip-path: polygon(100% 59%, 44% 48%, 100% 35%);
+    }
+
+    100% {
+        clip-path: polygon(100% 74%, 44% 48%, 100% 21%);
+    }
+}
+
+
+.pacmanBodyBlue {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #0b387c;
+    position: relative;
+    margin-top: 20px;
+    transform: scaleX(-1);
+    animation: paccyBlue 4s infinite ease-in-out;
+}
+@keyframes paccyBlue {
+    0% {
+        opacity: 0;
+        transform: translateX(1200px);
+    }
+    85%{
+        opacity: 1
+    }
+    100%{
+        opacity: 0;
+        transform: translateX(0px);
+    }
+}
+.pacmanEyeBlue {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    top: 10px;
+    right: 20px;
+    background: #fff;
+}
+.pacmanMouthBlue {
+    background: #eff9e0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(100% 74%, 44% 48%, 100% 21%);
+    transform: scaleX(-1);
+    animation: eatBlue 0.5s infinite;
+}
+@keyframes eatBlue {
     0% {
         clip-path: polygon(100% 74%, 44% 48%, 100% 21%);
     }
@@ -192,18 +257,103 @@ div.content {
 }
 
 
-
-.loader {
-    border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid #3498db; /* Blue */
+.load {
+    border: 12px solid #f3f3f3;
     border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    animation: spin 2s linear infinite;
-    /* visibility: visible; */
+    border-top: 12px solid #444444;
+    width: 70px;
+    height: 70px;
+    animation: spin 1s linear infinite;
+    /* visibility: hidden; */
+    margin: auto;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.center {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+
+#eth {
+    max-width: 15%;
+    max-height: 15%;
+    position: relative;
+    margin-top: 25%;
+    animation: bouncy 1s infinite ease-in-out;
+    animation-delay: 3s;
+}
+@keyframes bouncy {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    50% {
+        transform: translate3d(0, -150px, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+#ada {
+    max-width: 15%;
+    max-height: 15%;
+    position: relative;
+    margin-top: 25%;
+    animation: bouncy 3s infinite ease-out;
+    animation-delay: 3.2s;
+}
+
+#link {
+    max-width: 15%;
+    max-height: 15%;
+    position: relative;
+    margin-top: 25%;
+    margin-left: 20px;
+    animation: bouncy 3s infinite ease-out;
+    animation-delay: 3.4s;
+}
+
+#binance {
+    max-width: 15%;
+    max-height: 15%;
+    position: relative;
+    margin-top: 25%;
+    margin-left: 20px;
+    animation: bouncy 3s infinite ease-out;
+    animation-delay: 3.6s;
+}
+
+#litecoin {
+    max-width: 15%;
+    max-height: 15%;
+    position: relative;
+    margin-top: 25%;
+    margin-left: 20px;
+    animation: bouncy 3s infinite ease-out;
+    animation-delay: 3.8s;
+}
+
+#xrp {
+    max-width: 15%;
+    max-height: 15%;
+    position: relative;
+    margin-top: 25%;
+    margin-left: 30px;
+    animation: bouncy 3s infinite ease-out;
+    animation-delay: 4s;
 }
