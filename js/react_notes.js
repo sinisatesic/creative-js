@@ -10,7 +10,7 @@
 // React is often referred to as a front-end "framework" because it is capable and directly comparable to a framework such as Angular or Vue.
 
 // React gives one a way to structure the "view" layer of an app (view out of MVC). Reminder: MVC - Model, View, Controller: popular software design model. The model deals
-// with the data, the controller deals with requests and routing, and the view is the UI. React is the V in MVC, when utilized in a stack.
+// with the data, the controller deals with requests and routing, and the view is the UI. React is the V in MVC, when utilized in a stack. 
 
 // React allows you to build with reusable components which have their own state.
 
@@ -51,15 +51,15 @@
 
 // on js file, imports at top (library names in singular quotes):
 // import React from 'react'
-// import ReactDOM from 'react-dom'
+// import ReactDOM from 'react-dom' 
 
 // next, there's App component; stores all sub-components in the React file; outputs JSX
 
 // Below example:
 
-function App() {
-    return <div>Hello, world</div>
-}
+// function App() {
+//     return <div>Hello, world</div>
+// }d
 
 ReactDOM.render(App, document.getElementById('root'));
 
@@ -75,9 +75,9 @@ ReactDOM.render(App, document.getElementById('root'));
 
 import React from 'react'
 
-export default function Book(props) {
-    return <li>{props.title}</li>
-}
+// export default function Book(props) {
+//     return <li>{props.title}</li>
+// }
 
 // props allow us to use data from previous components
 
