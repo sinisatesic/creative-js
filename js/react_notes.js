@@ -41,6 +41,15 @@
 // useEffect - Perform side effects in function components
 // useContext, useReduceer, useRef - beyond the scope of this
 
+function Fruit(name, color, shape){
+    this.name = name;
+    this.color = color;
+    this.shape = shape;
+    this.describe() = function(){
+
+    }
+}
+
 
 
 // *** INSTALLING REACT ***:

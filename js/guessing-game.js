@@ -1952,5 +1952,16 @@ function Fruit(name, color, shape){
 let melon = new Fruit('melon','green', 'round');
 console.log(melon.describe());
 
+function Fruit(name, color, shape){
+    this.name = name;
+    this.color = color;
+    this.shape = shape;
+    this.describe = function(){
+        return `this ${name} is the color ${color} and is the shape ${shape}`;
+    }
+}
+let melon = new Fruit('melon', 'green','round');
+console.log(melon.describe());
+
 
 
