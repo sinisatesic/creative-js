@@ -158,3 +158,4 @@ function toArray(obj) {
 function toArray(obj) {
     return Object.entries(obj);
 }
+
