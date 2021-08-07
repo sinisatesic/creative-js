@@ -151,3 +151,51 @@ button.addEventListener('keydown', function(event){
     // mainTitle.classList.add('color'); //add a class to element which can have multiple style properties already affiliated to it
     // mainTitle.classList.toggle('color'); //will check to see if class is attributed; if not, will add - if added, will remove
 });
+
+
+//1.  Fruit Salad 🍇🍓🍎
+// Fruit salads are served best when the fruits are sliced and diced into small chunks!
+
+// For this challenge, slice each fruit in half and sort the chunks alphabetically. This recipe tastes best when the chunks are joined together to make a string.
+
+// Worked Example
+// fruitSalad(["apple", "pear", "grapes"]) ➞ "apargrapepesple"
+
+// // Chunks: ["ap", "ple", "pe", "ar", "gra", "pes"]
+// // Sorted chunks: ["ap", "ar", "gra", "pe", "pes", "ple"]
+// // Final string: "apargrapepesple"
+// Examples
+// fruitSalad(["apple", "pear", "grapes"]) ➞ "apargrapepesple"
+
+// fruitSalad(["raspberries", "mango"]) ➞ "erriesmangoraspb"
+
+// fruitSalad(["banana"]) ➞ "anaban"
+// Notes
+// If a fruit has an odd number of letters, make the right side larger than the left.
+// For example: "apple" will be sliced into "ap" and "ple".
+// All fruits will be given in lowercase.
+
+//moj odgovor:
+function fruitSalad(arr) {
+    let foist = arr.map(x => x.substring(0, x.length/2));
+    let second = arr.map(x => x.substring(x.length/2, x.length));
+    let thoid = foist.concat(second);
+    return thoid.sort().join('');
+}
+
+//2. Derivative of a Function
+// Create a function that takes numbers b and m as arguments and returns the derivative of the function f(x)=x^b with respect to x evaluated at x=m, where b and m are constants.
+
+// Examples
+// derivative(1, 4) ➞ 1
+
+// derivative(3, -2) ➞ 12
+
+// derivative(4, -3) ➞ -108
+// Notes
+// ^ in the context of this challenge means "to the power of", also known as the "exponent" operator.
+
+//moj odgovor:
+function derivative(b, m) {
+    return b*(m**(b - 1));
+}
