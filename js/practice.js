@@ -337,3 +337,5 @@ const someRating = games.some(function(game){
 });
 
 console.log(someRating); //true, since 1 or more has rating greater than 8
+
+//
