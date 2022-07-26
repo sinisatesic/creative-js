@@ -1,0 +1,359 @@
+*, *:after, *:before {
+    box-sizing: border-box;
+    /* cursor: url("cursor.png") 5 5, default; */
+  }
+
+  html, body {
+    scroll-behavior: smooth;
+    max-width: 100%;
+    overflow-x: hidden;
+    /* cursor: url("cursor.png"), default; */
+  }
+
+  #containerYes {
+    background-image:url('bitcoin.gif'); 
+    background-repeat:no-repeat; 
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh;
+    overflow-y: auto;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+
+.pointer {
+    width: 200px;
+    height: 20px;
+    position: relative;
+    background: purple;
+    animation: stretchy 3s ease-out infinite;
+  }
+  .pointer:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 10px solid #eff9e0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+  }
+  .pointer:before {
+    content: "";
+    position: absolute;
+    right: -10px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 10px solid purple;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+  }
+@keyframes stretchy {
+    0% {
+        width: 0px;
+        background-color: white;
+    }
+    90%{
+        background-color: purple;
+    }
+    100%{
+        width: 200px;
+        background-color: white;
+    }
+}
+
+.pacmanBody {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #F2D648;
+    position: relative;
+    margin-top: 20px;
+    animation: paccy 4s infinite ease-in-out;
+  }
+  @keyframes paccy {
+      0% {
+        opacity: 0;
+        transform: translateX(0px);
+      }
+      85%{
+        opacity: 1
+      }
+      100%{
+          opacity: 0;
+          transform: translateX(1200px);
+      }
+  }
+.pacmanEye {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    top: 10px;
+    right: 20px;
+    background: #333333;
+}
+.pacmanMouth {
+    background: #eff9e0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(100% 74%, 44% 48%, 100% 21%);
+    animation: eat 0.5s infinite;
+}
+@keyframes eat {
+    0% {
+      clip-path: polygon(100% 74%, 44% 48%, 100% 21%);
+    }
+    25% {
+      clip-path: polygon(100% 60%, 44% 48%, 100% 40%);
+    }
+    
+    50% {
+      clip-path: polygon(100% 50%, 44% 48%, 100% 50%);
+    }
+    
+    75% {
+     clip-path: polygon(100% 59%, 44% 48%, 100% 35%);
+    }
+    
+    100% {
+     clip-path: polygon(100% 74%, 44% 48%, 100% 21%);
+    }
+  }
+
+
+  .pacmanBodyBlue {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #0b387c;
+    position: relative;
+    margin-top: 20px;
+    transform: scaleX(-1);
+    animation: paccyBlue 4s infinite ease-in-out;
+  }
+  @keyframes paccyBlue {
+      0% {
+        opacity: 0;
+        transform: translateX(1200px);
+      }
+      85%{
+        opacity: 1
+      }
+      100%{
+          opacity: 0;
+          transform: translateX(0px);
+      }
+  }
+.pacmanEyeBlue {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    top: 10px;
+    right: 20px;
+    background: #fff;
+}
+.pacmanMouthBlue {
+    background: #eff9e0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(100% 74%, 44% 48%, 100% 21%);
+    transform: scaleX(-1);
+    animation: eatBlue 0.5s infinite;
+}
+@keyframes eatBlue {
+    0% {
+      clip-path: polygon(100% 74%, 44% 48%, 100% 21%);
+    }
+    25% {
+      clip-path: polygon(100% 60%, 44% 48%, 100% 40%);
+    }
+    
+    50% {
+      clip-path: polygon(100% 50%, 44% 48%, 100% 50%);
+    }
+    
+    75% {
+     clip-path: polygon(100% 59%, 44% 48%, 100% 35%);
+    }
+    
+    100% {
+     clip-path: polygon(100% 74%, 44% 48%, 100% 21%);
+    }
+  }
+
+  #symbol {
+    color: #10a38d;
+    margin: 0 30px;
+    font-family: 'Notable', sans-serif;
+    font-size: 1.8rem;
+  }
+
+  #icon {
+    height: 7%;
+    width: 7%;
+    margin: 0 52px;
+  }
+
+  #pricesIcon {
+    height: 7%;
+    width: 7%;
+  }
+
+  #pricesSymbol{
+    font-family: 'Notable', sans-serif;
+    color: #10a38d;
+    margin: 0 10px;
+  }
+
+  .pricesInfo {
+    margin: 0 10px;
+    font-family: 'Bungee Shade', cursive;
+    text-shadow: .5px .5px black;
+    font-size: 1rem;
+    color: black;
+  }
+
+  #name {
+    margin: 0 30px;
+    font-family: 'Bungee Shade', cursive;
+    font-size: 2rem;
+    color: black;
+    text-shadow: .5px .5px black;
+  }
+
+  #rank {
+    margin: 0 30px;
+    font-family: 'Bungee Shade', cursive;
+    font-size: 2rem;
+    color: black;
+    text-shadow: .5px .5px black;
+  }
+
+  div.card {
+      margin: 10px;
+  }
+
+  div.card-content {
+      background-color: #d4ff91;
+      border: 4px solid #6fb95b;
+  }
+
+  div.content {
+      padding: 30px;
+      background-color: #eff9e0;
+  }
+
+  .navbar {
+    position: fixed;
+  }
+ 
+
+  .load {
+    border: 12px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 12px solid #444444;
+    width: 70px;
+    height: 70px;
+    animation: spin 1s linear infinite;
+    /* visibility: hidden; */
+    margin: auto;
+}
+  
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+  
+.center {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+
+  #eth {
+    max-width: 15%;
+    max-height: 15%;
+    position: relative;
+    margin-top: 25%;
+    animation: bouncy 1s infinite ease-in-out;
+    animation-delay: 3s;
+  }
+  @keyframes bouncy {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    50% {
+        transform: translate3d(0, -150px, 0);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+  }
+
+  #ada {
+    max-width: 15%;
+    max-height: 15%;
+    position: relative;
+    margin-top: 25%;
+    animation: bouncy 3s infinite ease-out;
+    animation-delay: 3.2s;
+  }
+
+  #link {
+    max-width: 15%;
+    max-height: 15%;
+    position: relative;
+    margin-top: 25%;
+    margin-left: 20px;
+    animation: bouncy 3s infinite ease-out;
+    animation-delay: 3.4s;
+  }
+
+  #binance {
+    max-width: 15%;
+    max-height: 15%;
+    position: relative;
+    margin-top: 25%;
+    margin-left: 20px;
+    animation: bouncy 3s infinite ease-out;
+    animation-delay: 3.6s;
+  }
+
+  #litecoin {
+    max-width: 15%;
+    max-height: 15%;
+    position: relative;
+    margin-top: 25%;
+    margin-left: 20px;
+    animation: bouncy 3s infinite ease-out;
+    animation-delay: 3.8s;
+  }
+
+  #xrp {
+    max-width: 15%;
+    max-height: 15%;
+    position: relative;
+    margin-top: 25%;
+    margin-left: 30px;
+    animation: bouncy 3s infinite ease-out;
+    animation-delay: 4s;
+  }
