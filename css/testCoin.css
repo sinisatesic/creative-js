@@ -7,6 +7,7 @@
     scroll-behavior: smooth;
     max-width: 100%;
     overflow-x: hidden;
+    /* overflow-y: scroll; */
     /* cursor: url("cursor.png"), default; */
   }
 
@@ -16,7 +17,7 @@
     background-attachment: fixed;
     background-size: cover;
     min-height: 100vh;
-    overflow-y: auto;
+    overflow-y: scroll;
     padding: 0;
     margin: 0;
     max-width: 100%;
@@ -240,16 +241,19 @@
 
   div.card {
       margin: 10px;
+      overflow: hidden;
   }
 
   div.card-content {
       background-color: #d4ff91;
       border: 4px solid #6fb95b;
+      overflow: hidden;
   }
 
   div.content {
       padding: 30px;
       background-color: #eff9e0;
+      overflow: hidden;
   }
 
   .navbar {

@@ -1,7 +1,7 @@
 // vanilla (es6):
 const trendingAPI = `https://api.coingecko.com/api/v3/search/trending`;
-const pricesAPI = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd`;
-const statusAPI = `https://api.coingecko.com/api/v3/status_updates`;
+const coinsAPI = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd`;
+const categoriesAPI = `https://api.coingecko.com/api/v3/coins/categories`;
 const fiPlatformsAPI = `https://api.coingecko.com/api/v3/finance_platforms`;
 const productsAPI = `https://api.coingecko.com/api/v3/finance_products`;
 const globalAPI = `https://api.coingecko.com/api/v3/global`;
@@ -116,7 +116,7 @@ const getTrends = async () => {
  });
 };
 
-const getPrices = async () => {
+const getCoins = async () => {
  container.innerHTML = '';
 
  // if(document.readyState !== 'complete'){
@@ -133,10 +133,10 @@ const getPrices = async () => {
  // container.append(loadDiv);
  // } while (document.readyState !== "complete");
 
- const responsePrice = await fetch(pricesAPI);
- const jsonPrices = await responsePrice.json();
+ const responseCoins = await fetch(coinsAPI);
+ const jsonCoins = await responseCoins.json();
 
- jsonPrices.forEach(e => {
+ jsonCoins.forEach(e => {
  let secondColumn = document.createElement('div');
  secondColumn.classList.add('column');
 
@@ -188,14 +188,22 @@ const getPrices = async () => {
 };
 
 
-const getStatusInfo = async () => {
+
+
+
+
+
+
+const getCategoriesInfo = async () => {
  container.innerHTML = '';
 
- const statusResponse = await fetch(statusAPI);
- const statusJSON = await statusResponse.json();
+ const categoriesResponse = await fetch(categoriesAPI);
+ const categoriesJSON = await categoriesResponse.json();
+
+ console.log(categoriesJSON);
 
 
- statusJSON.status_updates.forEach(e => {
+ categoriesJSON.forEach(e => {
  let columns = document.createElement('div');
  columns.classList.add('columns');
 
@@ -208,13 +216,15 @@ const getStatusInfo = async () => {
  let content = document.createElement('div');
  content.classList.add('content');
 
+let textContent = e.content == "" || e.content == null ? "No description" : e.content;
+
  content.innerHTML = `
- <span style="color: black; font-family: Courier New">${e.description}</span>
- <div>Coin: <span style="color: purple;">${e.project.name}</span></div>
- <div>Symbol: <span style="color: purple;">${e.project.symbol}</span></div>
- <div>User: <span style="color: purple;">${e.user}</span></div>
+ <span style="color: black; font-family: Courier New">${e.id}</span>
+ <div>${e.name}: <span style="color: purple;">${textContent}</span></div>
+ <div>Market Cap: <span style="color: purple;">${e.market_cap}</span></div>
+ <div>24 HR Market Cap Change: <span style="color: purple;">${e.market_cap_change_24h}</span></div>
  <div>User title: <span style="color: purple;">${e.user_title}</span></div>
- <div><img src="${e.project.image.thumb}"></div>
+ <div>Top 3 Coins:<img src="${e.top_3_coins[0]}"><img src="${e.top_3_coins[1]}"><img src="${e.top_3_coins[2]}"></div>
  `;
 
  cardContent.appendChild(content);
@@ -223,6 +233,10 @@ const getStatusInfo = async () => {
  container.appendChild(columns);
  });
 };
+
+
+
+
 
 
 
@@ -267,6 +281,14 @@ jsonFiPlatforms.forEach(e => {
 });
 container.appendChild(columns);
 };
+
+
+
+
+
+
+
+
 
 const getProductsInfo = async () => {
  container.innerHTML = '';
@@ -559,10 +581,17 @@ const getGlobalInfo = async () => {
 // });
 ////// getGlobalInfo();
 
+
+
+
+
+
+
+
 // event listeners:
 // trendingButton.addEventListener('click', getTrends);
 // popularButton.addEventListener('click', getPrices);
-// newsButton.addEventListener('click', getStatusInfo);
+// newsButton.addEventListener('click', getCategoriesInfo);
 // platformsButton.addEventListener('click', getPlatformsInfo);
 // productsButton.addEventListener('click', getProductsInfo)
 // globalButton.addEventListener('click', getGlobalInfo);
@@ -570,12 +599,21 @@ const getGlobalInfo = async () => {
 
 document.addEventListener("DOMContentLoaded", () => {
  trendingButton && trendingButton.addEventListener('click', getTrends);
- popularButton && popularButton.addEventListener('click', getPrices);
- newsButton && newsButton.addEventListener('click', getStatusInfo);
+ popularButton && popularButton.addEventListener('click', getCoins);
+ newsButton && newsButton.addEventListener('click', getCategoriesInfo);
  platformsButton && platformsButton.addEventListener('click', getPlatformsInfo);
  productsButton && productsButton.addEventListener('click', getProductsInfo);
  globalButton && globalButton.addEventListener('click', getGlobalInfo);
 });
+
+
+
+
+
+
+
+
+
 
 
 
