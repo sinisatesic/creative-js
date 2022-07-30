@@ -256,6 +256,15 @@
       overflow: hidden;
   }
 
+  .column {
+    margin: 0 auto;
+    padding-top: 75px;
+  }
+  .columns {
+    margin: 0 auto;
+    width: 100%;
+  }
+
   .navbar {
     position: fixed;
   }

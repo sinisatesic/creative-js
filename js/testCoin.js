@@ -219,11 +219,11 @@ const getCategoriesInfo = async () => {
 let textContent = e.content == "" || e.content == null ? "No description" : e.content;
 
  content.innerHTML = `
- <span style="color: black; font-family: Courier New">${e.id}</span>
+ <span style="color: black; font-family: Courier New; font-weight: bold">${e.id}</span>
  <div>${e.name}: <span style="color: purple;">${textContent}</span></div>
  <div>Market Cap: <span style="color: purple;">${e.market_cap}</span></div>
  <div>24 HR Market Cap Change: <span style="color: purple;">${e.market_cap_change_24h}</span></div>
- <div>User title: <span style="color: purple;">${e.user_title}</span></div>
+ <div>24 HR Volume: <span style="color: purple;">${e.volume_24h}</span></div>
  <div>Top 3 Coins:<img src="${e.top_3_coins[0]}"><img src="${e.top_3_coins[1]}"><img src="${e.top_3_coins[2]}"></div>
  `;
 
@@ -344,6 +344,7 @@ const getGlobalInfo = async () => {
  // capPercents.push(globalJSON.data.market_cap_percentage);
  // console.log(capPercents);
  console.log(globalJSON.data.market_cap_percentage);
+
  let capPercents = [];
  capPercents.push(globalJSON.data.market_cap_percentage);
 
@@ -364,23 +365,20 @@ const getGlobalInfo = async () => {
  let content = document.createElement('div');
  content.classList.add('content');
 
- // capPercents.forEach(e => {
-
- // content.innerHTML = `
- // <div><span style="color: purple;">Market Cap Percentages on Popular Coins:</span></div>
- // <div>Bitcoin: <span style="color: purple;">${(e.btc).toFixed(2)}%</span></div>
- // <div>Ethereum: <span style="color: purple;">${(e.eth).toFixed(2)}%</span></div>
- // <div>Binance: <span style="color: purple;">${(e.bnb).toFixed(2)}%</span></div>
- // <div>XRP: <span style="color: purple;">${(e.xrp).toFixed(2)}%</span></div>
- // <div>Tether: <span style="color: purple;">${(e.usdt).toFixed(2)}%</span></div>
- // <div>Cardano: <span style="color: purple;">${(e.ada).toFixed(2)}%</span></div>
- // <div>Dogecoin: <span style="color: purple;">${(e.doge).toFixed(2)}%</span></div>
- // <div>Polkadot: <span style="color: purple;">${(e.dot).toFixed(2)}%</span></div>
- // <div>Uniswap: <span style="color: purple;">${(e.uni).toFixed(2)}%</span></div>
- // <div>Litecoin: <span style="color: purple;">${(e.ltc).toFixed(2)}%</span></div>
- // `
-
- // });
+ capPercents.forEach(e => {
+ content.innerHTML = `
+ <div><span style="color: purple;">Market Cap Percentages on Popular Coins:</span></div>
+ <div>Bitcoin: <span style="color: purple;">${e.btc}%</span></div>
+ <div>Ethereum: <span style="color: purple;">${e.eth}%</span></div>
+ <div>Binance: <span style="color: purple;">${e.bnb}%</span></div>
+ <div>XRP: <span style="color: purple;">${e.xrp}%</span></div>
+ <div>Tether: <span style="color: purple;">${e.usdt}%</span></div>
+ <div>Cardano: <span style="color: purple;">${e.ada}%</span></div>
+ <div>Polkadot: <span style="color: purple;">${e.dot}%</span></div>
+ <div>Solana: <span style="color: purple;">${e.sol}%</span></div>
+ <div>Binance USD: <span style="color: purple;">${e.busd}%</span></div>
+ `
+ });
 
  let marketCap = [];
  marketCap.push(globalJSON.data.total_market_cap);
