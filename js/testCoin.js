@@ -1,9 +1,12 @@
 // vanilla (es6):
-const trendingAPI = `https://api.coingecko.com/api/v3/search/trending`;
-const coinsAPI = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd`;
-const categoriesAPI = `https://api.coingecko.com/api/v3/coins/categories`;
+
 const fiPlatformsAPI = `https://api.coingecko.com/api/v3/finance_platforms`;
 const productsAPI = `https://api.coingecko.com/api/v3/finance_products`;
+
+
+const coinsAPI = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd`;
+const trendingAPI = `https://api.coingecko.com/api/v3/search/trending`;
+const categoriesAPI = `https://api.coingecko.com/api/v3/coins/categories`;
 const globalAPI = `https://api.coingecko.com/api/v3/global`;
 
 const container = document.getElementById('containerYes');
