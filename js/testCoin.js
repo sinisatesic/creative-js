@@ -19,7 +19,12 @@ const productsButton = document.getElementById('productsButton');
 const globalButton = document.getElementById('globalButton');
 // const flexContainer = document.getElementById('flexContainer');
 const searchBar = document.getElementById('searchBar');
-// const jsonPrices = [];
+
+
+// const audio = new Audio("sounds/chalo.mp3");
+// document.addEventListener('click', () => {
+//     audio.play();
+// });
 
 // console.log(searchBar);
 // searchBar.addEventListener('keyup', (e) => {
@@ -78,7 +83,7 @@ const currency = new Intl.NumberFormat('en-US', {
 //////
 
 let jsonTrends;
-let firstText;
+// let firstText;
 const getTrends = async () => {
 
  container.innerHTML = '';
@@ -100,7 +105,7 @@ const getTrends = async () => {
  let firstContent = document.createElement('div');
  firstContent.classList.add('content');
 
- firstText = document.createElement('text');
+ let firstText = document.createElement('text');
  firstText.innerHTML = `<img src="${e.item.large}" id="icon"></img> 
  <span id="name">${e.item.name}</span>
  <span id="symbol">SYMBOL: ${e.item.symbol} </span>

@@ -32,17 +32,6 @@
     background: purple;
     animation: stretchy 3s ease-out infinite;
   }
-  .pointer:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 0;
-    border-left: 10px solid #eff9e0;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-  }
   .pointer:before {
     content: "";
     position: absolute;
@@ -54,6 +43,18 @@
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
   }
+  .pointer:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 10px solid #eff9e0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+  }
+
 @keyframes stretchy {
     0% {
         width: 0px;
