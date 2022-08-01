@@ -12,7 +12,7 @@ const globalAPI = `https://api.coingecko.com/api/v3/global`;
 const container = document.getElementById('containerYes');
 const trendingButton = document.getElementById('trendingButton');
 const popularButton = document.getElementById('popularButton');
-const newsButton = document.getElementById('newsButton');
+const categoriesButton = document.getElementById('categoriesButton');
 const platformsButton = document.getElementById('platformsButton');
 const navBarItems = document.getElementById('navBarItems');
 const productsButton = document.getElementById('productsButton');
@@ -606,7 +606,7 @@ const getGlobalInfo = async () => {
 document.addEventListener("DOMContentLoaded", () => {
  trendingButton && trendingButton.addEventListener('click', getTrends);
  popularButton && popularButton.addEventListener('click', getCoins);
- newsButton && newsButton.addEventListener('click', getCategoriesInfo);
+ categoriesButton && categoriesButton.addEventListener('click', getCategoriesInfo);
  platformsButton && platformsButton.addEventListener('click', getPlatformsInfo);
  productsButton && productsButton.addEventListener('click', getProductsInfo);
  globalButton && globalButton.addEventListener('click', getGlobalInfo);
