@@ -1,7 +1,7 @@
 // vanilla (es6):
 
-const fiPlatformsAPI = `https://api.coingecko.com/api/v3/finance_platforms`;
-const productsAPI = `https://api.coingecko.com/api/v3/finance_products`;
+
+const derivativesAPI = `https://api.coingecko.com/api/v3/derivatives/exchanges`;
 
 
 // let searchAPI = `https://api.coingecko.com/api/v3/search`
@@ -12,6 +12,8 @@ const trendingAPI = `https://api.coingecko.com/api/v3/search/trending`;
 const categoriesAPI = `https://api.coingecko.com/api/v3/coins/categories`;
 const globalAPI = `https://api.coingecko.com/api/v3/global`;
 const searchAPI = `https://api.coingecko.com/api/v3/search?query=`
+const assetPlatforms = `https://api.coingecko.com/api/v3/asset_platforms`
+
 
 const container = document.getElementById('containerYes');
 const trendingButton = document.getElementById('trendingButton');
@@ -19,14 +21,22 @@ const popularButton = document.getElementById('popularButton');
 const categoriesButton = document.getElementById('categoriesButton');
 const platformsButton = document.getElementById('platformsButton');
 const navBarItems = document.getElementById('navBarItems');
-const productsButton = document.getElementById('productsButton');
+const derivativesButton = document.getElementById('derivativesButton');
 const globalButton = document.getElementById('globalButton');
 const searchButton = document.getElementById('searchButton');
 const searchInput = document.getElementById('searchInput');
 const burger = document.getElementById('burger');
-
+// const assetPlatforms = document.getElementById('a')
 // let valueOfSearchInput = searchInput.value;
 // let stringValueInput = valueOfSearchInput.toString();
+
+
+
+
+
+
+
+
 
 
 
@@ -122,6 +132,8 @@ const getSearchResults = async () => {
         
     })
 
+
+
    ////
     // getSearchJSON.exchanges.forEach(e => {
     // let columns = document.createElement('div');
@@ -154,10 +166,10 @@ searchButton.addEventListener('click', (e) => {
 })
 
 
-const audio = new Audio("sounds/chalo.mp3");
-document.addEventListener('click', () => {
-    audio.play();
-});
+// const audio = new Audio("sounds/chalo.mp3");
+// document.addEventListener('click', () => {
+//     audio.play();
+// });
 
 // console.log(searchBar);
 // searchBar.addEventListener('keyup', (e) => {
@@ -386,41 +398,46 @@ let textContent = e.content == "" || e.content == null ? "No description" : e.co
 const getPlatformsInfo = async () => {
  container.innerHTML = '';
 
- const fiPlatformsResponse = await fetch(fiPlatformsAPI);
- const jsonFiPlatforms = await fiPlatformsResponse.json();
+ const platformsResponse = await fetch(assetPlatforms);
+ const platformValue = await platformsResponse.json();
 
- let columns = document.createElement('div');
- columns.classList.add('columns');
- columns.classList.add('is-multiline');
+ console.log(platformValue)
 
-jsonFiPlatforms.forEach(e => {
+//  const fiPlatformsResponse = await fetch(fiPlatformsAPI);
+//  const jsonFiPlatforms = await fiPlatformsResponse.json();
 
- let column = document.createElement('div');
- column.classList.add('column');
- column.classList.add('is-one-quarter');
+//  let columns = document.createElement('div');
+//  columns.classList.add('columns');
+//  columns.classList.add('is-multiline');
 
- let card = document.createElement('div');
- card.classList.add('card');
+// jsonFiPlatforms.forEach(e => {
 
- let cardContent = document.createElement('div');
- cardContent.classList.add('card-content');
+//  let column = document.createElement('div');
+//  column.classList.add('column');
+//  column.classList.add('is-one-quarter');
 
- let content = document.createElement('div');
- content.classList.add('content');
+//  let card = document.createElement('div');
+//  card.classList.add('card');
 
- content.innerHTML = `
- <span style="color: black; font-family: Courier New; font-size: 1.5rem;">${e.name}</span>
- <div>Type: <span style="color: purple;">${e.category}</span></div>
- <div>URL: <a href="${e.website_url}">${e.website_url}</a></div>
- `
+//  let cardContent = document.createElement('div');
+//  cardContent.classList.add('card-content');
 
- cardContent.appendChild(content);
- card.appendChild(cardContent);
- column.appendChild(card);
- columns.appendChild(column);
+//  let content = document.createElement('div');
+//  content.classList.add('content');
+
+//  content.innerHTML = `
+//  <span style="color: black; font-family: Courier New; font-size: 1.5rem;">${e.name}</span>
+//  <div>Type: <span style="color: purple;">${e.category}</span></div>
+//  <div>URL: <a href="${e.website_url}">${e.website_url}</a></div>
+//  `
+
+//  cardContent.appendChild(content);
+//  card.appendChild(cardContent);
+//  column.appendChild(card);
+//  columns.appendChild(column);
  
-});
-container.appendChild(columns);
+// });
+// container.appendChild(columns);
 };
 
 
@@ -431,48 +448,86 @@ container.appendChild(columns);
 
 
 
-const getProductsInfo = async () => {
+const getDerivatives = async () => {
  container.innerHTML = '';
 
- const productsResponse = await fetch(productsAPI);
- const productsJSON = await productsResponse.json();
+ const derivativesResponse = await fetch(derivativesAPI);
+ const derivativesJSON = await derivativesResponse.json();
 
- console.log(productsJSON);
+ console.log(derivativesJSON);
 
- let columns = document.createElement('div');
- columns.classList.add('columns');
- columns.classList.add('is-multiline');
+//  let columns = document.createElement('div');
+//  columns.classList.add('columns');
+//  columns.classList.add('is-multiline');
 
- productsJSON.forEach(e => {
- let column = document.createElement('div');
- column.classList.add('column');
- column.classList.add('is-one-quarter');
+//  let column = document.createElement('div');
+//  column.classList.add('column');
+//  column.classList.add('is-one-quarter');
 
- let card = document.createElement('div');
- card.classList.add('card');
+//  let card = document.createElement('div');
+//  card.classList.add('card');
 
- let cardContent = document.createElement('div');
- cardContent.classList.add('card-content');
+//  let cardContent = document.createElement('div');
+//  cardContent.classList.add('card-content');
 
- let content = document.createElement('div');
- content.classList.add('content');
+//  let content = document.createElement('div');
+//  content.classList.add('content');
+
+ derivativesJSON.forEach(e => {
+
+let columns = document.createElement('div');
+columns.classList.add('columns');
+columns.style.textAlign = "center";
+
+let card = document.createElement('div');
+card.classList.add('card');
+card.style.width = "100%";
+
+let cardContent = document.createElement('div');
+cardContent.classList.add('card-content');
+
+let content = document.createElement('div');
+content.classList.add('content');
+
+let derivativeCountry = e.country === null || e.country === "" ? "Country not provided" : e.country;
+let derivativeDescription = e.description === null || e.description === "" ? "Description not provided" : e.description;
+let derivativeEstablished = e.year_established === null || e.year_established === "" ? "Year established not provided" : e.year_established;
 
  content.innerHTML = `
- <div>Platform: <span style="color: purple;">${e.platform}</span></div>
- <div>Identifier: <span style="color: purple; word-wrap: break-word;">${e.identifier}</span></div>
- <div>Borrow-rate %: <span style="color: purple;">${e.borrow_rate_percentage}</span></div>
- <div>Supply-rate %: <span style="color: purple;">${e.supply_rate_percentage}</span></div>
+ <div style="font-weight: bold;">${e.id}</span></div>
+ <div>Name: <span style="color: purple; word-wrap: break-word;">${e.name}</span></div>
+ <div>Country: <span style="color: purple;">${derivativeCountry}</span></div>
+ <div>Description: <span style="color: purple;">${derivativeDescription}</span></div>
+ <a href="${e.url}" target="_blank" style="text-decoration: none";><div>URL: ${e.url}</div></a>
+ <div>Established: <span style="color: purple;">${derivativeEstablished}</span></div>
+ <div>Trade Volume to BTC (24 hrs): <span style="color: purple;">${e.trade_volume_24h_btc}</span></div>
+ <div>Open Interest - BTC: <span style="color: purple;">${e.open_interest_btc}</span></div>
+ <div>Number of Perpentual Pairs: <span style="color: purple;">${e.number_of_perpetual_pairs}</span></div>
+ <div>Number of Future Pairs: <span style="color: purple;">${e.number_of_futures_pairs}</span></div>
+ <div><img src="${e.image}" style="padding-top: 10px;"></div>
  `;
+
 
  cardContent.appendChild(content);
  card.appendChild(cardContent);
- column.appendChild(card);
- columns.appendChild(column);
- });
+ columns.appendChild(card);
  container.appendChild(columns);
+
+//  cardContent.appendChild(content);
+//  card.appendChild(cardContent);
+//  column.appendChild(card);
+//  columns.appendChild(column);
+ });
+//  container.appendChild(columns);
 };
 
-// getDerivativeInfo();
+
+
+
+
+
+
+
 const getGlobalInfo = async () => {
  container.innerHTML = '';
 
@@ -741,7 +796,7 @@ document.addEventListener("DOMContentLoaded", () => {
  popularButton && popularButton.addEventListener('click', getCoins);
  categoriesButton && categoriesButton.addEventListener('click', getCategoriesInfo);
  platformsButton && platformsButton.addEventListener('click', getPlatformsInfo);
- productsButton && productsButton.addEventListener('click', getProductsInfo);
+ derivativesButton && derivativesButton.addEventListener('click', getDerivatives);
  globalButton && globalButton.addEventListener('click', getGlobalInfo);
 });
 
