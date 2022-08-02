@@ -4,10 +4,14 @@ const fiPlatformsAPI = `https://api.coingecko.com/api/v3/finance_platforms`;
 const productsAPI = `https://api.coingecko.com/api/v3/finance_products`;
 
 
+// let searchAPI = `https://api.coingecko.com/api/v3/search`
+
+
 const coinsAPI = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd`;
 const trendingAPI = `https://api.coingecko.com/api/v3/search/trending`;
 const categoriesAPI = `https://api.coingecko.com/api/v3/coins/categories`;
 const globalAPI = `https://api.coingecko.com/api/v3/global`;
+const searchAPI = `https://api.coingecko.com/api/v3/search?query=`
 
 const container = document.getElementById('containerYes');
 const trendingButton = document.getElementById('trendingButton');
@@ -18,7 +22,65 @@ const navBarItems = document.getElementById('navBarItems');
 const productsButton = document.getElementById('productsButton');
 const globalButton = document.getElementById('globalButton');
 // const flexContainer = document.getElementById('flexContainer');
-const searchBar = document.getElementById('searchBar');
+const searchButton = document.getElementById('searchButton');
+const searchInput = document.getElementById('searchInput');
+
+// let valueOfSearchInput = searchInput.value;
+// let stringValueInput = valueOfSearchInput.toString();
+
+
+
+let searchValue;
+let modifiedSearch;
+searchInput.addEventListener('input', (text) => {
+    searchValue = text.target.value.toString()
+    
+    modifiedSearch = searchAPI+searchValue
+    console.log(modifiedSearch);
+})
+
+const getSearchResults = async () => {
+
+    container.innerHTML = '';
+
+    const getSearch = await fetch(modifiedSearch);
+    const getSearchJSON = await getSearch.json();
+    // let testy = JSON.stringify(getSearchJSON);
+
+    // console.log(getSearchJSON);
+    console.log(getSearchJSON.coins);
+    console.log(getSearchJSON.exchanges);
+
+   ////
+    // getSearchJSON.exchanges.forEach(e => {
+    // let columns = document.createElement('div');
+    // columns.classList.add('columns');
+   
+    // let card = document.createElement('div');
+    // card.classList.add('card');
+   
+    // let cardContent = document.createElement('div');
+    // cardContent.classList.add('card-content');
+   
+    // let content = document.createElement('div');
+    // content.classList.add('content');
+//    })
+
+//    content.innerHTML = `
+//    <span style="color: black; font-family: Courier New; font-weight: bold">${e.id}</span>
+//    <div>Name: <span style="color: purple;">${e.id}</span></div>
+//    <div>Market Type: <span style="color: purple;">${e.market_type}</span></div>
+//    `;
+  
+//    cardContent.appendChild(content);
+//    card.appendChild(cardContent);
+//    columns.appendChild(card);
+//    container.appendChild(columns);
+}
+searchButton.addEventListener('click', (e) => {
+   
+    getSearchResults();
+})
 
 
 // const audio = new Audio("sounds/chalo.mp3");
