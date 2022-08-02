@@ -24,6 +24,9 @@
     overflow-x: hidden;
   }
   
+  .urls:hover {
+    color: blue;
+  }
 
 .pointer {
     width: 200px;

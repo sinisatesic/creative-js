@@ -498,7 +498,7 @@ let derivativeEstablished = e.year_established === null || e.year_established ==
  <div>Name: <span style="color: purple; word-wrap: break-word;">${e.name}</span></div>
  <div>Country: <span style="color: purple;">${derivativeCountry}</span></div>
  <div>Description: <span style="color: purple;">${derivativeDescription}</span></div>
- <a href="${e.url}" target="_blank" style="text-decoration: none";><div>URL: ${e.url}</div></a>
+ <a href="${e.url} target="_blank" style="text-decoration: none";><div class="urls">URL: ${e.url}</div></a>
  <div>Established: <span style="color: purple;">${derivativeEstablished}</span></div>
  <div>Trade Volume to BTC (24 hrs): <span style="color: purple;">${e.trade_volume_24h_btc}</span></div>
  <div>Open Interest - BTC: <span style="color: purple;">${e.open_interest_btc}</span></div>
@@ -563,7 +563,7 @@ const getGlobalInfo = async () => {
 
  capPercents.forEach(e => {
  content.innerHTML = `
- <div><span style="color: purple;">Market Cap Percentages on Popular Coins:</span></div>
+ <div><span style="color: purple;">Market Cap Percentages on Popular Coins:</span></div><br>
  <div>Bitcoin: <span style="color: purple;">${e.btc}%</span></div>
  <div>Ethereum: <span style="color: purple;">${e.eth}%</span></div>
  <div>Binance: <span style="color: purple;">${e.bnb}%</span></div>
@@ -596,7 +596,7 @@ const getGlobalInfo = async () => {
 
  marketCap.forEach(e => {
  contentTwo.innerHTML = `
- <div><span style="color: purple;">Total Market Caps:</span></div>
+ <div><span style="color: purple;">Total Market Caps:</span></div><br>
  <div>United Arab Emirates dirham: <span style="color: purple;">${currency.format(e.aed)}</span></div>
  <div>Argentine peso: <span style="color: purple;">${currency.format(e.ars)}</span></div>
  <div>Australian dollar: <span style="color: purple;">${currency.format(e.aud)}</span></div>
@@ -679,7 +679,7 @@ const getGlobalInfo = async () => {
 
  volume.forEach(e => {
  contentThree.innerHTML = `
- <div><span style="color: purple;">Total Volumes:</span></div>
+ <div><span style="color: purple;">Total Volumes:</span></div><br>
  <div>United Arab Emirates dirham: <span style="color: purple;">${currency.format(e.aed)}</span></div>
  <div>Argentine peso: <span style="color: purple;">${currency.format(e.ars)}</span></div>
  <div>Australian dollar: <span style="color: purple;">${currency.format(e.aud)}</span></div>
