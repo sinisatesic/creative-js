@@ -21,9 +21,9 @@ const platformsButton = document.getElementById('platformsButton');
 const navBarItems = document.getElementById('navBarItems');
 const productsButton = document.getElementById('productsButton');
 const globalButton = document.getElementById('globalButton');
-// const flexContainer = document.getElementById('flexContainer');
 const searchButton = document.getElementById('searchButton');
 const searchInput = document.getElementById('searchInput');
+const burger = document.getElementById('burger');
 
 // let valueOfSearchInput = searchInput.value;
 // let stringValueInput = valueOfSearchInput.toString();
@@ -47,9 +47,80 @@ const getSearchResults = async () => {
     const getSearchJSON = await getSearch.json();
     // let testy = JSON.stringify(getSearchJSON);
 
-    // console.log(getSearchJSON);
+    console.log(getSearchJSON);
     console.log(getSearchJSON.coins);
     console.log(getSearchJSON.exchanges);
+
+    let searchCoins = getSearchJSON.coins;
+    let searchExchanges = getSearchJSON.exchanges;
+
+    searchExchanges.forEach(exchange => {
+        let exchangeColumns = document.createElement('div');
+        exchangeColumns.classList.add('columns');
+
+        let exchangeCard = document.createElement('div');
+        exchangeCard.classList.add('card');
+        exchangeCard.style.width = "100%"
+
+        let exchangeCardContent = document.createElement('div');
+        exchangeCardContent.classList.add('card-content');
+        exchangeCardContent.style.textAlign = "center";
+
+        let exchangeContent = document.createElement('div');
+        exchangeContent.classList.add('content');
+
+        exchangeContent.innerHTML = `
+        <span style="color: black; font-family: Courier New; font-weight: bold">${exchange.id}</span>
+        <div>Name: <span style="color: purple;">${exchange.name}</span></div>
+        <div>Market Type: <span style="color: purple;">${exchange.market_type}</span></div>
+        <div><img src="${exchange.large}" style="padding-top: 10px;"></div>
+        `
+
+        exchangeCardContent.appendChild(exchangeContent);
+        exchangeCard.appendChild(exchangeCardContent);
+
+        exchangeColumns.appendChild(exchangeCard);
+    
+
+        container.appendChild(exchangeColumns);
+
+    })
+
+
+    searchCoins.forEach(coin => {
+        let columns = document.createElement('div');
+        columns.classList.add('columns');
+        
+       
+        let card = document.createElement('div');
+        card.classList.add('card');
+        card.style.width = "100%";
+       
+        let cardContent = document.createElement('div');
+        cardContent.classList.add('card-content');
+        cardContent.style.textAlign = "center";
+       
+        let content = document.createElement('div');
+        content.classList.add('content');
+
+        content.innerHTML = `
+        <span style="color: black; font-family: Courier New; font-weight: bold">${coin.id}</span>
+        <div>Name: <span style="color: purple;">${coin.name}</span></div>
+        <div>Symbol: <span style="color: purple;">${coin.symbol}</span></div>
+        <div>Market Cap Rank: <span style="color: purple;">${coin.market_cap_rank}</span></div>
+        <div><img src="${coin.large}" style="padding-top: 10px;"></div>
+        `;
+
+        cardContent.appendChild(content);
+        card.appendChild(cardContent);
+
+        columns.appendChild(card);
+    
+
+        container.appendChild(columns);
+       
+        
+    })
 
    ////
     // getSearchJSON.exchanges.forEach(e => {
@@ -83,10 +154,10 @@ searchButton.addEventListener('click', (e) => {
 })
 
 
-// const audio = new Audio("sounds/chalo.mp3");
-// document.addEventListener('click', () => {
-//     audio.play();
-// });
+const audio = new Audio("sounds/chalo.mp3");
+document.addEventListener('click', () => {
+    audio.play();
+});
 
 // console.log(searchBar);
 // searchBar.addEventListener('keyup', (e) => {
@@ -130,9 +201,9 @@ searchButton.addEventListener('click', (e) => {
 // }
 
 //for burger for mobile:
-document.addEventListener('click', () => {
- let burger = document.getElementById('navBarItems');
- burger.classList.toggle('is-active');
+burger.addEventListener('click', () => {
+ let burgerIcon = document.getElementById('navBarItems');
+ burgerIcon.classList.toggle('is-active');
 });
 //////
 
