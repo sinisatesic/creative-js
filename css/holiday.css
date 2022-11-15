@@ -1,0 +1,9 @@
+*, *:after, *:before {
+    box-sizing: border-box;
+    /* cursor: url("cursor.png") 5 5, default; */
+  }
+
+.redDiv {
+   text-align: center;
+   margin: 0 auto;
+}
